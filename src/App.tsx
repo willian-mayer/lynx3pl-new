@@ -7,6 +7,7 @@ import Services from "./components/Services";
 import Navbar from "./components/Navbar";
 import routes from "./data/routes.json";
 import Strengths from "./components/Strengths";
+import Gallery from "./components/Gallery";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -29,6 +30,9 @@ function App() {
           </section>
           <section>
             <Strengths />
+          </section>
+          <section>
+            <Gallery />
           </section>
         </>
       )}
