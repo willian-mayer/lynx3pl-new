@@ -38,7 +38,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
         </div>
 
         {/* Botón hamburguesa */}
-        <div className="md:hidden">
+        <div className="md:hidden mt-2">
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="text-black font-bold"
