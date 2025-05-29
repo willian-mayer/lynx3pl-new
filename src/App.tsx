@@ -1,11 +1,12 @@
 
 import './App.css'
+import Hero from './components/Hero'
 
 function App() {
 
   return (
     <>
-      <h1 className='text-4xl text-blue-400 font-bold'>Lynx3PL</h1>
+      <Hero />
     </>
   )
 }
