@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Services from "./components/Services";
 import Navbar from "./components/Navbar";
 import routes from "./data/routes.json";
+import Strengths from "./components/Strengths";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -25,6 +26,9 @@ function App() {
           </section>
           <section>
             <Services />
+          </section>
+          <section>
+            <Strengths />
           </section>
         </>
       )}
