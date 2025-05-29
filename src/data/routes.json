@@ -1,5 +1,9 @@
 [
   {
+    "name": "Services",
+    "path": "#services"
+  },
+  {
     "name": "Warehousing",
     "path": "#warehousing"
   },
