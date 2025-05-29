@@ -11,16 +11,16 @@ export default function Navbar({ title, routes }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black shadow-md absolute top-0 left-0 right-0 z-50 px-2">
+    <nav className="bg-white absolute top-0 left-0 right-0 z-50 px-2">
       <div className="max-w-7xl mx-auto flex items-center justify-between sm:mx-8 md:mx-24 lg:mx-48 xl:mx-72">
         {/* Logo / Título */}
         <a href="/" className="cursor-pointer">
           <img
-            src="/logo.png"
+            src="/logo-black.png"
             alt={title}
             width={10}
             height={10}
-            className="h-14 w-auto"
+            className="h-10 w-auto py-2"
           />
         </a>
 
@@ -30,7 +30,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
             <a
               key={route.path}
               href={route.path}
-              className="text-white font-bold hover:text-blue-600"
+              className="text-black font-bold hover:text-blue-600"
             >
               {route.name}
             </a>
@@ -41,7 +41,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white font-bold"
+            className="text-black font-bold"
             aria-label="Menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -55,12 +55,12 @@ export default function Navbar({ title, routes }: NavbarProps) {
           isOpen ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="flex flex-col space-y-2 bg-black px-4 pb-4">
+        <div className="flex flex-col space-y-2 bg-white px-4 pb-4">
           {routes.map((route) => (
             <a
               key={route.path}
               href={route.path}
-              className="text-white font-bold hover:text-blue-600"
+              className="text-black font-bold hover:text-blue-600"
               onClick={() => setIsOpen(false)}
             >
               {route.name}
