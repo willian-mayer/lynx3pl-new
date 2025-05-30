@@ -9,6 +9,7 @@ import routes from "./data/routes.json";
 import Strengths from "./components/Strengths";
 import Gallery from "./components/Gallery";
 import WeServe from "./components/WeServe";
+import Warehousing from "./components/Warehousing";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -37,6 +38,9 @@ function App() {
           </section>
           <section>
             <WeServe />
+          </section>
+          <section>
+            <Warehousing />
           </section>
         </>
       )}
