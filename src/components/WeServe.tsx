@@ -5,7 +5,7 @@ const WeServe = () => {
   const { title, left, right } = data[0];
 
   return (
-    <section className="h-screen bg-white flex flex-col items-center justify-center px-4 md:px-12">
+    <section className=" md:h-screen bg-white flex flex-col items-center justify-center px-4 md:px-12">
       {/* Título */}
       <motion.h2
         initial={{ opacity: 0, y: -30 }}
