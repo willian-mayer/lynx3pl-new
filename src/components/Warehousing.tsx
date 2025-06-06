@@ -20,7 +20,7 @@ export default function Warehousing() {
       </div>
 
       {/* Lista de ítems */}
-      <div className="w-full mx-auto space-y-6 mt-6 px-2 lg:h-[60%]">
+      <div className="w-full mx-auto space-y-6 mt-6 px-10 lg:h-[60%] ">
         {items.map((item, index) => (
           <div key={index} className="text-center md:text-left">
             <h3 className="text-xl md:text-2xl font-semibold text-black mb-1">

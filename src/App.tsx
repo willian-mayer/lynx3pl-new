@@ -10,6 +10,7 @@ import Strengths from "./components/Strengths";
 import Gallery from "./components/Gallery";
 import WeServe from "./components/WeServe";
 import Warehousing from "./components/Warehousing";
+import Fulfillment from "./components/Fulfillment";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -41,6 +42,9 @@ function App() {
           </section>
           <section>
             <Warehousing />
+          </section>
+          <section>
+            <Fulfillment />
           </section>
         </>
       )}
