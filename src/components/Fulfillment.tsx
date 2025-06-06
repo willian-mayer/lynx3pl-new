@@ -6,7 +6,7 @@ export default function Fulfillment() {
   const stepSection = steps[0];
 
   return (
-    <section className="bg-white px-4 md:px-10 py-10 lg:h-screen flex flex-col">
+    <section className="bg-white px-4 md:px-10 py-10 flex flex-col">
       {/* Title & Desc */}
       <div className="text-center max-w-4xl mx-auto mb-10">
         <motion.h2

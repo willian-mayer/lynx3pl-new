@@ -11,6 +11,7 @@ import Gallery from "./components/Gallery";
 import WeServe from "./components/WeServe";
 import Warehousing from "./components/Warehousing";
 import Fulfillment from "./components/Fulfillment";
+import Transloading from "./components/Transloading";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -45,6 +46,9 @@ function App() {
           </section>
           <section>
             <Fulfillment />
+          </section>
+          <section>
+            <Transloading />
           </section>
         </>
       )}
