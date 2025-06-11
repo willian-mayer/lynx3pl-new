@@ -1,0 +1,38 @@
+{
+    "title": "Partners",
+    "years": [
+        {
+            "year": 35,
+            "desc": "years of warehouse management and logistics experiences"
+        }
+    ],
+    "partners": [
+        {
+            "partnersUrl": "/partners/1.jpg"
+        },
+        {
+            "partnersUrl": "/partners/2.jpg"
+        },
+        {
+            "partnersUrl": "/partners/3.jpg"
+        },
+        {
+            "partnersUrl": "/partners/4.jpg"
+        },
+        {
+            "partnersUrl": "/partners/5.jpg"
+        },
+        {
+            "partnersUrl": "/partners/6.jpg"
+        },
+        {
+            "partnersUrl": "/partners/7.jpg"
+        },
+        {
+            "partnersUrl": "/partners/8.jpg"
+        },
+        {
+            "partnersUrl": "/partners/9.jpg"
+        }
+    ]
+}

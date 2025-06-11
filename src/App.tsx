@@ -13,6 +13,8 @@ import Warehousing from "./components/Warehousing";
 import Fulfillment from "./components/Fulfillment";
 import Transloading from "./components/Transloading";
 import Reviews from "./components/Reviews";
+import Hall from "./components/Hall";
+import Partners from "./components/Partners";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -53,6 +55,12 @@ function App() {
           </section>
           <section>
             <Reviews /> 
+          </section>
+          <section>
+            <Hall />
+          </section>
+          <section>
+            <Partners />
           </section>
         </>
       )}
