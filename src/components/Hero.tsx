@@ -7,48 +7,57 @@ export default function Hero() {
   const { title, description, rating, contact } = heroData;
 
   return (
-    <section className="min-h-screen flex flex-col bg-white px-6 pt-12 pb-12">
-      {/* Título y descripción centrados */}
-      <div className="flex-1 flex flex-col items-center justify-center text-center">
-        <motion.h1
-          className="font-bold text-gray-900 mb-4 text-5xl sm:text-[40px] md:text-[60px] lg:text-[80px] xl:text-[100px] leading-tight"
+    <section className="min-h-screen grid grid-cols-1 md:grid-cols-3 bg-white px-4 sm:px-6 lg:px-8 py-12">
+      {/* Espacio izquierdo */}
+      <div className="hidden md:block" />
+
+      {/* Contenido principal */}
+      <div className="flex flex-col justify-center items-start text-left gap-8 w-full max-w-2xl mx-auto">
+        {/* Título y descripción */}
+        <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+          className="space-y-4"
         >
-          {title}
-        </motion.h1>
+          <h1 className="font-bold text-gray-900 text-3xl sm:text-4xl md:text-5xl leading-tight">
+            {title}
+          </h1>
+          <p className="font-bold text-gray-900 text-3xl sm:text-4xl md:text-5xl leading-tight">
+            {description}
+          </p>
+        </motion.div>
 
-        <motion.p
-          className="text-gray-700 text-[20px] sm:text-[28px] md:text-[40px] lg:text-[52px] xl:text-[64px] leading-snug"
-          initial={{ opacity: 0, y: -20 }}
+        {/* Reseña + botón en fila */}
+        <motion.div
+          className="flex flex-col sm:flex-row items-start sm:items-center gap-4"
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          {description}
-        </motion.p>
+          {/* Review más pequeño */}
+          <div className="bg-gray-100 rounded-lg p-4 shadow-sm text-left w-full sm:w-auto max-w-sm">
+            <div className="flex items-center gap-1 mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} size={14} className="text-yellow-500 fill-yellow-500" />
+              ))}
+            </div>
+            <p className="italic text-sm text-gray-600 leading-snug">"{rating.quote}"</p>
+            <p className="mt-1 text-xs font-semibold text-gray-900">— {rating.author}</p>
+          </div>
+
+          {/* Botón grande */}
+          <a
+            href={contact.url}
+            className="bg-black text-white px-8 py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-gray-800 transition"
+          >
+            {contact.title}
+          </a>
+        </motion.div>
       </div>
 
-      <motion.div
-        className="w-full max-w-4xl flex flex-col lg:flex-row items-center lg:justify-between gap-6 mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-      >
-        <div className="bg-gray-100 rounded-xl p-6 shadow-md w-full lg:w-auto text-center lg:text-left">
-          <div className="flex justify-center lg:justify-start mb-2">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={20} className="text-yellow-500 fill-yellow-500" />
-            ))}
-          </div>
-          <p className="italic text-gray-600">"{rating.quote}"</p>
-          <p className="mt-2 text-sm font-semibold text-gray-900">— {rating.author}</p>
-        </div>
-
-        <button className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition whitespace-nowrap">
-          {contact.title}
-        </button>
-      </motion.div>
+      {/* Espacio derecho */}
+      <div className="hidden md:block" />
     </section>
   );
 }
