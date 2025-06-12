@@ -15,6 +15,8 @@ import Transloading from "./components/Transloading";
 import Reviews from "./components/Reviews";
 import Hall from "./components/Hall";
 import Partners from "./components/Partners";
+import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -61,6 +63,12 @@ function App() {
           </section>
           <section>
             <Partners />
+          </section>
+          <section>
+            <Form />
+          </section>
+          <section>
+            <Footer />
           </section>
         </>
       )}
