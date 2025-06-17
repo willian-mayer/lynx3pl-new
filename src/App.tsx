@@ -27,49 +27,49 @@ function App() {
 
       {!showEntrance && (
         <>
-          {/* Navbar fijo global */}
           <Navbar title="Lynx3PL" routes={routes} />
 
-          {/* Secciones de contenido */}
-          <section>
-            <Hero />
-          </section>
-          <section>
-            <Services />
-          </section>
-          <section>
-            <Strengths />
-          </section>
-          <section>
-            <Gallery />
-          </section>
-          <section>
-            <WeServe />
-          </section>
-          <section>
-            <Warehousing />
-          </section>
-          <section>
-            <Fulfillment />
-          </section>
-          <section>
-            <Transloading />
-          </section>
-          <section>
-            <Reviews /> 
-          </section>
-          <section>
-            <Hall />
-          </section>
-          <section>
-            <Partners />
-          </section>
-          <section>
-            <Form />
-          </section>
-          <section>
-            <Footer />
-          </section>
+          <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth">
+            <section className="h-screen snap-start">
+              <Hero />
+            </section>
+            <section className="h-screen snap-start">
+              <Services />
+            </section>
+            <section className="h-screen snap-start">
+              <Strengths />
+            </section>
+            <section className="h-screen snap-start">
+              <Gallery />
+            </section>
+            <section className="h-screen snap-start">
+              <WeServe />
+            </section>
+            <section className="h-screen snap-start">
+              <Warehousing />
+            </section>
+            <section className="h-screen snap-start">
+              <Fulfillment />
+            </section>
+            <section className="h-screen snap-start">
+              <Transloading />
+            </section>
+            <section className="h-screen snap-start">
+              <Reviews />
+            </section>
+            <section className="h-screen snap-start">
+              <Hall />
+            </section>
+            <section className="h-screen snap-start">
+              <Partners />
+            </section>
+            <section className="h-screen snap-start">
+              <Form />
+            </section>
+            <section className="h-screen snap-start">
+              <Footer />
+            </section>
+          </div>
         </>
       )}
     </>
