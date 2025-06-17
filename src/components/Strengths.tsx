@@ -1,26 +1,41 @@
+import { motion } from "framer-motion";
 import strengthsData from "../data/strengths.json";
- 
+
 export default function Strengths() {
   const { title, description } = strengthsData[0];
 
   return (
-    <section className="flex flex-col md:flex-row w-full min-h-screen bg-white">
+    <section className="flex flex-col lg:flex-row w-full min-h-screen bg-white justify-center lg:justify-normal">
       {/* Imagen izquierda */}
-      <div className="w-full md:w-1/2 flex items-center justify-center bg-gray-100 p-8">
+      <motion.div
+        initial={{ x: "-100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12"
+      >
         <img
           src="/logo-black.png"
           alt="Strengths Logo"
-          className="max-w-[300px] w-full h-auto object-contain"
+          className="max-w-[220px] w-full h-auto object-contain"
         />
-      </div>
+      </motion.div>
 
       {/* Texto derecha */}
-      <div className="w-full md:w-1/2 flex flex-col justify-center items-center text-center px-8 py-12 md:py-0">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{title}</h2>
-        <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl">
-          {description}
-        </p>
-      </div>
+      <motion.div
+        initial={{ x: "100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center p-6 md:p-12"
+      >
+        <div className="text-center lg:text-left max-w-md">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 uppercase">
+            {title}
+          </h2>
+          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+            {description}
+          </p>
+        </div>
+      </motion.div>
     </section>
   );
 }
