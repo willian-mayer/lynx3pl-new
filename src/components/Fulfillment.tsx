@@ -6,83 +6,90 @@ export default function Fulfillment() {
   const stepSection = steps[0];
 
   return (
-    <section className="bg-white px-4 md:px-10 py-10 flex flex-col">
-      {/* Title & Desc */}
-      <div className="text-center max-w-4xl mx-auto mb-10">
-        <motion.h2
-          className="text-3xl md:text-5xl font-bold mb-4"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          {title}
-        </motion.h2>
-        <motion.p
-          className="text-gray-700 text-base md:text-lg"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          {desc}
-        </motion.p>
-      </div>
-
-      {/* Main grid layout */}
-      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-12 lg:flex-1 pb-4">
-        {/* Steps Section */}
-        <div className="flex flex-col gap-6">
-          <motion.h3
-            className="text-xl md:text-2xl font-semibold text-black"
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
+    <section className="bg-white min-h-screen px-4 md:px-6 py-4 flex items-start justify-center">
+      <div className="w-full max-w-6xl h-full mx-auto flex flex-col">
+        {/* Title & Desc */}
+        <div className="text-center mb-4 px-2">
+          <motion.h2
+            className="text-2xl md:text-4xl font-bold leading-tight mb-2"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {stepSection.title}
-          </motion.h3>
-          <p className="text-gray-700 font-medium text-base md:text-lg">
-            {stepSection.brief}
-          </p>
+            {title}
+          </motion.h2>
+          <motion.p
+            className="text-gray-800 text-sm font-medium md:text-base leading-snug"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            {desc}
+          </motion.p>
+        </div>
 
-          <div className="">
-            {stepSection.step.map((s, i) => (
+        {/* Main content layout */}
+        <div className="flex flex-col lg:flex-row gap-6 flex-1 overflow-hidden px-2">
+          {/* Steps Section */}
+          <div className="flex flex-col flex-1">
+            <motion.h3
+              className="text-lg md:text-xl font-semibold text-black mb-1"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              {stepSection.title}
+            </motion.h3>
+
+            <p className="text-black text-xl font-medium mb-2">
+              {stepSection.brief}
+            </p>
+
+            <div className="space-y-1">
+              {stepSection.step.map((s, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 * i }}
+                >
+                  <h4 className="font-bold text-sm md:text-base text-black mb-1">
+                    {s.title}
+                    <span className="font-medium text-gray-900 text-xs md:text-sm">
+                      : {s.desc}
+                    </span>
+                  </h4>
+                </motion.div>
+              ))}
+            </div>
+
+            <div className="w-full h-48 md:h-60 lg:h-72 mt-2 rounded-xl overflow-hidden">
+              <img
+                src={stepSection.imageUrl}
+                alt="Fulfillment"
+                className="w-full h-full object-fill"
+              />
+            </div>
+          </div>
+
+          {/* Benefits Section */}
+          <div className="flex-1 space-y-2 overflow-hidden">
+            {benefits.map((b, i) => (
               <motion.div
                 key={i}
-                className=""
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 * i }}
               >
-                <h4 className="font-bold text-black mb-1">{s.title} <span className="font-normal text-sm text-gray-700">: {s.desc}</span></h4>
+                <h4 className="text-sm md:text-base font-bold">
+                  {b.title}
+                  <span className="text-xs md:text-sm text-gray-900 font-medium leading-tight">
+                    : {b.desc.trim()}
+                  </span>
+                </h4>
               </motion.div>
             ))}
           </div>
-
-<img
-  src={stepSection.imageUrl}
-  alt="Fulfillment"
-  className="w-full mt-4 rounded-xl shadow-lg object-cover max-h-[300px] lg:max-h-[250px]"
-/>
-
-        </div>
-
-        {/* Benefits Section */}
-        <div className="mt-10 lg:mt-0 space-y-6 overflow-y-auto">
-          {benefits.map((b, i) => (
-            <motion.div
-              key={i}
-              className=""
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 * i }}
-            >
-              <h4 className="text-lg font-bold mb-1">
-                {b.title}
-                <span className=" text-sm text-gray-700 font-normal leading-relaxed">
-                  : {b.desc.trim()}
-                </span>
-              </h4>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>
