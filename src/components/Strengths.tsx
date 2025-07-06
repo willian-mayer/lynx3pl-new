@@ -31,9 +31,10 @@ export default function Strengths() {
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 uppercase">
             {title}
           </h2>
-          <ul className="space-y-4 text-base md:text-lg lg:text-lg text-black leading-relaxed font-medium">
+          <ul className="space-y-4 text-base md:text-lg lg:text- text-black leading-relaxed">
             {description.map((item, index) => (
-              <li key={index} className="relative">
+              <li key={index} className="relative pl-5">
+                <span className="absolute left-0  text-black font-bold">•</span>
                 {item.line}
               </li>
             ))}
