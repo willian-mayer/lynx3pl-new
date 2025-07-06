@@ -28,7 +28,7 @@ export default function Warehousing() {
 
                 <h3 className="text-base md:text-md font-semibold text-black">
                   • {item.title}: {" "}
-                  <span className="text-gray-700 font-normal text-md leading-snug">
+                  <span className="text-gray-900 font-normal text-md leading-snug">
                     {item.desc}
                   </span>
                 </h3>
