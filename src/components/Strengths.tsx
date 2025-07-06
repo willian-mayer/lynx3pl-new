@@ -5,7 +5,7 @@ export default function Strengths() {
   const { title, description } = strengthsData[0];
 
   return (
-    <section className="flex flex-col lg:flex-row w-full min-h-screen bg-white justify-center lg:justify-normal">
+    <section className="flex flex-col lg:flex-row w-full min-h-screen bg-white justify-center lg:justify-normal px-5 py-12">
       {/* Imagen izquierda */}
       <motion.div
         initial={{ x: "-100%", opacity: 0 }}
@@ -16,7 +16,7 @@ export default function Strengths() {
         <img
           src="/logo-black.png"
           alt="Strengths Logo"
-          className="max-w-[220px] w-full h-auto object-contain"
+          className="max-w-[280px] w-full h-auto object-contain"
         />
       </motion.div>
 
@@ -27,13 +27,17 @@ export default function Strengths() {
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center p-6 md:p-12"
       >
-        <div className="text-center lg:text-left max-w-md">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4 uppercase">
+        <div className="text-center lg:text-left max-w-xl">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 uppercase">
             {title}
           </h2>
-          <p className="text-sm md:text-base text-gray-700 leading-relaxed">
-            {description}
-          </p>
+          <ul className="space-y-4 text-base md:text-lg lg:text-lg text-black leading-relaxed font-medium">
+            {description.map((item, index) => (
+              <li key={index} className="relative">
+                {item.line}
+              </li>
+            ))}
+          </ul>
         </div>
       </motion.div>
     </section>
