@@ -11,7 +11,7 @@ import Gallery from "./components/Gallery";
 import WeServe from "./components/WeServe";
 import Warehousing from "./components/Warehousing";
 import Fulfillment from "./components/Fulfillment";
-import Transloading from "./components/Transloading";
+// import Transloading from "./components/Transloading";
 import Reviews from "./components/Reviews";
 import Hall from "./components/Hall";
 import Partners from "./components/Partners";
