@@ -6,12 +6,12 @@ export default function Fulfillment() {
   const stepSection = steps[0];
 
   return (
-    <section className="bg-white min-h-screen px-4 md:px-6 py-4 flex items-start justify-center">
-      <div className="w-full max-w-6xl h-full mx-auto flex flex-col">
+    <section className="bg-white h-screen px-4 md:px-6 py-6 flex items-start justify-center">
+      <div className="w-full max-w-6xl h-full mx-auto flex flex-col mb-12 pt-2">
         {/* Title & Desc */}
-        <div className="text-center mb-4 px-2">
+        <div className="text-center mb-6 px-2">
           <motion.h2
-            className="text-2xl md:text-4xl font-bold leading-tight mb-2"
+            className="text-2xl md:text-4xl font-bold leading-tight mb-3"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -19,7 +19,7 @@ export default function Fulfillment() {
             {title}
           </motion.h2>
           <motion.p
-            className="text-gray-800 text-sm font-medium md:text-base leading-snug"
+            className="text-gray-800 text-sm md:text-base font-medium leading-snug"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -29,11 +29,11 @@ export default function Fulfillment() {
         </div>
 
         {/* Main content layout */}
-        <div className="flex flex-col lg:flex-row gap-6 flex-1 overflow-hidden px-2">
+        <div className="flex flex-col lg:flex-row gap-6 flex-1 px-2 overflow-visible">
           {/* Steps Section */}
           <div className="flex flex-col flex-1">
             <motion.h3
-              className="text-lg md:text-xl font-semibold text-black mb-1"
+              className="text-lg md:text-xl font-semibold text-black mb-2"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -41,11 +41,11 @@ export default function Fulfillment() {
               {stepSection.title}
             </motion.h3>
 
-            <p className="text-black text-xl font-medium mb-2">
+            <p className="text-black text-xl font-medium mb-3">
               {stepSection.brief}
             </p>
 
-            <div className="space-y-1">
+            <div className="space-y-2">
               {stepSection.step.map((s, i) => (
                 <motion.div
                   key={i}
@@ -63,17 +63,18 @@ export default function Fulfillment() {
               ))}
             </div>
 
-            <div className="w-full h-48 md:h-60 lg:h-72 mt-2 rounded-xl overflow-hidden">
+            {/* Imagen con altura ajustada para evitar scroll */}
+            <div className="w-full h-36 md:h-44 lg:h-52 mt-4 rounded-xl overflow-hidden">
               <img
                 src={stepSection.imageUrl}
                 alt="Fulfillment"
-                className="w-full h-full object-fill"
+                className="w-full h-full object-top"
               />
             </div>
           </div>
 
           {/* Benefits Section */}
-          <div className="flex-1 space-y-2 overflow-hidden">
+          <div className="flex-1 space-y-3">
             {benefits.map((b, i) => (
               <motion.div
                 key={i}
