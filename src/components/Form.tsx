@@ -83,7 +83,7 @@ export default function Form() {
             <h2 className="text-3xl font-bold">I'm interested in</h2>
             <div className="grid grid-cols-2 gap-3">
               {interests.map((interest, idx) => (
-                <label key={idx} className="text-sm flex items-center gap-2">
+                <label key={idx} className="text-sm font-semibold flex items-center gap-2">
                   <input
                     type="checkbox"
                     value={interest}

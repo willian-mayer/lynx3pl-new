@@ -53,9 +53,9 @@ export default function Fulfillment() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.2 * i }}
                 >
-                  <h4 className="font-bold text-sm md:text-base text-black mb-1">
+                  <h4 className="font-bold text-sm md:text-lg text-black mb-1">
                     {s.title}
-                    <span className="font-medium text-gray-900 text-xs md:text-sm">
+                    <span className="font-medium text-gray-900 text-xs md:text-lg">
                       : {s.desc}
                     </span>
                   </h4>
@@ -82,9 +82,9 @@ export default function Fulfillment() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 * i }}
               >
-                <h4 className="text-sm md:text-base font-bold">
+                <h4 className="text-sm md:text-lg font-bold">
                   {b.title}
-                  <span className="text-xs md:text-sm text-gray-900 font-medium leading-tight">
+                  <span className="text-xs md:text-lg text-gray-900 font-medium leading-tight">
                     : {b.desc.trim()}
                   </span>
                 </h4>
