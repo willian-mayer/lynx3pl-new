@@ -33,7 +33,7 @@ export default function Fulfillment() {
           {/* Steps Section */}
           <div className="flex flex-col flex-1">
             <motion.h3
-              className="text-lg md:text-xl font-semibold text-black mb-2"
+              className="text-lg md:text-xl font-medium text-black mb-2"
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
@@ -55,7 +55,7 @@ export default function Fulfillment() {
                 >
                   <h4 className="font-bold text-sm md:text-lg text-black mb-1">
                     {s.title}
-                    <span className="font-medium text-gray-900 text-xs md:text-lg">
+                    <span className="font-normal text-black text-xs md:text-lg">
                       : {s.desc}
                     </span>
                   </h4>
@@ -84,7 +84,7 @@ export default function Fulfillment() {
               >
                 <h4 className="text-sm md:text-lg font-bold">
                   {b.title}
-                  <span className="text-xs md:text-lg text-gray-900 font-medium leading-tight">
+                  <span className="text-xs md:text-lg text-black font-normal leading-tight">
                     : {b.desc.trim()}
                   </span>
                 </h4>
