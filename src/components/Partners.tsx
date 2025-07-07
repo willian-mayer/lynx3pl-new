@@ -23,17 +23,17 @@ export default function Partners() {
 
   return (
     <section className="bg-white px-4 md:px-10 py-10 h-screen flex items-center">
-      <div className="w-full max-w-2xl mx-auto h-full grid grid-rows-4 grid-cols-2 gap-6">
+      <div className="w-full max-w-3xl mx-auto h-full grid grid-rows-5 grid-cols-2 gap-6">
         
         {/* Title (rows 1-2, col 1) */}
-        <div className="row-span-2 flex items-center justify-center">
+        <div className="row-span-3 flex items-center justify-center">
           <h2 className="text-4xl md:text-5xl font-bold text-green-800">
             {title}
           </h2>
         </div>
 
         {/* Years Experience (rows 1-2, col 2) */}
-        <div className="row-span-2 flex items-center justify-start">
+        <div className="row-span-3 flex items-center justify-start">
           <div className="bg-black h-full text-white p-6 rounded-xl flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
