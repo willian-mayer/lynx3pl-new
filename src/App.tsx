@@ -51,9 +51,9 @@ function App() {
             <section className="h-screen snap-start">
               <Fulfillment />
             </section>
-            <section className="h-screen snap-start">
+            {/* <section className="h-screen snap-start">
               <Transloading />
-            </section>
+            </section> */}
             <section className="h-screen snap-start">
               <Reviews />
             </section>
