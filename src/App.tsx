@@ -18,6 +18,7 @@ import Partners from "./components/Partners";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Box from "./components/Box";
+import WatchUs from "./components/WatchUs";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -36,6 +37,9 @@ function App() {
             </section>
             <section className="h-screen snap-start">
               <Services />
+            </section>
+            <section className="h-screen snap-start">
+              <WatchUs />
             </section>
             <section className="h-screen snap-start">
               <Strengths />
