@@ -17,6 +17,7 @@ import Hall from "./components/Hall";
 import Partners from "./components/Partners";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
+import Box from "./components/Box";
 
 function App() {
   const [showEntrance, setShowEntrance] = useState(true);
@@ -65,6 +66,9 @@ function App() {
             </section>
             <section className="h-screen snap-start">
               <Form />
+            </section>
+            <section className="h-screen snap-start">
+              <Box />
             </section>
             <section className="h-screen snap-start">
               <Footer />
