@@ -24,7 +24,7 @@ export default function Box() {
         transition={{ duration: 1.2, delay: 0.6, ease: "easeOut" }}
         className="relative z-10 text-center px-4"
       >
-        <h2 className="text-3xl md:text-5xl font-bold text-black max-w-3xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold text-black max-w-3xl mx-auto">
           Our box is open, <br />
           we welcome businesses of all sizes to connect with us!
         </h2>

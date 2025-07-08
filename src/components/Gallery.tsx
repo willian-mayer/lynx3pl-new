@@ -1,64 +1,92 @@
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import galleryData from "../data/gallery.json";
 
 export default function Gallery() {
   const { desc, images } = galleryData[0];
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1 },
+  };
 
   return (
-    <section className="bg-white h-screen flex items-center justify-center px-4 py-6">
+    <section
+      ref={ref}
+      className="bg-white h-screen flex items-center justify-center px-4 py-6"
+    >
       <div className="w-full max-w-6xl h-full flex flex-col justify-center mb-12 pt-2">
-        {/* Pantallas grandes: grid 3x3 */}
-        <div className="hidden lg:grid grid-cols-3 grid-rows-3 gap-4 h-full px-6">
-          {/* Columna 1: imágenes 1, 2, 3 */}
-          <img
-            src={images[0].imgUrl}
-            alt="Gallery 1"
-            className="w-full h-full object-cover rounded-xl row-start-1 col-start-1"
-          />
-          <img
-            src={images[1].imgUrl}
-            alt="Gallery 2"
-            className="w-full h-full object-cover rounded-xl row-start-2 col-start-1"
-          />
-          <img
-            src={images[2].imgUrl}
-            alt="Gallery 3"
-            className="w-full h-full object-cover rounded-xl row-start-3 col-start-1"
-          />
+        {/* Pantallas grandes */}
+        <motion.div
+          className="hidden lg:grid grid-cols-3 grid-rows-3 gap-4 h-full px-6"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={containerVariants}
+        >
+          {images.slice(0, 5).map((img, i) => (
+            <motion.img
+              key={i}
+              src={img.imgUrl}
+              alt={`Gallery ${i + 1}`}
+              className={`w-full h-full object-cover rounded-xl ${
+                i === 3
+                  ? "row-span-2 col-start-2 row-start-1"
+                  : i === 4
+                  ? "row-span-2 col-start-3 row-start-1"
+                  : `row-start-${i + 1} col-start-1`
+              }`}
+              variants={itemVariants}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+          ))}
 
-          {/* Columna 2-3: imágenes grandes */}
-          <img
-            src={images[3].imgUrl}
-            alt="Gallery 4"
-            className="w-full h-full object-cover rounded-xl row-span-2 col-start-2 row-start-1"
-          />
-          <img
-            src={images[4].imgUrl}
-            alt="Gallery 5"
-            className="w-full h-full object-cover rounded-xl row-span-2 col-start-3 row-start-1"
-          />
-
-          {/* Texto final */}
-          <div className="row-start-3 col-start-2 col-span-2 flex items-center justify-center p-4 bg-gray-800 rounded-xl text-center overflow-hidden h-full">
+          <motion.div
+            className="row-start-3 col-start-2 col-span-2 flex items-center justify-center p-4 bg-gray-800 rounded-xl text-center overflow-hidden h-full"
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             <p className="text-sm md:text-base font-medium text-white leading-tight">
               {desc}
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
-        {/* Pantallas pequeñas: stack vertical */}
-        <div className="lg:hidden min-h-screen overflow-y-auto flex flex-col items-center gap-4 px-4 py-6 hide-scrollbar">
+        {/* Pantallas pequeñas */}
+        <motion.div
+          className="lg:hidden min-h-screen overflow-y-auto flex flex-col items-center gap-4 px-4 py-6 hide-scrollbar"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={containerVariants}
+        >
           {images.map((img, index) => (
-            <img
+            <motion.img
               key={index}
               src={img.imgUrl}
               alt={`Gallery ${index + 1}`}
               className="w-full max-w-md object-cover rounded-xl"
+              variants={itemVariants}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             />
           ))}
-          <p className="text-center text-base font-medium text-gray-800 mt-4 px-2">
+          <motion.p
+            className="text-center text-base font-medium text-gray-800 mt-4 px-2"
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
             {desc}
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );

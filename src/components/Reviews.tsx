@@ -1,28 +1,33 @@
-import data from "../data/reviews.json";
+import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import data from "../data/reviews.json";
 
 export default function Reviews() {
   const { main, reviews } = data;
   const mainReview = main[0];
 
-  const renderStars = (count: number) => {
-    return Array.from({ length: count }).map((_, i) => (
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
+
+  const renderStars = (count: number) =>
+    Array.from({ length: count }).map((_, i) => (
       <Star
         key={i}
         className="w-4 h-4 text-red-600 fill-red-600 inline-block mr-1"
       />
     ));
-  };
 
   return (
-    <section className="bg-white px-4 md:px-10 py-10 md:h-screen flex flex-col justify-start gap-6">
+    <section
+      ref={ref}
+      className="bg-white px-4 md:px-10 py-10 md:h-screen flex flex-col justify-start gap-6"
+    >
       <div className="w-full max-w-6xl mx-auto flex flex-col gap-6">
         {/* Main Review */}
         <motion.div
           className="flex flex-col justify-start items-center text-center"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
           <p className="text-black text-lg md:text-6xl font-bold mb-4">
@@ -43,7 +48,7 @@ export default function Reviews() {
                 key={i}
                 className="flex flex-col items-end"
                 initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.1 * i }}
               >
                 <div className="flex items-center justify-end text-end">

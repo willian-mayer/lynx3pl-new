@@ -1,35 +1,38 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 import services from "../data/services.json";
 
 export default function Services() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
+
   return (
-    <div className="snap-start flex items-center justify-center px-5 h-full">
+    <div ref={ref} className="snap-start flex items-center justify-center px-5 h-full">
       <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center gap-6 text-center">
-
         {/* Imagen hero */}
-<motion.div
-  initial={{ opacity: 0, y: 40 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
-  className="w-full h-[60vh] overflow-hidden rounded-lg shadow-md"
->
-  <img
-    src="/services/services.jpg"
-    alt="Services"
-    className="w-full h-full object-fill" // <--- Este es el cambio clave
-  />
-</motion.div>
-
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+          className="w-full h-[60vh] overflow-hidden rounded-lg shadow-md"
+        >
+          <img
+            src="/services/services.jpg"
+            alt="Services"
+            className="w-full h-full object-fill"
+          />
+        </motion.div>
 
         {/* Letras con animación escalonada */}
         <motion.div
           className="bg-white w-full flex flex-wrap justify-center items-end gap-7 py-4 px-4 z-10 relative rounded-lg"
           initial="hidden"
-          animate="visible"
+          animate={inView ? "visible" : "hidden"}
           variants={{
             hidden: {},
             visible: {
               transition: {
+                delayChildren: 0.8,
                 staggerChildren: 0.15,
               },
             },
@@ -49,14 +52,13 @@ export default function Services() {
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
               >
                 {service.title}
               </motion.a>
             );
           })}
         </motion.div>
-
       </div>
     </div>
   );

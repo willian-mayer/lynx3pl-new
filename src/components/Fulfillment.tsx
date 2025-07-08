@@ -1,19 +1,20 @@
-import data from "../data/fulfillment.json";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import data from "../data/fulfillment.json";
 
 export default function Fulfillment() {
   const { title, desc, steps, benefits } = data[0];
   const stepSection = steps[0];
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <section className="bg-white h-screen px-4 md:px-6 py-6 flex items-start justify-center">
+    <section ref={ref} className="bg-white h-screen px-4 md:px-6 py-6 flex items-start justify-center">
       <div className="w-full max-w-6xl h-full mx-auto flex flex-col mb-12 pt-2">
-        {/* Title & Desc */}
         <div className="text-center mb-6 px-2">
           <motion.h2
             className="text-2xl md:text-4xl font-bold leading-tight mb-3"
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
           >
             {title}
@@ -21,21 +22,20 @@ export default function Fulfillment() {
           <motion.p
             className="text-gray-800 text-sm md:text-base font-medium leading-snug"
             initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             {desc}
           </motion.p>
         </div>
 
-        {/* Main content layout */}
         <div className="flex flex-col lg:flex-row gap-6 flex-1 px-2 overflow-visible">
-          {/* Steps Section */}
+          {/* Steps */}
           <div className="flex flex-col flex-1">
             <motion.h3
               className="text-lg md:text-xl font-medium text-black mb-2"
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.5 }}
             >
               {stepSection.title}
@@ -50,7 +50,7 @@ export default function Fulfillment() {
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.2 * i }}
                 >
                   <h4 className="font-bold text-sm md:text-lg text-black mb-1">
@@ -63,7 +63,6 @@ export default function Fulfillment() {
               ))}
             </div>
 
-            {/* Imagen con altura ajustada para evitar scroll */}
             <div className="w-full h-36 md:h-44 lg:h-52 mt-4 rounded-xl overflow-hidden">
               <img
                 src={stepSection.imageUrl}
@@ -73,13 +72,13 @@ export default function Fulfillment() {
             </div>
           </div>
 
-          {/* Benefits Section */}
+          {/* Benefits */}
           <div className="flex-1 space-y-3">
             {benefits.map((b, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.2 * i }}
               >
                 <h4 className="text-sm md:text-lg font-bold">
