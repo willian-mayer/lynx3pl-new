@@ -35,7 +35,7 @@ function App() {
             <section className="h-screen snap-start">
               <Hero />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="services">
               <Services />
             </section>
             <section className="h-screen snap-start">
@@ -59,7 +59,7 @@ function App() {
             <section className="h-screen snap-start">
               <Transloading />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="reviews">
               <Reviews />
             </section>
             <section className="h-screen snap-start">
@@ -68,7 +68,7 @@ function App() {
             <section className="h-screen snap-start">
               <Partners />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="form">
               <Form />
             </section>
             <section className="h-screen snap-start">

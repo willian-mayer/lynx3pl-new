@@ -12,15 +12,15 @@ export default function Navbar({ title, routes }: NavbarProps) {
 
   return (
     <nav className="bg-white sticky top-0 left-0 right-0 z-50 px-2">
-      <div className="max-w-7xl mx-auto flex items-center justify-between sm:mx-8 md:mx-24 lg:mx-48 xl:mx-72">
+<div className="max-w-6xl mx-auto w-full flex items-center justify-between px-6">
         {/* Logo / Título */}
         <a href="/" className="cursor-pointer">
           <img
             src="/logo-black.png"
             alt={title}
-            width={10}
-            height={10}
-            className="h-10 w-auto py-2"
+            width={20}
+            height={20}
+            className="h-12 w-auto py-2"
           />
         </a>
 

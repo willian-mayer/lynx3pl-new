@@ -34,7 +34,7 @@ export default function Form() {
   };
 
   return (
-    <section className="px-4 py-6 md:px-6">
+    <section className="px-4 py-6 md:px-6 pt-12">
       <div className="max-w-6xl mx-auto grid gap-6">
         {/* FORMULARIO */}
         <form
@@ -122,7 +122,7 @@ export default function Form() {
           {/* Mapa */}
           <div>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.99225188882!2d-84.965537!3d34.755787999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88600b7ac7c171ad%3A0x7adaa70446346069!2sLynx3PL%20Inc!5e0!3m2!1spt-BR!2sbr!4v1749732230049!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.99225188882!2d-84.965537!3d34.755787999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88600b7ac7c171ad%3A0x7adaa70446346069!2sLynx3PL%20Inc!5e0!3m2!1spt-BR!2sbr!4v1749732230049!5m2!1sen!2sus"
               width="100%"
               height="200"
               style={{ border: 0 }}

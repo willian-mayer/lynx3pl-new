@@ -4,23 +4,11 @@
     "path": "#services"
   },
   {
-    "name": "Warehousing",
-    "path": "#warehousing"
-  },
-  {
-    "name": "Fulfillment",
-    "path": "#fulfillment"
-  },
-  {
-    "name": "Transloading",
-    "path": "#transloading"
-  },
-  {
-    "name": "About Us",
-    "path": "#about-us"
+    "name": "Reviews",
+    "path": "#reviews"
   },
   {
     "name": "Contact Us",
-    "path": "#contact"
+    "path": "#form"
   }
 ]

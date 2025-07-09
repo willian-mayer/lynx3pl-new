@@ -20,7 +20,7 @@ export default function Reviews() {
   return (
     <section
       ref={ref}
-      className="bg-white px-4 md:px-10 py-10 md:h-screen flex flex-col justify-start gap-6"
+      className="bg-white px-4 md:px-10 py-10 md:h-screen flex flex-col justify-start gap-6 pt-10"
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col gap-6">
         {/* Main Review */}
