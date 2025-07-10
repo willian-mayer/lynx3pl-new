@@ -46,7 +46,7 @@ export default function Services() {
                 key={index}
                 href={service.route}
                 className={`font-medium text-gray-900 transition-transform duration-300 hover:scale-125 ${
-                  isFulfillment ? "text-3xl" : "text-xl"
+                  isFulfillment ? "text-5xl" : "text-3xl"
                 }`}
                 variants={{
                   hidden: { opacity: 0, y: 20 },

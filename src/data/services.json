@@ -1,14 +1,14 @@
 [
     {
-        "title": "Warehousing",
+        "title": "warehousing",
         "route": "#warehousing"
     },
         {
-        "title": "Fulfillment",
+        "title": "fulfillment",
         "route": "#fulfillment"
     },
         {
-        "title": "Transloading",
+        "title": "transloading",
         "route": "#transloading"
     }
 ]
