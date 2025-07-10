@@ -15,11 +15,13 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
           className="space-y-4 text-left"
         >
-          <h1 className="font-semibold text-gray-900 text-3xl sm:text-4xl md:text-7xl leading-tight">
-            <span>Reliable fulfillment</span><br />
-            <span>center,</span><br />
-            <span>B2B, FBA, FBM, and more!</span>
-          </h1>
+<h1
+  className="text-3xl sm:text-4xl md:text-7xl leading-tight font-bold text-gray-900"
+  style={{ fontFamily: "Times New Roman, Times, serif" }}
+>
+  <span className="text-[1.2em]">Reliable fulfillment center,</span><br />
+  <span>B2B, FBA, FBM, and more.</span>
+</h1>
         </motion.div>
 
         {/* Reseña + botón */}
@@ -30,10 +32,10 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           {/* Review */}
-          <div className="bg-gray-100 rounded-lg p-4 shadow-sm text-left w-full sm:w-auto max-w-sm">
+          <div className="bg-gray-200 border-2 border-lime-500 p-4 shadow-sm text-left w-full sm:w-auto max-w-sm">
             <div className="flex items-center gap-1 mb-2">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={14} className="text-yellow-500 fill-yellow-500" />
+                <Star key={i} size={14} className="text-red-500 fill-red-500" />
               ))}
             </div>
             <p className="italic text-sm text-gray-600 leading-snug">"{rating.quote}" <span className="mt-1 text-xs font-semibold text-gray-900">— {rating.author}</span></p>
@@ -42,7 +44,7 @@ export default function Hero() {
           {/* Botón expandible */}
           <a
             href={contact.url}
-            className="bg-black text-white px-8 py-4 rounded-full text-base sm:text-lg font-semibold hover:bg-gray-800 transition flex-1 text-center"
+            className="bg-gray-200 text-black border-2 border-lime-500 px-8 py-[23px] text-base sm:text-lg hover:bg-gray-300 font-bold transition flex-1 text-end"
           >
             {contact.title}
           </a>
