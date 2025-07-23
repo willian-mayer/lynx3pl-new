@@ -99,7 +99,7 @@ export default function WatchUs() {
           <div className="relative w-full max-w-4xl aspect-video">
             <iframe
               className="w-full h-full rounded-lg"
-              src="/watchus/video.mp4"
+              src="/watchus/Lynx3PL.mp4"
               title="Watch Us Video"
               allow="autoplay; encrypted-media"
               allowFullScreen
