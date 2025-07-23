@@ -67,7 +67,7 @@ export default function Fulfillment() {
               <img
                 src={stepSection.imageUrl}
                 alt="Fulfillment"
-                className="w-full h-full object-top"
+                className="w-full h-full object-cover object-top"
               />
             </div>
           </div>

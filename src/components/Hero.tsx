@@ -43,7 +43,7 @@ export default function Hero() {
 
           {/* Botón expandible */}
           <a
-            href={contact.url}
+            href="#form"
             className="bg-gray-200 text-black border-2 border-lime-500 px-8 py-[23px] text-base sm:text-lg hover:bg-gray-300 font-bold transition flex-1 text-end"
           >
             {contact.title}

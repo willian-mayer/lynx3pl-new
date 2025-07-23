@@ -24,7 +24,7 @@ export default function Gallery() {
   return (
     <section
       ref={ref}
-      className="bg-white h-screen flex items-center justify-center px-4 py-6"
+      className="bg-white h-screen flex items-center justify-center px-4 py-6 pb-10"
     >
       <div className="w-full max-w-6xl h-full flex flex-col justify-center mb-12 pt-2">
         {/* Pantallas grandes */}
