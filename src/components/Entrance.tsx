@@ -1,20 +1,28 @@
 // src/components/Entrance.tsx
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import entranceData from "../data/entrance.json";
 
-type EntranceProps = {
-  onFinish: () => void;
-};
+export default function Entrance() {
+  const [languages, setLanguages] = useState<{ language: string; short: string }[]>([]);
 
-export default function Entrance({ onFinish }: EntranceProps) {
+  useEffect(() => {
+    setLanguages(entranceData);
+  }, []);
+
   return (
-    <motion.div
-      className="h-screen bg-black flex justify-center items-center fixed top-0 left-0 w-full z-50"
-      initial={{ y: 0 }}
-      animate={{ y: "-100%" }} // solo se desliza hacia arriba
-      transition={{ duration: 1.5, delay: 2 }}
-      onAnimationComplete={onFinish}
-    >
-      <img src="/logo.png" alt="logo" className="h-32 w-auto rotate-270" />
-    </motion.div>
+    <div className="h-screen bg-black flex items-center justify-center relative w-screen">
+      {/* Logo en el centro */}
+      <img src="/logo-entrance.png" alt="logo" className="h-128 w-auto" />
+
+      {/* Idiomas en la esquina superior derecha, en vertical */}
+      <div className="absolute top-4 right-4 flex flex-col items-enter space-y-2 text-white">
+        {languages.map((lang) => (
+          <div key={lang.short} className="flex items-center space-x-2 hover:underline cursor-pointer">
+            <img src="/item.png" alt="icon" className="h-4 w-auto" />
+            <span className="text-sm font-medium">{lang.short}</span>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }

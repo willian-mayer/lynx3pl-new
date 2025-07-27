@@ -1,9 +1,9 @@
-html,
-body {
+html, body, #root {
   margin: 0;
   padding: 0;
-  height: 100%;
-  overflow: hidden; /* 🔑 evita scroll en el body */
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .hide-scrollbar {
