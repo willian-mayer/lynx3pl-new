@@ -30,7 +30,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
             <a
               key={route.path}
               href={route.path}
-              className="text-xs sm:text-sm md:text-base font-bold text-black hover:text-blue-600 transition-colors"
+              className="text-xs sm:text-sm md:text-base font-bold text-black hover:text-blue-600 transition-colors exo-2"
             >
               {route.name}
             </a>
@@ -60,7 +60,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
             <a
               key={route.path}
               href={route.path}
-              className="text-black font-bold hover:text-blue-600"
+              className="text-black font-bold hover:text-blue-600 exo-2"
               onClick={() => setIsOpen(false)}
             >
               {route.name}

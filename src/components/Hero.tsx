@@ -17,7 +17,7 @@ export default function Hero() {
       </div>
 
       {/* Contenido central (el h1) */}
-      <div className="flex-1 flex items-center justify-center px-4">
+      <div className="flex-1 flex items-center justify-center px-4 ">
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -25,9 +25,9 @@ export default function Hero() {
           className="text-xl sm:text-xl md:text-5xl leading-tight font-bold text-gray-900 text-center"
           style={{ fontFamily: "Times New Roman, Times, serif" }}
         >
-          <span className="text-[2em] md:text-[1.1em]">Reliable fulfillment center,</span>
+          <span className="text-[2em] md:text-[1.1em] exo-2">Reliable fulfillment center,</span>
           <br />
-          <span className="text-[2em] md:text-[1em]">B2B, FBA, FBM, and more.</span>
+          <span className="text-[2em] md:text-[1em] exo-2">B2B, FBA, FBM, and more.</span>
         </motion.h1>
       </div>
 
@@ -45,7 +45,7 @@ export default function Hero() {
         <Star key={i} size={12} className="text-red-700 fill-red-700 sm:size-[14px]" />
       ))}
     </div>
-    <p className=" text-black leading-snug text-center whitespace-nowrap">
+    <p className=" text-black leading-snug text-center whitespace-nowrap exo-2">
       Client's reviews
     </p>
   </div>
@@ -53,7 +53,7 @@ export default function Hero() {
   {/* Botón */}
   <a
     href="#form"
-    className="bg-black text-white border-2 border-lime-500 px-4 sm:px-8 py-4 text-xs sm:text-sm hover:bg-gray-900 font-bold transition flex items-end justify-center rounded-full h-auto whitespace-nowrap flex-shrink"
+    className="bg-black text-white border-2 border-lime-500 px-4 sm:px-8 py-4 text-xs sm:text-sm hover:bg-gray-900 font-bold transition flex items-end justify-center rounded-full h-auto whitespace-nowrap flex-shrink exo-2"
   >
     {contact.title}
   </a>
