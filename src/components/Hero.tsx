@@ -7,7 +7,7 @@ import routes from "../data/routes.json";
 import Navbar from "./Navbar";
 
 export default function Hero() {
-  const { rating, contact } = heroData;
+  const { contact } = heroData;
 
   return (
     <section className="h-screen overflow-hidden bg-white flex flex-col justify-between p-4 sm:p-10">
