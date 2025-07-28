@@ -1,14 +1,18 @@
 [
   {
+    "name": "Why Us",
+    "path": "#why-us"
+  },
+  {
     "name": "Services",
     "path": "#services"
   },
   {
-    "name": "Reviews",
-    "path": "#reviews"
+    "name": "How it works",
+    "path": "#how-it-works"
   },
   {
-    "name": "Contact Us",
-    "path": "#form"
+    "name":"Contact",
+    "path": "#contact"
   }
 ]

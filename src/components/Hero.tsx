@@ -45,7 +45,7 @@ export default function Hero() {
         <Star key={i} size={12} className="text-red-700 fill-red-700 sm:size-[14px]" />
       ))}
     </div>
-    <p className="italic text-black leading-snug text-center whitespace-nowrap">
+    <p className=" text-black leading-snug text-center whitespace-nowrap">
       Client's reviews
     </p>
   </div>

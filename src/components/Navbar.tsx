@@ -20,12 +20,12 @@ export default function Navbar({ title, routes }: NavbarProps) {
             alt={title}
             width={20}
             height={20}
-            className="h-12 w-auto"
+            className="h-6 md:h-10 lg:h-12 w-auto"
           />
         </a>
 
         {/* Menú escritorio (sm en adelante) */}
-        <div className="hidden sm:flex space-x-4 sm:space-x-6">
+        <div className="hidden sm:flex space-x-4 sm:space-x-4s">
           {routes.map((route) => (
             <a
               key={route.path}
