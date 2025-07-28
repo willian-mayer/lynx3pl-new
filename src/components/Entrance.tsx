@@ -12,7 +12,7 @@ export default function Entrance() {
   return (
     <div className="h-screen bg-black flex items-center justify-center relative w-screen">
       {/* Logo en el centro */}
-      <img src="/logo-entrance.png" alt="logo" className="h-[340px] lg:h-96 w-auto" />
+      <img src="/logo-entrance.png" alt="logo" className="h-[400px] lg:h-96 w-auto" />
 
       {/* Idiomas en la esquina superior derecha, en vertical */}
       <div className="absolute top-10 right-10 flex flex-col items-enter space-y-2 text-white">

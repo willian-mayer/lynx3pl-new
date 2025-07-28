@@ -10,7 +10,7 @@ export default function Hero() {
   const { rating, contact } = heroData;
 
   return (
-    <section className="h-screen overflow-hidden bg-white flex flex-col justify-between">
+    <section className="h-screen overflow-hidden bg-white flex flex-col justify-between p-4 sm:p-10">
       {/* Navbar */}
       <div className="w-full">
         <Navbar title="Your Company" routes={routes} />
@@ -22,45 +22,44 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-3xl sm:text-4xl md:text-7xl leading-tight font-bold text-gray-900 text-center"
+          className="text-xl sm:text-xl md:text-5xl leading-tight font-bold text-gray-900 text-center"
           style={{ fontFamily: "Times New Roman, Times, serif" }}
         >
-          <span className="text-[1.2em]">Reliable fulfillment center,</span>
+          <span className="text-[2em] md:text-[1.1em]">Reliable fulfillment center,</span>
           <br />
-          <span>B2B, FBA, FBM, and more.</span>
+          <span className="text-[2em] md:text-[1em]">B2B, FBA, FBM, and more.</span>
         </motion.h1>
       </div>
 
       {/* Parte inferior: review + botón */}
-      <motion.div
-        className="flex flex-col sm:flex-row items-stretch gap-4 px-4 pb-4 w-full max-w-6xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        {/* Review */}
-        <div className="bg-gray-200 border-2 border-lime-500 px-4 py-4 shadow-sm w-full sm:w-auto flex items-center gap-2 flex-wrap h-full">
-          <div className="flex items-center gap-1">
-            {[...Array(5)].map((_, i) => (
-              <Star key={i} size={14} className="text-red-500 fill-red-500" />
-            ))}
-          </div>
-          <p className="italic text-sm text-gray-600 leading-snug">
-            "{rating.quote}"{" "}
-            <span className="text-xs font-semibold text-gray-900">
-              — {rating.author}
-            </span>
-          </p>
-        </div>
+<motion.div
+  className="flex flex-row items-center justify-between flex-wrap gap-2 pb-4 w-full max-w-6xl mx-auto"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+>
+  {/* Review */}
+  <div className="bg-gray-200 border-2 border-lime-500 px-3 py-1 sm:px-4 sm:py-2 shadow-sm flex flex-col items-center justify-center gap-y-1 sm:gap-y-2 text-xs sm:text-sm flex-shrink">
+    <div className="flex items-center gap-[2px] sm:gap-1">
+      {[...Array(5)].map((_, i) => (
+        <Star key={i} size={12} className="text-red-700 fill-red-700 sm:size-[14px]" />
+      ))}
+    </div>
+    <p className="italic text-black leading-snug text-center whitespace-nowrap">
+      Client's reviews
+    </p>
+  </div>
 
-        {/* Botón */}
-        <a
-          href="#form"
-          className="bg-gray-200 text-black border-2 border-lime-500 px-8 py-4 text-base sm:text-lg hover:bg-gray-300 font-bold transition flex-1 text-end h-full flex items-center justify-end"
-        >
-          {contact.title}
-        </a>
-      </motion.div>
+  {/* Botón */}
+  <a
+    href="#form"
+    className="bg-black text-white border-2 border-lime-500 px-4 sm:px-8 py-4 text-xs sm:text-sm hover:bg-gray-900 font-bold transition flex items-end justify-center rounded-full h-auto whitespace-nowrap flex-shrink"
+  >
+    {contact.title}
+  </a>
+</motion.div>
+
+
     </section>
   );
 }
