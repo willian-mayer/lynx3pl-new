@@ -28,12 +28,13 @@ function App() {
           <section className="h-screen snap-start">
             <Entrance />
           </section>
-          <section className="h-screen snap-start">
-            <Hero />
-          </section>
           <section className="h-screen snap-start" id="services">
             <Services />
           </section>
+          <section className="h-screen snap-start">
+            <Hero />
+          </section>
+
           <section className="h-screen snap-start">
             <WatchUs />
           </section>

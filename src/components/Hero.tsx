@@ -23,7 +23,7 @@ export default function Hero() {
     text-black 
     font-black 
     text-left
-    text-[1.8em]        /* Tamaño por defecto (móvil) */
+    text-[2.4em]        /* Tamaño por defecto (móvil) */
     sm:text-[2.2em]     /* Pantallas sm un poco más grande */
     md:text-[2.8em]     /* Pantallas md como lo tienes ahora */
     leading-tight
@@ -31,6 +31,8 @@ export default function Hero() {
     max-w-5xl 
     mx-auto 
     exo-2
+    mt-20
+    md:mt-0
   "
   style={{ fontFamily: 'Times New Roman, Times, serif' }}
 >
@@ -86,7 +88,7 @@ export default function Hero() {
     text-white 
     border-1 
     px-4 py-1.5      /* Compacto en móvil */
-    text-xs          /* Tamaño por defecto */
+    text-md          /* Tamaño por defecto */
     sm:px-5 sm:py-2  /* Un poco más grande en sm */
     sm:text-sm
     md:text-base     /* Tamaño original en desktop */
