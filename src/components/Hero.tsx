@@ -70,7 +70,7 @@ export default function Hero() {
           pb-6 
           w-full 
           px-3
-          sm:px-0 
+          sm:px-10 
           md:pb-10
         "
         initial={{ opacity: 0, y: 20 }}

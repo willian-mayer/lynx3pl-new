@@ -18,7 +18,7 @@ import Partners from "./components/Partners";
 import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Box from "./components/Box";
-import WatchUs from "./components/WatchUs";
+// import WatchUs from "./components/WatchUs";
 import Navbar from "./components/Navbar";
 import routes from "./data/routes.json";
 function App() {
@@ -38,9 +38,9 @@ function App() {
               <Hero />
             </section>
 
-            <section className="h-screen snap-start">
+            {/* <section className="h-screen snap-start">
               <WatchUs />
-            </section>
+            </section> */}
             <section className="h-screen snap-start">
               <Strengths />
             </section>
