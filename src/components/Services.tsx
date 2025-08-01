@@ -9,20 +9,28 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="snap-start w-full bg-white min-h-screen flex flex-col items-center justify-center gap-8 px-2 sm:px-24" // mismo padding que navbar
+      className="snap-start w-full bg-white min-h-screen flex flex-col items-center justify-center gap-8 px-2 sm:px-24"
     >
-      {/* Imagen hero */}
+      {/* Imagen hero responsive con <picture> */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
         className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden shadow-md rounded-lg"
       >
-        <img
-          src="/services/services.jpg"
-          alt="Services"
-          className="w-full h-full object-cover"
-        />
+        <picture>
+          {/* Imagen para pantallas md en adelante */}
+          <source
+            srcSet="/services/service-md.png"
+            media="(min-width: 768px)"
+          />
+          {/* Imagen por defecto para móviles */}
+          <img
+            src="/services/service-xs.png"
+            alt="Services"
+            className="w-full h-full object-cover"
+          />
+        </picture>
       </motion.div>
 
       {/* Lista de servicios */}
@@ -55,7 +63,7 @@ export default function Services() {
               className="
                 font-semibold text-black 
                 transition-transform duration-300 hover:scale-110 
-                text-xl sm:text-lg md:text-2xl 
+                text-3xl sm:text-lg md:text-2xl 
                 py-2 sm:py-0
                 w-full sm:w-auto text-center
               "
