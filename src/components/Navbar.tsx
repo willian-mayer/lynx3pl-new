@@ -12,8 +12,8 @@ export default function Navbar({ title, routes }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white sticky top-0 left-0 right-0 z-50 w-full px-2 py-1">
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-2 sm:px-4">
+    <nav className="bg-white sticky top-0 left-0 right-0 z-50 w-full px-2 md:px-16 py-5">
+      <div className="mx-auto flex items-center justify-between px-2 sm:px-7">
         {/* Logo */}
         <a href="/" className="cursor-pointer flex-shrink-0">
           <img
@@ -26,18 +26,18 @@ export default function Navbar({ title, routes }: NavbarProps) {
         </a>
 
         {/* Links + Contact en desktop */}
-        <div className="hidden sm:flex flex-row items-center gap-x-3 text-xs md:text-sm">
+        <div className="hidden sm:flex flex-row items-center gap-x-5 text-base md:text-lg">
           {routes.map((route) => (
             <a
               key={route.path}
               href={route.path}
-              className="font-medium text-black hover:text-blue-600 transition-colors whitespace-nowrap"
+              className="font-semibold text-black hover:text-blue-600 transition-colors whitespace-nowrap"
             >
               {route.name}
             </a>
           ))}
           <div className="flex-shrink-0">
-            <ContactButton />
+            <ContactButton  />
           </div>
         </div>
 
@@ -52,12 +52,12 @@ export default function Navbar({ title, routes }: NavbarProps) {
 
       {/* Menú móvil */}
       {isOpen && (
-        <div className="sm:hidden flex flex-col gap-3 px-4 pb-4 bg-white shadow-md border-t border-gray-200 text-right">
+        <div className="sm:hidden flex flex-col gap-3 px-4 pb-4 bg-white shadow-md border-t border-gray-200 text-right text-lg">
           {routes.map((route) => (
             <a
               key={route.path}
               href={route.path}
-              className="font-medium text-black hover:text-blue-600 transition-colors"
+              className="font-semibold text-black hover:text-blue-600 transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {route.name}

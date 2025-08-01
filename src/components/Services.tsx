@@ -1,67 +1,64 @@
 import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, Fragment } from "react";
 import services from "../data/services.json";
-import Navbar from "./Navbar";
-import routes from "../data/routes.json";
 
 export default function Services() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div ref={ref} className="snap-start w-full bg-white">
-      {/* Navbar fijo arriba */}
-      <Navbar title="Your Company" routes={routes} />
+    <section
+      ref={ref}
+      className="snap-start w-full bg-white min-h-screen flex flex-col items-center justify-center gap-8 px-2 sm:px-24" // mismo padding que navbar
+    >
+      {/* Imagen hero */}
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+        className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden shadow-md rounded-lg"
+      >
+        <img
+          src="/services/services.jpg"
+          alt="Services"
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
 
-      {/* Contenido centrado verticalmente */}
-      <div className="w-full max-w-6xl mx-auto flex flex-col items-center justify-center gap-6 min-h-screen ">
-        
-        {/* Imagen hero */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-          className="w-full px-0 md:px-5 h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden shadow-md"
-        >
-          <img
-            src="/services/services.jpg"
-            alt="Services"
-            className="w-full h-full object-cover"
-          />
-        </motion.div>
-
-        {/* Lista de servicios */}
-        <motion.div
-          className="
-            bg-white 
-            w-full 
-            flex flex-col md:flex-row
-            flex-wrap 
-            justify-center md:justify-around 
-            items-center 
-            gap-3 md:gap-1
-            py-4 px-4 
-            z-10 
-            relative 
-            rounded-lg
-          "
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={{
-            hidden: {},
-            visible: {
-              transition: {
-                delayChildren: 0.8,
-                staggerChildren: 0.15,
-              },
+      {/* Lista de servicios */}
+      <motion.div
+        className="
+          bg-white 
+          w-full 
+          flex flex-col md:flex-row flex-wrap 
+          justify-center md:justify-around 
+          items-center 
+          py-6 px-4 
+          z-10 relative rounded-lg
+        "
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              delayChildren: 0.8,
+              staggerChildren: 0.15,
             },
-          }}
-        >
-          {services.map((service, index) => (
+          },
+        }}
+      >
+        {services.map((service, index) => (
+          <Fragment key={service.title}>
             <motion.a
-              key={index}
               href={service.route}
-              className="font-medium text-black transition-transform duration-300 hover:scale-110 text-3xl sm:text-xl md:text-2xl"
+              className="
+                font-semibold text-black 
+                transition-transform duration-300 hover:scale-110 
+                text-xl sm:text-lg md:text-2xl 
+                py-2 sm:py-0
+                w-full sm:w-auto text-center
+              "
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
@@ -70,9 +67,20 @@ export default function Services() {
             >
               {service.title}
             </motion.a>
-          ))}
-        </motion.div>
-      </div>
-    </div>
+
+            {/* Divisor para pantallas pequeñas (vertical) */}
+            {index < services.length - 1 && (
+              <>
+                {/* En mobile → línea separadora */}
+                <span className="block sm:hidden w-full h-px my-2" />
+
+                {/* En desktop → divisor vertical */}
+                <span className="hidden sm:block w-0.5 h-6 bg-black" />
+              </>
+            )}
+          </Fragment>
+        ))}
+      </motion.div>
+    </section>
   );
 }

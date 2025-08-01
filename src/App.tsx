@@ -19,7 +19,8 @@ import Form from "./components/Form";
 import Footer from "./components/Footer";
 import Box from "./components/Box";
 import WatchUs from "./components/WatchUs";
-
+import Navbar from "./components/Navbar";
+import routes from "./data/routes.json";
 function App() {
   return (
     <>
@@ -28,52 +29,55 @@ function App() {
           <section className="h-screen snap-start">
             <Entrance />
           </section>
-          <section className="h-screen snap-start" id="services">
-            <Services />
-          </section>
-          <section className="h-screen snap-start">
-            <Hero />
-          </section>
+          <div className="navbar">
+            <Navbar title="Your Company" routes={routes} />
+            <section className="h-screen snap-start" id="services">
+              <Services />
+            </section>
+            <section className="h-screen snap-start">
+              <Hero />
+            </section>
 
-          <section className="h-screen snap-start">
-            <WatchUs />
-          </section>
-          <section className="h-screen snap-start">
-            <Strengths />
-          </section>
-          <section className="h-screen snap-start">
-            <Gallery />
-          </section>
-          <section className="h-screen snap-start">
-            <WeServe />
-          </section>
-          <section className="h-screen snap-start">
-            <Warehousing />
-          </section>
-          <section className="h-screen snap-start">
-            <Fulfillment />
-          </section>
-          <section className="h-screen snap-start">
-            <Transloading />
-          </section>
-          <section className="h-screen snap-start" id="reviews">
-            <Reviews />
-          </section>
-          <section className="h-screen snap-start">
-            <Hall />
-          </section>
-          <section className="h-screen snap-start">
-            <Partners />
-          </section>
-          <section className="h-screen snap-start" id="form">
-            <Form />
-          </section>
-          <section className="h-screen snap-start">
-            <Box />
-          </section>
-          <section className="h-screen snap-start">
-            <Footer />
-          </section>
+            <section className="h-screen snap-start">
+              <WatchUs />
+            </section>
+            <section className="h-screen snap-start">
+              <Strengths />
+            </section>
+            <section className="h-screen snap-start">
+              <Gallery />
+            </section>
+            <section className="h-screen snap-start">
+              <WeServe />
+            </section>
+            <section className="h-screen snap-start">
+              <Warehousing />
+            </section>
+            <section className="h-screen snap-start">
+              <Fulfillment />
+            </section>
+            <section className="h-screen snap-start">
+              <Transloading />
+            </section>
+            <section className="h-screen snap-start" id="reviews">
+              <Reviews />
+            </section>
+            <section className="h-screen snap-start">
+              <Hall />
+            </section>
+            <section className="h-screen snap-start">
+              <Partners />
+            </section>
+            <section className="h-screen snap-start" id="form">
+              <Form />
+            </section>
+            <section className="h-screen snap-start">
+              <Box />
+            </section>
+            <section className="h-screen snap-start">
+              <Footer />
+            </section>
+          </div>
         </div>
       </>
     </>
