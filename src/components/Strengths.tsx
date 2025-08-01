@@ -10,23 +10,24 @@ export default function Strengths() {
   return (
     <section
       ref={ref}
-      className="flex flex-col lg:flex-row w-full min-h-screen bg-white justify-center lg:justify-normal px-5 py-12"
+      className="flex flex-col-reverse lg:flex-row w-full min-h-screen bg-white justify-center lg:justify-normal px-5 py-12"
     >
-      {/* Imagen izquierda */}
+      {/* Video abajo en móvil, izquierda en desktop */}
       <motion.div
         initial={{ x: "-100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
         className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12"
       >
-        <img
-          src="/logo-black.png"
-          alt="Strengths Logo"
-          className="max-w-[280px] w-full h-auto object-contain"
+        <video
+          src="/watchus/Lynx3PL.mp4"
+          className="max-w-xl w-full h-auto object-contain"
+          controls
+          playsInline
         />
       </motion.div>
 
-      {/* Texto derecha */}
+      {/* Texto arriba en móvil, derecha en desktop */}
       <motion.div
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
@@ -41,9 +42,9 @@ export default function Strengths() {
         }}
         className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center p-6 md:p-12"
       >
-        <div className="text-center lg:text-left max-w-xl">
+        <div className="max-w-xl w-full">
           <motion.h2
-            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 uppercase"
+            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 uppercase text-right lg:text-left"
             variants={{
               hidden: { opacity: 0, y: 30 },
               visible: { opacity: 1, y: 0 },
@@ -53,7 +54,7 @@ export default function Strengths() {
             {title}
           </motion.h2>
 
-          <ul className="space-y-4 text-base md:text-lg lg:text- text-black leading-relaxed">
+          <ul className="space-y-4 text-base md:text-lg text-black leading-relaxed text-left">
             {description.map((item, index) => (
               <motion.li
                 key={index}
