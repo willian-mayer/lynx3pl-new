@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import React from "react";
 import warehousingData from "../data/newwarehousing.json";
 
 export default function NewWarehousing() {
