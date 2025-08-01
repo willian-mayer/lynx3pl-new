@@ -7,7 +7,7 @@ import Services from "./components/Services";
 // import Navbar from "./components/Navbar";
 // import routes from "./data/routes.json";
 import Strengths from "./components/Strengths";
-import Gallery from "./components/Gallery";
+// import Gallery from "./components/Gallery";
 import WeServe from "./components/WeServe";
 import Warehousing from "./components/Warehousing";
 import Fulfillment from "./components/Fulfillment";
@@ -21,6 +21,7 @@ import Box from "./components/Box";
 // import WatchUs from "./components/WatchUs";
 import Navbar from "./components/Navbar";
 import routes from "./data/routes.json";
+import NewWarehousing from "./components/NewWarehousing";
 function App() {
   return (
     <>
@@ -45,8 +46,11 @@ function App() {
               <Strengths />
             </section>
             <section className="h-screen snap-start">
-              <Gallery />
+              <NewWarehousing />
             </section>
+            {/* <section className="h-screen snap-start">
+              <Gallery />
+            </section> */}
             <section className="h-screen snap-start">
               <WeServe />
             </section>
