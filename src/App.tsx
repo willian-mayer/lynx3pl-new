@@ -9,9 +9,7 @@ import Services from "./components/Services";
 import Strengths from "./components/Strengths";
 // import Gallery from "./components/Gallery";
 import WeServe from "./components/WeServe";
-import Warehousing from "./components/Warehousing";
 import Fulfillment from "./components/Fulfillment";
-import Transloading from "./components/Transloading";
 import Reviews from "./components/Reviews";
 import Hall from "./components/Hall";
 import Partners from "./components/Partners";
@@ -56,16 +54,10 @@ function App() {
               <Gallery />
             </section> */}
             <section className="h-screen snap-start">
-              <WeServe />
-            </section>
-            <section className="h-screen snap-start">
-              <Warehousing />
-            </section>
-            <section className="h-screen snap-start">
               <Fulfillment />
             </section>
             <section className="h-screen snap-start">
-              <Transloading />
+              <WeServe />
             </section>
             <section className="h-screen snap-start" id="reviews">
               <Reviews />

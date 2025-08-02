@@ -20,7 +20,19 @@ export default function Reviews() {
   return (
     <section
       ref={ref}
-      className="bg-white px-4 md:px-10 py-10 md:h-screen flex flex-col justify-start gap-6 pt-10"
+      className="
+        bg-white 
+        px-4 md:px-10 
+        py-10 
+        min-h-screen 
+        flex flex-col 
+        gap-6 
+        pt-10
+        mt-10
+        justify-center          /* En móvil se va al fondo */
+        md:justify-center     /* En md+ se centra */
+        md:items-center
+      "
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col gap-6">
         {/* Main Review */}
@@ -30,7 +42,7 @@ export default function Reviews() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-black text-lg md:text-6xl font-bold mb-4">
+          <p className="text-black text-2xl md:text-6xl font-bold mb-4">
             “{mainReview.review}”
           </p>
           <p className="text-lg text-red-700 font-semibold">
@@ -53,9 +65,9 @@ export default function Reviews() {
               >
                 <div className="flex items-center justify-end text-end">
                   <div className="flex mr-2 mb-4">{renderStars(r.stars)}</div>
-                  <p className="text-black md:text-xl font-bold">“{r.review}”</p>
+                  <p className="text-black text-sm md:text-xl font-bold">“{r.review}”</p>
                 </div>
-                <p className="text-md text-red-700 font-semibold text-end">
+                <p className="text-md text-red-700 text-sm font-semibold text-end">
                   {r.author} — {r.country} ({r.year})
                 </p>
               </motion.div>
