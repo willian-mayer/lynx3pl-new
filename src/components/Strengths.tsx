@@ -54,11 +54,11 @@ export default function Strengths() {
             {title}
           </motion.h2>
 
-          <ul className="space-y-4 text-base md:text-lg text-black leading-relaxed text-left">
+          <ul className="space-y-2 text-sm md:text-lg text-black leading-relaxed text-left">
             {description.map((item, index) => (
               <motion.li
                 key={index}
-                className="relative pl-5"
+                className="relative pl-5 inter md:text-2xl"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
