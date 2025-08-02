@@ -22,6 +22,7 @@ import Box from "./components/Box";
 import Navbar from "./components/Navbar";
 import routes from "./data/routes.json";
 import NewWarehousing from "./components/NewWarehousing";
+import WarehousingList from "./components/WarehousingList";
 function App() {
   return (
     <>
@@ -47,6 +48,9 @@ function App() {
             </section>
             <section className="h-screen snap-start">
               <NewWarehousing />
+            </section>
+            <section className="h-screen snap-start">
+              <WarehousingList />
             </section>
             {/* <section className="h-screen snap-start">
               <Gallery />
