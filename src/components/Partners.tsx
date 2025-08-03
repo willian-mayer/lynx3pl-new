@@ -28,11 +28,11 @@ export default function Partners() {
   return (
     <section
       ref={ref}
-      className="bg-white px-4 md:px-10 py-10 h-screen flex items-center"
+      className="bg-white px-4 md:px-10 py-10 h-screen flex items-center mt-20"
     >
       <div className="w-full max-w-3xl mx-auto h-full grid grid-rows-5 grid-cols-2 gap-6">
         {/* Title */}
-        <div className="row-span-3 flex items-center justify-center">
+        <div className="row-span-3 flex items-end mb-24 justify-center">
           <motion.h2
             className="text-4xl md:text-5xl font-bold text-green-800"
             initial={{ opacity: 0 }}
@@ -44,7 +44,7 @@ export default function Partners() {
         </div>
 
         {/* Years */}
-        <div className="row-span-3 flex items-center justify-start">
+        <div className="row-span-3 flex items-center justify-start mt-20">
           <div className="bg-black h-full text-white p-6 rounded-xl flex flex-col justify-center">
             <motion.div
               initial={{ opacity: 0, y: -10 }}
@@ -63,11 +63,14 @@ export default function Partners() {
         {/* Partner Logos */}
         <div className="col-span-2 w-full h-full flex flex-col justify-between gap-y-4">
           {/* Primera fila */}
-          <div className="w-full flex justify-between items-center gap-x-4">
-            {partners.slice(0, 4).map((p, i) => (
+          <div className="w-full flex justify-between items-center gap-x-2 md:gap-x-4">
+            {partners.slice(0, 5).map((p, i) => (
               <motion.div
                 key={i}
-                className="w-1/5 min-w-[80px] h-20 flex items-center justify-center"
+                className="flex items-center justify-center 
+                  w-[45px] h-[30px]   /* tamaño reducido en móviles */
+                  md:w-1/5 md:h-20    /* tamaño original en escritorio */
+                "
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.3, delay: i * 0.05 }}
@@ -82,18 +85,21 @@ export default function Partners() {
           </div>
 
           {/* Segunda fila */}
-          <div className="w-full flex justify-between items-center gap-x-4">
-            {partners.slice(4).map((p, i) => (
+          <div className="w-full flex justify-between items-center gap-x-2 md:gap-x-4">
+            {partners.slice(5).map((p, i) => (
               <motion.div
                 key={i + 4}
-                className="w-1/4 min-w-[100px] h-24 flex items-center justify-center"
+                className="flex items-center justify-center 
+                  w-[55px] h-[35px]   /* tamaño reducido en móviles */
+                  md:w-1/4 md:h-24    /* tamaño original en escritorio */
+                "
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.3, delay: (i + 4) * 0.05 }}
+                transition={{ duration: 0.3, delay: (i + 5) * 0.05 }}
               >
                 <img
                   src={p.partnersUrl}
-                  alt={`Partner ${i + 5}`}
+                  alt={`Partner ${i + 6}`}
                   className="w-full h-full object-contain scale-110"
                 />
               </motion.div>
