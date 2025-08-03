@@ -32,12 +32,14 @@ export default function Reviews() {
         justify-center          /* En móvil se va al fondo */
         md:justify-center     /* En md+ se centra */
         md:items-center
+        md:h-full
+        pt-32
       "
     >
-      <div className="w-full max-w-6xl mx-auto flex flex-col gap-6">
-        {/* Main Review */}
+      <div className="w-full max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+        {/* Left column - Main Review */}
         <motion.div
-          className="flex flex-col justify-start items-center text-center"
+          className="flex flex-col items-end text-left md:pb-92"
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -46,34 +48,31 @@ export default function Reviews() {
             “{mainReview.review}”
           </p>
           <p className="text-lg text-red-700 font-semibold">
-            {mainReview.author} — {mainReview.country} ({mainReview.year})
+            — {mainReview.author}, {mainReview.country} ({mainReview.year})
           </p>
-          <div className="mt-1">{renderStars(mainReview.stars)}</div>
         </motion.div>
 
-        {/* Review Row */}
-        <div className="grid md:grid-cols-3 w-full">
-          <div></div>
-          <div className="md:col-span-2 space-y-6">
-            {reviews.map((r, i) => (
-              <motion.div
-                key={i}
-                className="flex flex-col items-end"
-                initial={{ opacity: 0, x: 30 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.4, delay: 0.1 * i }}
-              >
-                <div className="flex items-center justify-end text-end">
-                  <div className="flex mr-2 mb-4">{renderStars(r.stars)}</div>
-                  <p className="text-black text-sm md:text-xl font-bold">“{r.review}”</p>
-                </div>
-                <p className="text-md text-red-700 text-sm font-semibold text-end">
-                  {r.author} — {r.country} ({r.year})
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        {/* Right column - Other Reviews */}
+<div className="flex flex-col justify-end h-full">
+  {reviews.map((r, i) => (
+    <motion.div
+      key={i}
+      className="flex flex-col items-end my-3"
+      initial={{ opacity: 0, x: 30 }}
+      animate={inView ? { opacity: 1, x: 0 } : {}}
+      transition={{ duration: 0.4, delay: 0.1 * i }}
+    >
+      <div className="flex items-start justify-end ">
+        <div className="flex mr-2 mb-4">{renderStars(r.stars)}</div>
+        <p className="text-black text-sm md:text-xl font-bold text-start">“{r.review}”</p>
+      </div>
+      <p className="w-full text-md text-red-700 font-semibold text-start my-3">
+        — {r.author}, {r.country} ({r.year})
+      </p>
+    </motion.div>
+  ))}
+</div>
+
       </div>
     </section>
   );
