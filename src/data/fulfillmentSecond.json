@@ -2,27 +2,6 @@
     {
         "title": "Effortless Fulfillment Services to Streamline Your Business",
         "desc": "Get your products shipped to customers quickly, accurately, and cost-effectively, for businesses of all sizes.",
-        "steps": [
-            {
-                "title": "Managing fulfillment can be stressful and time-consuming. We take care of inventory, packing, and shipping, so you can focus on growing your business.",
-                "brief": "How it works:",
-                "step": [
-                    {
-                        "title": "Step 1",
-                        "desc": "Send your products to our warehouse"
-                    },
-                    {
-                        "title": "Step 2",
-                        "desc": "We store, pack, and ship your orders"
-                    },
-                    {
-                        "title": "Step 3",
-                        "desc": "You track shipments and manage your inventory online."
-                    }
-                ],
-                "imageUrl": "/fulfillment/image.jpg"
-            }
-        ],
         "benefits": [
             {
                 "title": "Order Processing",

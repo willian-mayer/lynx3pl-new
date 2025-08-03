@@ -9,7 +9,6 @@ import Services from "./components/Services";
 import Strengths from "./components/Strengths";
 // import Gallery from "./components/Gallery";
 import WeServe from "./components/WeServe";
-import Fulfillment from "./components/Fulfillment";
 import Reviews from "./components/Reviews";
 import Hall from "./components/Hall";
 import Partners from "./components/Partners";
@@ -21,6 +20,9 @@ import Navbar from "./components/Navbar";
 import routes from "./data/routes.json";
 import NewWarehousing from "./components/NewWarehousing";
 import WarehousingList from "./components/WarehousingList";
+import FulfillmentFirst from "./components/FulfillmentFirst";
+import FulfillmentSecond from "./components/FulfillmentSecond";
+import FulfillmentThird from "./components/FulfillmentThird";
 function App() {
   return (
     <>
@@ -54,10 +56,13 @@ function App() {
               <Gallery />
             </section> */}
             <section className="h-screen snap-start">
-              <Fulfillment />
+              <FulfillmentFirst />
             </section>
-            <section className="h-screen snap-start">
-              <WeServe />
+                        <section className="h-screen snap-start">
+              <FulfillmentSecond />
+            </section>
+                                    <section className="h-screen snap-start">
+              <FulfillmentThird />
             </section>
             <section className="h-screen snap-start" id="reviews">
               <Reviews />
@@ -70,9 +75,6 @@ function App() {
             </section>
             <section className="h-screen snap-start" id="form">
               <Form />
-            </section>
-            <section className="h-screen snap-start">
-              <Box />
             </section>
             <section className="h-screen snap-start">
               <Footer />
