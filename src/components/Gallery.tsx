@@ -24,9 +24,14 @@ export default function Gallery() {
   return (
     <section
       ref={ref}
-      className="bg-white min-h-screen flex items-center justify-center px-4 py-10"
+      className="bg-white min-h-screen px-4 py-10
+                 flex flex-col md:flex md:items-center md:justify-center"
+      // Flex en md+ para centrar verticalmente, flex-col para que en móvil el contenido empiece arriba
     >
-      <div className="w-full md:mx-64 max-w-7xl flex flex-col justify-center">
+      <div
+        className="w-full md:mx-64 max-w-7xl flex flex-col
+                   md:h-auto h-screen overflow-y-auto"
+      >
         {/* Pantallas md+ */}
         <motion.div
           className="hidden md:grid grid-cols-3 grid-rows-2 gap-4 w-full"
@@ -71,7 +76,7 @@ export default function Gallery() {
 
         {/* Pantallas pequeñas con scroll vertical */}
         <motion.div
-          className="md:hidden h-screen overflow-y-auto py-6 px-4 flex flex-col gap-[-3rem]"
+          className="md:hidden flex flex-col gap-[-3rem] my-24 md:my-0"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
@@ -94,16 +99,16 @@ export default function Gallery() {
               style={{ zIndex: images.length - index }}
             />
           ))}
-        </motion.div>
 
-        {/* Texto fijo fuera del scroll en móviles */}
-        <motion.p
-          className="md:hidden text-center text-base font-medium text-black inter mt-6 px-4"
-          variants={itemVariants}
-          transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-          {desc}
-        </motion.p>
+          {/* Texto ahora dentro del scroll */}
+          <motion.p
+            className="text-center text-base font-medium text-black inter mt-6 px-4"
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            {desc}
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );
