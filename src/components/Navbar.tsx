@@ -13,7 +13,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
 
   return (
     <nav className="bg-white sticky top-0 left-0 right-0 z-50 w-full px-2 md:px-16 py-5">
-      <div className="mx-auto flex items-center justify-between px-2 sm:px-7">
+      <div className="mx-auto flex items-center justify-between px-2 md:px-32">
         {/* Logo */}
         <a href="/" className="cursor-pointer flex-shrink-0">
           <img

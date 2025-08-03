@@ -28,7 +28,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-screen overflow-hidden bg-white flex flex-col justify-between p-[0.1em] sm:p-10 sm:mx-8">
+    <section className="h-screen overflow-hidden bg-white flex flex-col justify-between p-[0.1em] sm:p-10 sm:mx-64">
       {/* Contenido central con flex (ajustado con espacio arriba) */}
       <div className="flex-1 flex items-center justify-center px-4">
         <motion.h1
@@ -70,7 +70,6 @@ export default function Hero() {
           pb-6 
           w-full 
           px-3
-          sm:px-10 
           md:pb-10
         "
         initial={{ opacity: 0, y: 20 }}

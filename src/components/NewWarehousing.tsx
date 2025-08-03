@@ -9,7 +9,7 @@ export default function NewWarehousing() {
   return (
     <section
       ref={ref}
-      className="w-full bg-white lg:px-6 sm:px-10 lg:px-20 py-10 min-h-screen flex items-center"
+      className="w-full bg-white lg:px-6 sm:px-10 lg:px-64 py-10 min-h-screen flex items-center"
     >
       {/* Mobile & Tablet: formato teléfono | Desktop: grid tipo Partners */}
       <div

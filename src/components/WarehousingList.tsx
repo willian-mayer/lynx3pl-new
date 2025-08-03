@@ -8,7 +8,7 @@ export default function WarehousingList() {
   return (
     <section
       ref={ref}
-      className="w-full bg-white sm:px-10 lg:px-20 py-10 min-h-screen flex items-center"
+      className="w-full bg-white sm:px-10 lg:px-64 py-10 min-h-screen flex items-center"
     >
       <div
         className="

@@ -16,7 +16,7 @@ export default function Services() {
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-        className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden shadow-md rounded-lg"
+        className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] overflow-hidden md:px-64"
       >
         <picture>
           {/* Imagen para pantallas md en adelante */}
@@ -28,7 +28,7 @@ export default function Services() {
           <img
             src="/services/service-xs.png"
             alt="Services"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-lg"
           />
         </picture>
       </motion.div>
@@ -42,7 +42,7 @@ export default function Services() {
           justify-center md:justify-around 
           items-center 
           py-6 px-4 
-          z-10 relative rounded-lg
+          z-10 relative rounded-lg md:px-64
         "
         initial="hidden"
         animate={inView ? "visible" : "hidden"}

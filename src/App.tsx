@@ -1,13 +1,9 @@
 // src/App.tsx
 import "./App.css";
-// import { useState } from "react";
 import Entrance from "./components/Entrance";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
-// import Navbar from "./components/Navbar";
-// import routes from "./data/routes.json";
 import Strengths from "./components/Strengths";
-// import Gallery from "./components/Gallery";
 import Reviews from "./components/Reviews";
 import Hall from "./components/Hall";
 import Partners from "./components/Partners";
@@ -36,10 +32,6 @@ function App() {
             <section className="h-screen snap-start">
               <Hero />
             </section>
-
-            {/* <section className="h-screen snap-start">
-              <WatchUs />
-            </section> */}
             <section className="h-screen snap-start">
               <Strengths />
             </section>
