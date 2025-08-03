@@ -16,6 +16,7 @@ import WarehousingList from "./components/WarehousingList";
 import FulfillmentFirst from "./components/FulfillmentFirst";
 import FulfillmentSecond from "./components/FulfillmentSecond";
 import FulfillmentThird from "./components/FulfillmentThird";
+import Gallery from "./components/Gallery";
 function App() {
   return (
     <>
@@ -41,16 +42,16 @@ function App() {
             <section className="h-screen snap-start">
               <WarehousingList />
             </section>
-            {/* <section className="h-screen snap-start">
+            <section className="h-screen snap-start">
               <Gallery />
-            </section> */}
+            </section>
             <section className="h-screen snap-start">
               <FulfillmentFirst />
             </section>
-                        <section className="h-screen snap-start">
+            <section className="h-screen snap-start">
               <FulfillmentSecond />
             </section>
-                                    <section className="h-screen snap-start">
+            <section className="h-screen snap-start">
               <FulfillmentThird />
             </section>
             <section className="h-screen snap-start" id="reviews">

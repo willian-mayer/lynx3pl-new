@@ -24,69 +24,86 @@ export default function Gallery() {
   return (
     <section
       ref={ref}
-      className="bg-white h-screen flex items-center justify-center px-4 py-6 pb-10"
+      className="bg-white min-h-screen flex items-center justify-center px-4 py-10"
     >
-      <div className="w-full max-w-6xl h-full flex flex-col justify-center mb-12 pt-2">
-        {/* Pantallas grandes */}
+      <div className="w-full md:mx-64 max-w-7xl flex flex-col justify-center">
+        {/* Pantallas md+ */}
         <motion.div
-          className="hidden lg:grid grid-cols-3 grid-rows-3 gap-4 h-full px-6"
+          className="hidden md:grid grid-cols-3 grid-rows-2 gap-4 w-full"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
         >
-          {images.slice(0, 5).map((img, i) => (
+          {/* Fila 1 */}
+          {images.slice(0, 3).map((img, i) => (
             <motion.img
               key={i}
               src={img.imgUrl}
               alt={`Gallery ${i + 1}`}
-              className={`w-full h-full object-cover rounded-xl ${
-                i === 3
-                  ? "row-span-2 col-start-2 row-start-1"
-                  : i === 4
-                  ? "row-span-2 col-start-3 row-start-1"
-                  : `row-start-${i + 1} col-start-1`
-              }`}
+              className="w-full h-72 object-cover shadow-md rounded-xl"
+              variants={itemVariants}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+            />
+          ))}
+
+          {/* Fila 2 */}
+          {images.slice(3, 5).map((img, i) => (
+            <motion.img
+              key={i + 3}
+              src={img.imgUrl}
+              alt={`Gallery ${i + 4}`}
+              className="w-full h-72 object-cover shadow-md rounded-xl"
               variants={itemVariants}
               transition={{ duration: 0.5, ease: "easeOut" }}
             />
           ))}
 
           <motion.div
-            className="row-start-3 col-start-2 col-span-2 flex items-center justify-center p-4 bg-gray-800 rounded-xl text-center overflow-hidden h-full"
+            className="flex items-center justify-center p-4 rounded-xl text-center"
             variants={itemVariants}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <p className="text-sm md:text-base font-medium text-white leading-tight">
+            <p className="text-sm md:text-lg font-medium text-black leading-relaxed inter">
               {desc}
             </p>
           </motion.div>
         </motion.div>
 
-        {/* Pantallas pequeñas */}
+        {/* Pantallas pequeñas con scroll vertical */}
         <motion.div
-          className="lg:hidden min-h-screen overflow-y-auto flex flex-col items-center gap-4 px-4 py-6 hide-scrollbar"
+          className="md:hidden h-screen overflow-y-auto py-6 px-4 flex flex-col gap-[-3rem]"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}
+          style={{ scrollBehavior: "smooth" }}
         >
           {images.map((img, index) => (
             <motion.img
               key={index}
               src={img.imgUrl}
               alt={`Gallery ${index + 1}`}
-              className="w-full max-w-md object-cover rounded-xl"
+              className={`w-40 h-56 object-cover rounded-xl shadow-md
+                ${
+                  index % 2 === 0
+                    ? "self-end mr-8 -mt-12"
+                    : "self-start ml-8 -mt-12"
+                }
+              `}
               variants={itemVariants}
               transition={{ duration: 0.5, ease: "easeOut" }}
+              style={{ zIndex: images.length - index }}
             />
           ))}
-          <motion.p
-            className="text-center text-base font-medium text-gray-800 mt-4 px-2"
-            variants={itemVariants}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            {desc}
-          </motion.p>
         </motion.div>
+
+        {/* Texto fijo fuera del scroll en móviles */}
+        <motion.p
+          className="md:hidden text-center text-base font-medium text-black inter mt-6 px-4"
+          variants={itemVariants}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          {desc}
+        </motion.p>
       </div>
     </section>
   );
