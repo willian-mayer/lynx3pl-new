@@ -17,11 +17,11 @@ export default function Strengths() {
         initial={{ x: "-100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12"
+        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12 md:pt-64"
       >
         <video
           src="/watchus/Lynx3PL.mp4"
-          className="max-w-xl w-full h-auto object-contain"
+          className="max-w-2xl w-full h-auto object-contain"
           controls
           playsInline
         />
@@ -42,30 +42,31 @@ export default function Strengths() {
         }}
         className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center p-6 md:p-12"
       >
-        <div className="max-w-xl w-full">
-          <motion.h2
-            className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 uppercase text-right lg:text-left"
-            variants={{
-              hidden: { opacity: 0, y: 30 },
-              visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            {title}
-          </motion.h2>
+        <div className="max-w-xl w-full ">
+<motion.h2
+  className="flex items-baseline justify-end lg:justify-start text-2xl md:text-5xl font-bold text-gray-900 mb-6 uppercase pt-10"
+  variants={{
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0 },
+  }}
+  transition={{ duration: 0.6, ease: "easeOut" }}
+>
+  <span>{title}</span>
+  <span className="text-green-900 font-bold text-6xl pt-2">.</span>
+</motion.h2>
+
 
           <ul className="space-y-2 text-sm md:text-lg text-black leading-relaxed text-left">
             {description.map((item, index) => (
               <motion.li
                 key={index}
-                className="relative pl-5 inter md:text-2xl"
+                className="relative md:py-1 inter md:text-2xl"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
                 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                <span className="absolute left-0 text-black font-bold">•</span>
                 {item.line}
               </motion.li>
             ))}

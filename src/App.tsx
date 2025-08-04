@@ -34,7 +34,7 @@ function App() {
             <section className="h-screen snap-start">
               <Hero />
             </section>
-            <section className="h-screen snap-start">
+            <section className="snap-start min-h-[calc(100vh-64px)]">
               <Strengths />
             </section>
             <section className="h-screen snap-start" id="warehousing">
