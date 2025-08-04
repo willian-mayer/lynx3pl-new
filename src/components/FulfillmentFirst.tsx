@@ -40,23 +40,22 @@ export default function FulfillmentFirst() {
         </motion.p>
 
         {/* Image */}
-        <div className="flex items-center justify-center">
-          <motion.img
-            src="/fulfillmentFirst/image.jpg"
-            alt={title}
-            className="
-              w-full 
-              md:w-3/4 
-              lg:w-2/3
-              max-h-[450px] 
-              object-cover 
-              md:rounded-xl
-            "
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-          />
-        </div>
+ <div className="relative flex items-center justify-center md:w-3/4 lg:w-auto lg:mx-64 max-h-[450px] md:rounded-xl overflow-hidden">
+  <motion.img
+    src="/fulfillmentFirst/image.jpg"
+    alt={title}
+    className="w-full object-cover"
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={inView ? { opacity: 1, scale: 1 } : {}}
+    transition={{ duration: 0.6, delay: 0.4 }}
+  />
+  <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white rounded-xl">
+    <p className="text-center text-xl md:text-3xl font-semibold leading-snug text-black">
+      Our box is open,<br /> we welcome business of all sizes to connect with us!
+    </p>
+  </div>
+</div>
+
       </div>
     </section>
   );
