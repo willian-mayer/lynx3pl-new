@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="snap-start w-full bg-white min-h-[calc(100vh-64px)] px-2 sm:px-24 flex items-center justify-center"
+      className="snap-start w-full bg-white min-h-[calc(100vh-64px)] px-2 sm:px-24 flex items-center justify-center pt-16"
     >
       {/* Grid para móviles: imagen arriba, texto abajo */}
       <div className="grid grid-rows-[auto_auto] sm:flex sm:flex-col items-center justify-center gap-4 w-full h-full">
