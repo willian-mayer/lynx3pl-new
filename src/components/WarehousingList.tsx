@@ -35,7 +35,17 @@ export default function WarehousingList() {
         </div>
 
         {/* Lista */}
-        <div className="w-full grid grid-cols-1 gap-2 px-2">
+<div
+  className="
+    grid grid-cols-1 gap-2
+    px-2
+    border-3 border-green-900
+    w-[calc(100%-1.5rem)]    /* ancho reducido = 100% - 16px */
+    md:w-full
+    md:border-0
+  "
+>
+
           {warehousingList.map((item, index) => (
             <motion.div
               key={index}
@@ -44,9 +54,13 @@ export default function WarehousingList() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-md md:text-2xl font-bold text-black inter-bold">
-                {item.title}: <span className="text-md md:text-2xl text-black font-normal inter">{item.desc}</span>
-              </h3>            </motion.div>
+              <h3 className="text-xl md:text-2xl font-bold text-black inter-bold">
+                {item.title}:{" "}
+                <span className="text-md md:text-2xl text-black font-normal inter-medium">
+                  {item.desc}
+                </span>
+              </h3>
+            </motion.div>
           ))}
         </div>
       </div>

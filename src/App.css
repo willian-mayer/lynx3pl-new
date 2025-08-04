@@ -37,3 +37,10 @@ html, body, #root {
   font-weight: bold;
   font-style: normal;
 }
+
+.inter-medium {
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: medium;
+  font-style: normal;
+}

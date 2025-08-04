@@ -15,8 +15,8 @@ export default function NewWarehousing() {
       <div
         className="
           w-full
-          flex flex-col items-center justify-center 
-          lg:grid lg:grid-rows-3 lg:grid-cols-3 lg:gap-2 lg:mx-24
+          flex flex-col items-start justify-start py-20
+          lg:grid lg:grid-rows-3 lg:grid-cols-3 lg:gap-2 lg:mx-24 
         "
       >
         {/* Imagen */}
@@ -32,9 +32,23 @@ export default function NewWarehousing() {
         </div>
 
         {/* Title */}
-        <div className="px-6 text-center flex items-center justify-center lg:text-left lg:items-center lg:justify-start lg:row-span-3 lg:col-start-1 pt-12">
+        <div
+          className="
+            px-6 
+            flex items-center justify-center 
+            text-left
+            lg:text-left lg:items-center lg:justify-start lg:row-span-3 lg:col-start-1 
+            pt-6 sm:pt-12
+          "
+        >
           <motion.h2
-            className="text-4xl text-black mb-4 inter-bold sm:text-4xl lg:text-5xl"
+            className="
+              text-2xl text-black inter-bold 
+              sm:text-4xl lg:text-5xl
+              w-full
+              mb-4 sm:mb-6
+              mt-4 sm:mt-0
+            "
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6 }}
@@ -44,9 +58,9 @@ export default function NewWarehousing() {
         </div>
 
         {/* Descripción */}
-        <div className="px-6 text-center lg:text-left lg:col-span-3 lg:col-start-1 lg:row-start-5 flex items-center justify-center lg:mt-10">
+        <div className="px-6 text-left pt-24 lg:text-left lg:col-span-3 lg:col-start-1 lg:row-start-5 flex items-center justify-center lg:mt-10">
           <motion.p
-            className="text-xl sm:text-2xl text-black inter"
+            className="text-xl sm:text-2xl text-black inter-medium"
             initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
