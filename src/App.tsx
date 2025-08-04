@@ -17,6 +17,7 @@ import FulfillmentFirst from "./components/FulfillmentFirst";
 import FulfillmentSecond from "./components/FulfillmentSecond";
 import FulfillmentThird from "./components/FulfillmentThird";
 import Gallery from "./components/Gallery";
+import Transloading from "./components/Transloading";
 function App() {
   return (
     <>
@@ -36,7 +37,7 @@ function App() {
             <section className="h-screen snap-start">
               <Strengths />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="warehousing">
               <NewWarehousing />
             </section>
             <section className="h-screen snap-start">
@@ -45,19 +46,22 @@ function App() {
             <section className="h-screen snap-start">
               <Gallery />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="fulfillment">
               <FulfillmentFirst />
             </section>
             <section className="h-screen snap-start">
               <FulfillmentSecond />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="how-it-works">
               <FulfillmentThird />
+            </section>
+            <section className="h-screen snap-start" id="transloading">
+              <Transloading />
             </section>
             <section className="h-screen snap-start" id="reviews">
               <Reviews />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="convention">
               <Hall />
             </section>
             <section className="h-screen snap-start">

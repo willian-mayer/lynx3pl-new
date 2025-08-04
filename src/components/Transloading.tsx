@@ -1,69 +1,66 @@
-import data from "../data/transloading.json";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import transloadingData from "../data/transloading.json";
 
 export default function Transloading() {
-  const { title, "why-us": reasons, imgUl } = data;
+  const { title, ["why-us"]: whyUs, imgUl } = transloadingData;
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
 
   return (
-    <section className="h-screen snap-start bg-white flex justify-center items-center px-4">
-      <div className="max-w-6xl w-full h-full grid grid-cols-3">
-        {/* Left Column: Text */}
-        <div className="h-full flex flex-col justify-center space-y-6 gap-10">
-          {/* Title */}
+    <section
+      ref={ref}
+      className="w-full bg-white sm:px-10 lg:px-64 py-10 min-h-screen flex items-center"
+    >
+      <div
+        className="
+          w-full
+          flex flex-col items-center justify-center 
+          lg:grid lg:grid-rows-[auto_1fr] lg:grid-cols-1 lg:gap-8 lg:mx-24
+        "
+      >
+        {/* Imagen */}
+        <div className="flex items-center justify-center mb-6 lg:mb-0 lg:col-span-1">
+          <motion.img
+            src={imgUl}
+            alt={title}
+            className="
+              w-full 
+              max-h-[400px] 
+              object-cover 
+              object-center
+            "
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.6 }}
+          />
+        </div>
+
+        {/* Lista */}
+        <div className="w-full grid grid-cols-1 gap-2 px-2">
+          {/* Título */}
           <motion.h2
-            className="text-3xl md:text-5xl font-bold"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            className="text-2xl md:text-4xl font-bold text-black inter-bold mb-4"
+            initial={{ opacity: 0, y: -10 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
           >
             {title}
           </motion.h2>
 
-          {/* Subtitle */}
-
-
-          {/* List */}
-          <div className="space-y-2">
-                      <motion.h3
-            className="text-xl md:text-2xl font-semibold"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-          >
-            Why Us?
-          </motion.h3>
-            {reasons.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 * i }}
-              >
-                <h4 className="text-lg font-semibold text-black">
-                  • <span className="font-normal">{item.name}</span>
-                </h4>
-              </motion.div>
-            ))}
-          </div>
+          {/* Items */}
+          {whyUs.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+            >
+              <h3 className="text-md md:text-2xl font-normal text-black inter">
+                • {item.name}
+              </h3>
+            </motion.div>
+          ))}
         </div>
-
-        {/* Middle Column: Empty space */}
-        <div className="h-full"></div>
-
-        {/* Right Column: Image */}
-        <motion.div
-          className="h-full w-full overflow-hidden rounded-lg shadow-md"
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
-          <img
-            src={imgUl}
-            alt="Transloading"
-            className="w-full h-full object-cover object-bottom"
-          />
-        </motion.div>
       </div>
     </section>
   );
