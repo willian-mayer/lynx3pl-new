@@ -28,7 +28,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="h-screen overflow-hidden bg-white flex flex-col justify-between p-[0.1em] sm:p-10 sm:mx-64">
+    <section className="h-screen overflow-hidden bg-white flex flex-col justify-between sm:mx-48 pt-16">
       {/* Contenido central con flex (ajustado con espacio arriba) */}
       <div className="flex-1 flex items-center justify-center px-4">
         <motion.h1
@@ -42,8 +42,8 @@ export default function Hero() {
             text-[2.4em]        /* móvil */
             sm:text-[2.3em]     /* sm */
             md:text-[2.8em]     /* md más grande */
-            lg:text-[3.2em]     /* lg aún más */
-            xl:text-[4.5em]
+            lg:text-[3em]     /* lg aún más */
+            xl:text-[4.2em]
             leading-tight
             w-full 
             mx-auto 
