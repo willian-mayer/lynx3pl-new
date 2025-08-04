@@ -53,10 +53,10 @@ export default function Hero() {
           "
           style={{ fontFamily: "Times New Roman, Times, serif" }}
         >
-          <span className="block sm:inline exo-2">Reliable </span>
-          <span className="block sm:inline exo-2">fulfillment, </span>
-          <span className="block sm:inline exo-2">B2B, FBA, FBM,</span>
-          <span className="block exo-2">warehouse & more.</span>
+          <span className="block sm:inline inter-bold">Reliable </span>
+          <span className="block sm:inline inter-bold">fulfillment, </span>
+          <span className="block sm:inline inter-bold">B2B, FBA, FBM,</span>
+          <span className="block inter-bold">warehouse & more.</span>
         </motion.h1>
       </div>
 

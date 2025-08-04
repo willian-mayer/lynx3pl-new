@@ -9,9 +9,9 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="snap-start w-full bg-white min-h-screen px-2 sm:px-24 flex items-center justify-center"
+      className="snap-start w-full bg-white min-h-[calc(100vh-64px)] px-2 sm:px-24 flex items-center justify-center"
     >
-      {/* Contenedor grid para móviles */}
+      {/* Grid para móviles: imagen arriba, texto abajo */}
       <div className="grid grid-rows-[auto_auto] sm:flex sm:flex-col items-center justify-center gap-4 w-full h-full">
         
         {/* Imagen hero responsive */}
@@ -19,15 +19,15 @@ export default function Services() {
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-          className="w-full h-[50vh] sm:h-[50vh] md:h-[60vh] overflow-hidden md:px-24 mt-18"
+          // En móviles → mitad de la pantalla
+          // En pantallas medianas → como antes
+          className="w-full h-[50vh] sm:h-[50vh] md:h-[60vh] overflow-hidden md:px-24"
         >
           <picture>
-            {/* Imagen para pantallas md en adelante */}
             <source
               srcSet="/services/service-md.png"
               media="(min-width: 768px)"
             />
-            {/* Imagen por defecto para móviles */}
             <img
               src="/services/service-xs.png"
               alt="Services"
@@ -42,9 +42,9 @@ export default function Services() {
             bg-white 
             w-full 
             flex flex-col md:flex-row flex-wrap 
-            justify-center md:justify-around 
-            items-end 
-            py-6 px-4 
+            justify-start md:justify-around 
+            items-center
+            px-4 
             z-10 relative rounded-lg md:px-64
           "
           initial="hidden"
@@ -66,7 +66,7 @@ export default function Services() {
                 className="
                   font-semibold text-black 
                   transition-transform duration-300 hover:scale-110 
-                  text-lg sm:text-lg md:text-xl 
+                  text-base sm:text-lg md:text-xl 
                   py-1 sm:py-0
                   w-full sm:w-auto text-center exo-2
                 "
@@ -79,12 +79,9 @@ export default function Services() {
                 {service.title}
               </motion.a>
 
-              {/* Divisor */}
               {index < services.length - 1 && (
                 <>
-                  {/* En mobile → línea separadora */}
                   <span className="block sm:hidden w-full h-px my-2" />
-                  {/* En desktop → divisor vertical */}
                   <span className="hidden sm:block w-0.5 h-6 bg-black" />
                 </>
               )}

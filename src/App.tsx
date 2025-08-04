@@ -28,7 +28,7 @@ function App() {
           </section>
           <div className="navbar">
             <Navbar title="Your Company" routes={routes} />
-            <section className="h-screen snap-start" id="services">
+            <section className="snap-start min-h-[calc(100vh-64px)]" id="services">
               <Services />
             </section>
             <section className="h-screen snap-start">

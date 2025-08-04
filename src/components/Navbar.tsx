@@ -12,7 +12,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white sticky top-0 left-0 right-0 z-50 w-full px-2 md:px-16 py-5">
+    <nav className="bg-white sticky top-0 left-0 right-0 z-50 w-full px-2 md:px-16 pt-5 pb-2">
       <div className="mx-auto flex items-center justify-between px-2 md:px-32">
         {/* Logo */}
         <a href="/" className="cursor-pointer flex-shrink-0">
@@ -21,7 +21,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
             alt={title}
             width={20}
             height={20}
-            className="h-7 sm:h-10 w-auto"
+            className="h-7 sm:h-10 w-auto ml-2"
           />
         </a>
 
