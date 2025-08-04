@@ -21,12 +21,12 @@ export default function Navbar({ title, routes }: NavbarProps) {
             alt={title}
             width={20}
             height={20}
-            className="h-5 sm:h-7 w-auto"
+            className="h-7 sm:h-10 w-auto"
           />
         </a>
 
         {/* Links + Contact en desktop */}
-        <div className="hidden sm:flex flex-row items-center gap-x-5 text-base md:text-lg">
+        <div className="hidden sm:flex flex-row items-center gap-x-5 text-base md:text-md">
           {routes.map((route) => (
             <a
               key={route.path}
