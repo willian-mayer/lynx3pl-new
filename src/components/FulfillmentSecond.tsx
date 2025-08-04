@@ -14,9 +14,9 @@ export default function FulfillmentSecond() {
       <div className="w-full max-w-6xl flex flex-col items-center">
         
         {/* Title + Description */}
-        <div className="text-center mb-10 ">
+        <div className="text-center mb-10">
           <motion.h2
-            className="text-2xl md:text-5xl font-bold leading-tight pt-10  md:mx-24 md:pb-2"
+            className="text-2xl md:text-5xl font-bold leading-tight pt-10 md:mx-24 md:pb-2"
             initial={{ opacity: 0, y: -20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
@@ -41,7 +41,7 @@ export default function FulfillmentSecond() {
             <motion.img
               src="/fulfillmentSecond/image.jpg"
               alt="Fulfillment Service"
-              className="w-full max-w-xl object-cover rounded-lg shadow-md"
+              className="w-full object-cover rounded-lg shadow-md surface-duo-img"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -71,6 +71,18 @@ export default function FulfillmentSecond() {
 
         </div>
       </div>
+
+      {/* Ajuste específico para Surface Duo / pantallas intermedias */}
+<style>
+  {`
+    @media (min-width: 540px) and (max-width: 720px) {
+      .surface-duo-img {
+        max-width: 50% !important; /* antes era 70% */
+      }
+    }
+  `}
+</style>
+
     </section>
   );
 }
