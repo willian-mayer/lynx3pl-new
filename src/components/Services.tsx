@@ -12,14 +12,14 @@ export default function Services() {
       className="snap-start w-full bg-white min-h-screen px-2 sm:px-24 flex items-center justify-center"
     >
       {/* Contenedor grid para móviles */}
-      <div className="grid grid-rows-[auto_auto] sm:flex sm:flex-col items-center justify-center gap-16 w-full h-full">
+      <div className="grid grid-rows-[auto_auto] sm:flex sm:flex-col items-center justify-center gap-4 w-full h-full">
         
         {/* Imagen hero responsive */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-          className="w-full h-[50vh] sm:h-[50vh] md:h-[60vh] overflow-hidden md:px-24"
+          className="w-full h-[50vh] sm:h-[50vh] md:h-[60vh] overflow-hidden md:px-24 mt-18"
         >
           <picture>
             {/* Imagen para pantallas md en adelante */}
@@ -67,8 +67,8 @@ export default function Services() {
                   font-semibold text-black 
                   transition-transform duration-300 hover:scale-110 
                   text-lg sm:text-lg md:text-xl 
-                  py-2 sm:py-0
-                  w-full sm:w-auto text-center
+                  py-1 sm:py-0
+                  w-full sm:w-auto text-center exo-2
                 "
                 variants={{
                   hidden: { opacity: 0, y: 20 },
