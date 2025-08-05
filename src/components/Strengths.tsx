@@ -10,18 +10,18 @@ export default function Strengths() {
   return (
     <section
       ref={ref}
-      className="flex flex-col-reverse lg:flex-row w-full min-h-screen bg-white justify-center lg:justify-normal px-5 py-12"
+      className="flex flex-col-reverse lg:flex-row w-full min-h-screen bg-white justify-center lg:justify-normal px-5 py-12 pb-20"
     >
       {/* Video abajo en móvil, izquierda en desktop */}
       <motion.div
         initial={{ x: "-100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12 md:pt-64"
+        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12 md:pt-46"
       >
         <video
           src="/watchus/Lynx3PL.mp4"
-          className="max-w-2xl w-full h-auto object-contain"
+          className="max-w-lg w-full h-auto object-contain"
           controls
           playsInline
         />
@@ -52,15 +52,15 @@ export default function Strengths() {
   transition={{ duration: 0.6, ease: "easeOut" }}
 >
   <span>{title}</span>
-  <span className="text-green-900 font-bold text-6xl pt-2">.</span>
+  <span className="text-green-900 font-bold text-[40px] md:text-[60px] pt-2">.</span>
 </motion.h2>
 
 
-          <ul className="space-y-2 text-sm md:text-lg text-black leading-relaxed text-left">
+          <ul className="space-y-3  text-sm md:text-lg text-black leading-relaxed text-left">
             {description.map((item, index) => (
               <motion.li
                 key={index}
-                className="relative md:py-1 inter md:text-2xl"
+                className="relative md:py-1 inter-bold md:inter md:text-xl"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
