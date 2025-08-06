@@ -24,15 +24,11 @@ export default function Gallery() {
   return (
     <section
       ref={ref}
-      className="bg-white min-h-screen px-4 py-10
-                 flex flex-col md:flex md:items-center md:justify-center"
-      // Flex en md+ para centrar verticalmente, flex-col para que en móvil el contenido empiece arriba
+      className="bg-white min-h-screen px-4 py-10 flex flex-col md:items-center md:justify-center"
     >
-      <div
-        className="w-full md:mx-64 max-w-7xl flex flex-col
-                   md:h-auto h-screen overflow-y-auto"
-      >
-        {/* Pantallas md+ */}
+      <div className="w-full md:mx-64 max-w-7xl flex flex-col md:h-auto">
+        
+        {/* Pantallas md+ → Grid existente */}
         <motion.div
           className="hidden md:grid grid-cols-3 grid-rows-2 gap-4 w-full"
           initial="hidden"
@@ -74,41 +70,32 @@ export default function Gallery() {
           </motion.div>
         </motion.div>
 
-        {/* Pantallas pequeñas con scroll vertical */}
-        <motion.div
-          className="md:hidden flex flex-col gap-[-3rem] my-24 md:my-0"
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={containerVariants}
-          style={{ scrollBehavior: "smooth" }}
-        >
-          {images.map((img, index) => (
-            <motion.img
-              key={index}
-              src={img.imgUrl}
-              alt={`Gallery ${index + 1}`}
-              className={`w-40 h-56 object-cover rounded-xl shadow-md
-                ${
-                  index % 2 === 0
-                    ? "self-end mr-8 -mt-12"
-                    : "self-start ml-8 -mt-12"
-                }
-              `}
-              variants={itemVariants}
-              transition={{ duration: 0.5, ease: "easeOut" }}
-              style={{ zIndex: images.length - index }}
-            />
-          ))}
+        {/* Pantallas pequeñas → Imagen única + texto */}
+{/* Pantallas pequeñas → Imagen única + texto */}
+<motion.div
+  className="md:hidden flex flex-col items-center justify-center gap-6 min-h-screen pb-20 gap-10"
+  initial="hidden"
+  animate={inView ? "visible" : "hidden"}
+  variants={containerVariants}
+>
+  <motion.img
+    src="/gallery/gallery-small.png"
+    alt="Gallery"
+    className="w-auto h-80 max-w-sm rounded-xl shadow-md object-cover"
+    variants={itemVariants}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+  />
 
-          {/* Texto ahora dentro del scroll */}
-          <motion.p
-            className="text-center text-base font-medium text-black inter mt-6 px-4"
-            variants={itemVariants}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            {desc}
-          </motion.p>
-        </motion.div>
+  <motion.p
+    className="text-left text-base font-medium text-black inter px-4"
+    variants={itemVariants}
+    transition={{ duration: 0.5, ease: "easeOut" }}
+  >
+    {desc}
+  </motion.p>
+</motion.div>
+
+
       </div>
     </section>
   );
