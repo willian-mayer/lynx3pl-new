@@ -17,7 +17,7 @@ export default function Strengths() {
         initial={{ x: "-100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12 md:pt-46"
+        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12 md:pt-56"
       >
         <video
           src="/watchus/Lynx3PL.mp4"
@@ -44,7 +44,7 @@ export default function Strengths() {
       >
         <div className="max-w-xl w-full ">
 <motion.h2
-  className="flex items-baseline justify-end lg:justify-start text-2xl md:text-5xl font-bold text-gray-900 mb-6 uppercase pt-10"
+  className="flex items-baseline justify-end lg:justify-start text-2xl md:text-6xl font-bold text-gray-900 mb-6 uppercase inter-bold pt-10 lg:mb-16"
   variants={{
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
@@ -56,7 +56,7 @@ export default function Strengths() {
 </motion.h2>
 
 
-          <ul className="space-y-3  text-xs text-black leading-relaxed text-left">
+          <ul className="space-y-3  text-xs text-black leading-relaxed text-left lg:pr-10">
             {description.map((item, index) => (
               <motion.li
                 key={index}
