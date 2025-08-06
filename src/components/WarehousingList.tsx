@@ -54,9 +54,9 @@ export default function WarehousingList() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-md md:text-2xl font-bold text-black inter-bold">
+              <h3 className="text-sm md:text-2xl font-bold text-black inter-bold">
                 {item.title}:{" "}
-                <span className="text-sm md:text-2xl text-black font-normal inter-medium">
+                <span className="text-[0.85em] md:text-2xl text-black font-normal inter-medium">
                   {item.desc}
                 </span>
               </h3>
