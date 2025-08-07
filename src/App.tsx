@@ -43,7 +43,7 @@ function App() {
             <section className="snap-start min-h-[calc(100vh-64px)]">
               <WarehousingList />
             </section>
-            <section className="snap-start min-h-[calc(100vh-64px)]">
+            <section className="h-screen snap-start">
               <Gallery />
             </section>
             <section className="h-screen snap-start" id="fulfillment">
