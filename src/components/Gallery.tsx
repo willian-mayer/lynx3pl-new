@@ -71,9 +71,8 @@ export default function Gallery() {
         </motion.div>
 
         {/* Pantallas pequeñas → Imagen única + texto */}
-{/* Pantallas pequeñas → Imagen única + texto */}
 <motion.div
-  className="md:hidden flex flex-col items-center justify-center gap-6 min-h-screen pb-20 gap-10"
+  className="md:hidden flex flex-col items-center justify-center gap-6 min-h-screen pb-20 gap-14"
   initial="hidden"
   animate={inView ? "visible" : "hidden"}
   variants={containerVariants}
@@ -81,7 +80,7 @@ export default function Gallery() {
   <motion.img
     src="/gallery/gallery-small.png"
     alt="Gallery"
-    className="w-auto h-80 max-w-sm rounded-xl shadow-md object-cover"
+    className="w-auto h-90 max-w-sm shadow-md object-cover"
     variants={itemVariants}
     transition={{ duration: 0.5, ease: "easeOut" }}
   />

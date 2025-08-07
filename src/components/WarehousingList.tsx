@@ -8,7 +8,7 @@ export default function WarehousingList() {
   return (
     <section
       ref={ref}
-      className="w-full bg-white sm:px-10 lg:px-64 py-10 min-h-screen flex items-center"
+      className="w-full bg-white sm:px-10 lg:px-32 py-10 min-h-screen flex items-center"
     >
       <div
         className="
@@ -37,7 +37,7 @@ export default function WarehousingList() {
         {/* Lista */}
 <div
   className="
-    grid grid-cols-1 gap-2
+    grid grid-cols-1 
     px-2
     border-3 border-green-900
     w-[calc(100%-1.5rem)]    /* ancho reducido = 100% - 16px */
@@ -54,9 +54,9 @@ export default function WarehousingList() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-sm md:text-2xl font-bold text-black inter-bold">
-                {item.title}:{" "}
-                <span className="text-[0.85em] md:text-2xl text-black font-normal inter-medium">
+              <h3 className="text-sm md:text-lg font-bold text-black inter-bold">
+                ● {item.title}:{" "}
+                <span className="text-[0.85em] md:text-lg text-black font-normal inter-medium">
                   {item.desc}
                 </span>
               </h3>

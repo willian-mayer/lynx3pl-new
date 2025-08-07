@@ -28,7 +28,7 @@ export default function NewWarehousing() {
       w-full 
       md:max-w-lg      /* un poco más pequeño en desktop */
       lg:max-w-lg      /* todavía más control en pantallas grandes */
-      xl:max-w-4xl     /* antes era 4xl, ahora lo bajamos */
+      xl:max-w-3xl     /* antes era 4xl, ahora lo bajamos */
       h-auto 
       shadow-md
       object-contain   /* asegura que no se recorte raro */
@@ -69,7 +69,7 @@ export default function NewWarehousing() {
         {/* Descripción */}
         <div className="px-6 text-left md:text-left md:col-span-3 md:col-start-1 md:row-start-5 flex items-center justify-center md:mt-10">
           <motion.p
-            className="text-md sm:text-[1.7em] text-black inter-medium"
+            className="text-md sm:text-[1.4em] text-black inter-medium"
             initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
