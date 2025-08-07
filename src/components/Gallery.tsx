@@ -24,7 +24,7 @@ export default function Gallery() {
   return (
     <section
       ref={ref}
-      className="bg-white min-h-screen px-4 py-10 flex flex-col md:items-center md:justify-center pt-12"
+      className="bg-white min-h-screen px-4 py-10 flex flex-col md:items-center md:justify-center pt-12 md:pt-24"
     >
       <div className="w-full md:mx-64 max-w-7xl flex flex-col md:h-auto">
         
@@ -60,11 +60,11 @@ export default function Gallery() {
           ))}
 
           <motion.div
-            className="flex items-center justify-center p-4 rounded-xl text-center"
+            className="flex items-center justify-center rounded-xl text-center ml-8"
             variants={itemVariants}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <p className="text-sm md:text-lg font-medium text-black leading-relaxed inter">
+            <p className="text-sm md:text-lg font-medium text-black leading-relaxed inter ">
               {desc}
             </p>
           </motion.div>

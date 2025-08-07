@@ -54,7 +54,7 @@ export default function WarehousingList() {
           {warehousingList.map((item, index) => (
             <motion.div
               key={index}
-              className="gap-5 py-[0.3em] md:py-0 ml-3 md:ml-28"
+              className="gap-5 py-[0.3em] md:py-0 ml-3 md:ml-54"
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
