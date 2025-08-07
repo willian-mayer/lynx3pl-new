@@ -24,13 +24,13 @@ export default function Gallery() {
   return (
     <section
       ref={ref}
-      className="bg-white min-h-screen px-4 py-10 flex flex-col md:items-center md:justify-center"
+      className="bg-white min-h-screen px-4 py-10 flex flex-col md:items-center md:justify-center pt-24"
     >
       <div className="w-full md:mx-64 max-w-7xl flex flex-col md:h-auto">
         
         {/* Pantallas md+ → Grid existente */}
         <motion.div
-          className="hidden md:grid grid-cols-3 grid-rows-2 gap-4 w-full"
+          className="hidden md:grid grid-cols-3 grid-rows-2 gap-7 w-full"
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={containerVariants}

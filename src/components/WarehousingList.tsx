@@ -8,25 +8,26 @@ export default function WarehousingList() {
   return (
     <section
       ref={ref}
-      className="w-full bg-white sm:px-10 lg:px-32 py-10 min-h-screen flex items-center"
+      className="w-full bg-white sm:px-10 lg:px-32 md:py-10 min-h-screen flex items-end md:items-center"
     >
       <div
         className="
           w-full
           flex flex-col items-center justify-center 
-          lg:grid lg:grid-rows-[auto_1fr] lg:grid-cols-1 lg:gap-8 lg:mx-24
+          lg:grid lg:grid-rows-[auto_1fr] lg:grid-cols-1 gap-2 lg:mx-24
         "
       >
         {/* Imagen */}
-        <div className="flex items-center justify-center mb-6 lg:mb-0 lg:col-span-1">
+        <div className="flex items-center justify-center lg:mb-0 lg:col-span-1">
           <motion.img
             src="/warehousing/image2.jpg"
             alt="Warehousing"
             className="
               w-full 
-              max-h-[400px] 
+              max-h-[360px] 
               object-cover 
               object-bottom 
+              md:mt-20
             "
             initial={{ opacity: 0, scale: 0.95 }}
             animate={inView ? { opacity: 1, scale: 1 } : {}}
@@ -35,8 +36,8 @@ export default function WarehousingList() {
         </div>
 
         {/* Lista */}
-<div
-  className="
+        <div
+          className="
     grid grid-cols-1 
     px-2
     border-3 border-green-900
@@ -45,20 +46,20 @@ export default function WarehousingList() {
     md:border-0
     gap-2
     p-2
+    m-3
   "
->
-
+        >
           {warehousingList.map((item, index) => (
             <motion.div
               key={index}
-              className="gap-5"
+              className="gap-5 py-[0.3em] md:py-0"
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <h3 className="text-xs md:text-lg font-bold text-black inter-bold">
                 ● {item.title}:{" "}
-                <span className="text-[0.85em] md:text-lg text-black font-normal inter-medium">
+                <span className="text-[1em] md:text-lg text-black font-normal inter-medium">
                   {item.desc}
                 </span>
               </h3>

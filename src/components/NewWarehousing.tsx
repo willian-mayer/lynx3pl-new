@@ -28,7 +28,7 @@ export default function NewWarehousing() {
       w-full 
       md:max-w-lg      /* un poco más pequeño en desktop */
       lg:max-w-lg      /* todavía más control en pantallas grandes */
-      xl:max-w-3xl     /* antes era 4xl, ahora lo bajamos */
+      xl:max-w-2xl     /* antes era 4xl, ahora lo bajamos */
       h-auto 
       shadow-md
       object-contain   /* asegura que no se recorte raro */

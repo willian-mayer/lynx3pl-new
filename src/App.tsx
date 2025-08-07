@@ -37,13 +37,13 @@ function App() {
             <section className="snap-start min-h-[calc(100vh-64px)]">
               <Strengths />
             </section>
-            <section className="h-screen snap-start" id="warehousing">
+            <section className="snap-start min-h-[calc(100vh-64px)]" id="warehousing">
               <NewWarehousing />
             </section>
-            <section className="h-screen snap-start">
+            <section className="snap-start min-h-[calc(100vh-64px)]">
               <WarehousingList />
             </section>
-            <section className="h-screen snap-start">
+            <section className="snap-start min-h-[calc(100vh-64px)]">
               <Gallery />
             </section>
             <section className="h-screen snap-start" id="fulfillment">
