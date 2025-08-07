@@ -27,10 +27,10 @@ export default function WarehousingList() {
   >
     <source
       media="(min-width: 768px)"
-      srcSet="/warehousing/image2.jpg"
+      srcSet="/warehousing/warehouse2.jpg"
     />
     <img
-      src="/warehousing/image.jpg"
+      src="/warehousing/warehouse.jpg"
       alt="Warehousing"
       className="w-full max-h-[360px] object-cover object-bottom md:mt-20"
     />
