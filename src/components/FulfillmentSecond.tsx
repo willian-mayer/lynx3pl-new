@@ -37,7 +37,7 @@ export default function FulfillmentSecond() {
         <div className="w-full flex flex-col lg:flex-row items-center lg:items-center gap-2 md:px-18">
           
           {/* Left: Image */}
-          <div className="flex-shrink-0 flex justify-center lg:justify-start w-[240px] lg:w-[480px]">
+          <div className="flex-shrink-0 flex justify-center flex-col lg:justify-center lg:items-center w-[240px] lg:w-[480px]">
             <motion.img
               src="/fulfillmentSecond/image.jpg"
               alt="Fulfillment Service"
@@ -46,6 +46,12 @@ export default function FulfillmentSecond() {
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6 }}
             />
+                <a
+      href="#form"
+      className="bg-black text-white text-base text-sm px-2 font-bold lg:px-4 lg:py-2 rounded-full hover:bg-gray-900 transition whitespace-nowrap w-min border-2 border-black ml-5 lg:ml-20"
+    >
+      Looking for a new partner?
+    </a>
           </div>
 
           {/* Right: Benefits */}
@@ -58,7 +64,7 @@ export default function FulfillmentSecond() {
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.2 * i }}
                 >
-                  <h4 className="text-sm md:text-[1.1em] font-bold">
+                  <h4 className="text-xs md:text-[1.1em] font-bold">
                     ● {b.title}
                     <span className="text-xs md:text-[1.1em] text-black font-normal leading-tight">
                       : {b.desc.trim()}
