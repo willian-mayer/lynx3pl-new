@@ -15,13 +15,13 @@ export default function FulfillmentFirst() {
         className="
           w-full
           flex flex-col items-center justify-center 
-          lg:grid lg:grid-rows-[auto_auto_1fr] lg:grid-cols-1 lg:gap-8 lg:mx-24
+          lg:grid lg:grid-rows-[auto_auto_1fr] lg:grid-cols-1 gap-2 lg:mx-24
           text-center
         "
       >
         {/* Title */}
         <motion.h2
-          className="text-3xl md:text-5xl font-bold text-black mb-4"
+          className="text-3xl md:text-3xl font-bold text-black md:mt-20"
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -31,7 +31,7 @@ export default function FulfillmentFirst() {
 
         {/* Description */}
         <motion.p
-          className="text-base md:text-2xl text-gray-700 md:mx-64 mb-8 px-4 text-center"
+          className="text-base md:text-md text-gray-700 md:mx-64 mb-2 px-4 text-center"
           initial={{ opacity: 0, y: -10 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -50,7 +50,7 @@ export default function FulfillmentFirst() {
     transition={{ duration: 0.6, delay: 0.4 }}
   />
   <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white rounded-xl">
-    <p className="text-center text-xl md:text-3xl font-semibold leading-snug text-black">
+    <p className="text-center text-lg md:text-xl font-semibold leading-snug text-black md:px-36">
       Our box is open,<br /> we welcome business of all sizes to connect with us!
     </p>
   </div>
