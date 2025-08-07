@@ -25,7 +25,7 @@ export default function Transloading() {
             alt={title}
             className="
               w-full 
-              max-h-[400px] 
+              lg:h-[280px] 
               object-cover 
               object-center
             "
@@ -39,7 +39,7 @@ export default function Transloading() {
         <div className="w-full grid grid-cols-1 gap-2 px-2">
           {/* Título */}
           <motion.h2
-            className="text-2xl md:text-4xl font-bold text-black inter-bold mb-4"
+            className="text-2xl font-bold text-black inter-bold mb-4"
             initial={{ opacity: 0, y: -10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
@@ -55,7 +55,7 @@ export default function Transloading() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-md md:text-2xl font-normal text-black inter">
+              <h3 className="text-md font-normal text-black inter">
                 • {item.name}
               </h3>
             </motion.div>

@@ -8,7 +8,7 @@ export default function WarehousingList() {
   return (
     <section
       ref={ref}
-      className="w-full bg-white sm:px-10 lg:px-32 md:py-10 min-h-screen flex items-end md:items-center"
+      className="w-full bg-white sm:px-10 lg:px-32 md:py-10 min-h-screen flex items-center pt-10 md:items-center"
     >
       <div
         className="
@@ -18,22 +18,25 @@ export default function WarehousingList() {
         "
       >
         {/* Imagen */}
-        <div className="flex items-center justify-center lg:mb-0 lg:col-span-1">
-          <motion.img
-            src="/warehousing/image2.jpg"
-            alt="Warehousing"
-            className="
-              w-full 
-              max-h-[360px] 
-              object-cover 
-              object-bottom 
-              md:mt-20
-            "
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={inView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.6 }}
-          />
-        </div>
+{/* Imagen responsive por tamaño de pantalla */}
+<div className="flex items-center justify-center lg:mb-0 lg:col-span-1">
+  <motion.picture
+    initial={{ opacity: 0, scale: 0.95 }}
+    animate={inView ? { opacity: 1, scale: 1 } : {}}
+    transition={{ duration: 0.6 }}
+  >
+    <source
+      media="(min-width: 768px)"
+      srcSet="/warehousing/image2.jpg"
+    />
+    <img
+      src="/warehousing/image.jpg"
+      alt="Warehousing"
+      className="w-full max-h-[360px] object-cover object-bottom md:mt-20"
+    />
+  </motion.picture>
+</div>
+
 
         {/* Lista */}
         <div
@@ -44,7 +47,6 @@ export default function WarehousingList() {
     w-[calc(100%-1.5rem)]    /* ancho reducido = 100% - 16px */
     md:w-full
     md:border-0
-    gap-2
     p-2
     m-3
   "
@@ -52,7 +54,7 @@ export default function WarehousingList() {
           {warehousingList.map((item, index) => (
             <motion.div
               key={index}
-              className="gap-5 py-[0.3em] md:py-0 ml-4"
+              className="gap-5 py-[0.3em] md:py-0 ml-3 md:ml-28"
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}

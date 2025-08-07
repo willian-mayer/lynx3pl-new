@@ -21,7 +21,7 @@ export default function FulfillmentThird() {
       >
         {/* Title */}
         <motion.h2
-          className="text-3xl md:text-5xl font-bold text-black mt-20"
+          className="text-3xl md:text-3xl font-bold text-black mt-20"
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
@@ -30,7 +30,7 @@ export default function FulfillmentThird() {
         </motion.h2>
 
         {/* Steps */}
-        <div className="flex flex-col gap-4 md:mx-64 px-4 text-left w-full max-w-2xl mb-8 md:mb-0">
+        <div className="flex flex-col gap-4 lg:gap-0 md:mx-64 px-4 text-left w-full max-w-2xl mb-8 md:mb-0">
           {step.map((s, i) => (
             <motion.div
               key={i}
@@ -56,8 +56,7 @@ export default function FulfillmentThird() {
             className="
               w-full 
               md:w-3/4 
-              lg:w-2/3
-              max-h-[450px] 
+              lg:w-[450px]
               object-cover 
               object-top
               md:rounded-xl
