@@ -43,18 +43,20 @@ export default function WarehousingList() {
     w-[calc(100%-1.5rem)]    /* ancho reducido = 100% - 16px */
     md:w-full
     md:border-0
+    gap-2
+    p-2
   "
 >
 
           {warehousingList.map((item, index) => (
             <motion.div
               key={index}
-              className=""
+              className="gap-5"
               initial={{ opacity: 0, y: 10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-sm md:text-lg font-bold text-black inter-bold">
+              <h3 className="text-xs md:text-lg font-bold text-black inter-bold">
                 ● {item.title}:{" "}
                 <span className="text-[0.85em] md:text-lg text-black font-normal inter-medium">
                   {item.desc}
