@@ -14,9 +14,9 @@ export default function FulfillmentSecond() {
       <div className="w-full max-w-6xl flex flex-col items-center md:mt-6">
         
         {/* Title + Description */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-8">
           <motion.h2
-            className="text-xl md:text-[2.2em] font-bold leading-tight pt-10 md:mx-24 md:pb-2"
+            className="text-md md:text-[2.2em] font-bold leading-tight pt-10 md:mx-24 md:pb-2"
             initial={{ opacity: 0, y: -20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5 }}
@@ -24,7 +24,7 @@ export default function FulfillmentSecond() {
             {title}
           </motion.h2>
           <motion.p
-            className="text-gray-800 text-sm md:text-xl font-medium leading-snug"
+            className="text-gray-800 text-xs md:text-xl font-medium leading-snug"
             initial={{ opacity: 0, y: -10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -34,14 +34,14 @@ export default function FulfillmentSecond() {
         </div>
 
         {/* Image + Benefits */}
-        <div className="w-full flex flex-col lg:flex-row items-center lg:items-center gap-2 px-18">
+        <div className="w-full flex flex-col lg:flex-row items-center lg:items-center gap-2 md:px-18">
           
           {/* Left: Image */}
-          <div className="flex-shrink-0 flex justify-center lg:justify-start w-full lg:w-[480px]">
+          <div className="flex-shrink-0 flex justify-center lg:justify-start w-[240px] lg:w-[480px]">
             <motion.img
               src="/fulfillmentSecond/image.jpg"
               alt="Fulfillment Service"
-              className="w-full object-cover rounded-lg shadow-md surface-duo-img md:ml-22"
+              className="w-full object-cover rounded-lg shadow-md mb-2 surface-duo-img md:ml-22"
               initial={{ opacity: 0, scale: 0.95 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6 }}
