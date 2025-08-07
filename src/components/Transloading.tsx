@@ -15,7 +15,7 @@ export default function Transloading() {
         className="
           w-full
           flex flex-col items-center justify-center 
-          lg:grid lg:grid-rows-[auto_1fr] lg:grid-cols-1 lg:gap-8 lg:mx-24
+          lg:grid lg:grid-rows-[auto_1fr] lg:grid-cols-1 lg:gap-8 lg:mx-24 lg:mt-14
         "
       >
         {/* Imagen */}
