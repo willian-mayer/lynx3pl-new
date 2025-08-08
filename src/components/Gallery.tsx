@@ -78,7 +78,7 @@ export default function Gallery() {
   variants={containerVariants}
 >
   <motion.img
-    src="/gallery/gallery-small.png"
+    src="/gallery/gallery-small-new.png"
     alt="Gallery"
     className="w-auto h-90 max-w-sm rounded-xl shadow-md object-cover"
     variants={itemVariants}
@@ -86,7 +86,7 @@ export default function Gallery() {
   />
 
   <motion.p
-    className="text-left text-base font-medium text-black inter px-4"
+    className="text-left text-base font-medium text-black inter px-6"
     variants={itemVariants}
     transition={{ duration: 0.5, ease: "easeOut" }}
   >
