@@ -64,7 +64,7 @@ export default function Gallery() {
             variants={itemVariants}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <p className="text-sm md:text-[1.45em] font-medium text-black inter pb-10">
+            <p className="text-sm md:text-[1.3em] font-medium text-black inter-medium  mx-7 pr-5">
               {desc}
             </p>
           </motion.div>
@@ -86,11 +86,11 @@ export default function Gallery() {
   />
 
   <motion.p
-    className="text-left text-base font-medium text-black inter px-6"
+    className="text-left text-base font-medium text-black inter px-5 pr-14 ml-8"
     variants={itemVariants}
     transition={{ duration: 0.5, ease: "easeOut" }}
   >
-    {desc}
+    We offer choices of <span className="font-bold">real-time inventory management</span> software solutions and uniquely <span className="font-bold">versatile storage</span> options tailored to diverse customer needs, setting us apart from the competitions.
   </motion.p>
 </motion.div>
 
