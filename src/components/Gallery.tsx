@@ -64,7 +64,7 @@ export default function Gallery() {
             variants={itemVariants}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <p className="text-sm md:text-[1.72em] font-medium text-black inter pb-10">
+            <p className="text-sm md:text-[1.45em] font-medium text-black inter pb-10">
               {desc}
             </p>
           </motion.div>
