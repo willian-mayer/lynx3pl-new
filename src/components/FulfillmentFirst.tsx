@@ -30,7 +30,7 @@ export default function FulfillmentFirst() {
             transition={{ duration: 0.6, delay: 0.4 }}
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white rounded-xl">
-            <p className="text-center text-lg md:text-xl font-semibold leading-snug text-black md:px-10 lg:px-16">
+            <p className="text-center text-lg md:text-sm font-semibold leading-snug text-black md:px-10 lg:px-16 mb-25">
               Our box is open,<br /> we welcome business of all sizes to connect with us!
             </p>
           </div>
@@ -40,7 +40,8 @@ export default function FulfillmentFirst() {
   flex flex-col md:w-1/2 order-1 md:order-2
   justify-start md:justify-end
   h-auto md:h-full
-  md:mt-40
+  mt-20
+  md:mt-30
   md:mr-5
   md:mb-2
 ">
@@ -53,7 +54,7 @@ export default function FulfillmentFirst() {
     {title}
   </motion.h2>
 <motion.p
-  className="text-base md:text-xl text-black md:mx-0 md:px-0 text-right ml-20 w-62 md:w-full md:ml-0 mr-4 md:mr-0"
+  className="text-base md:text-[1.5em] text-black md:mx-0 md:px-0 text-right ml-20 w-62 md:w-full md:ml-0 mr-4 md:mr-0"
   initial={{ opacity: 0, y: -10 }}
   animate={inView ? { opacity: 1, y: 0 } : {}}
   transition={{ duration: 0.6, delay: 0.2 }}
