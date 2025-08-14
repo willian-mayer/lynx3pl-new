@@ -15,48 +15,54 @@ export default function FulfillmentThird() {
         className="
           w-full
           flex flex-col items-center justify-center 
-          lg:grid lg:grid-rows-[auto_auto_1fr] lg:grid-cols-1 lg:gap-8 lg:mx-24
-          text-center
+          md:grid md:grid-cols-2 md:gap-12 md:items-center
+          lg:mx-24
+          md:mt-20
         "
       >
-        {/* Title */}
-        <motion.h2
-          className="text-3xl md:text-3xl font-bold text-black mt-20"
-          initial={{ opacity: 0, y: -20 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-        >
-          {title}
-        </motion.h2>
+        {/* Columna izquierda: Título y Steps */}
+        <div className="flex flex-col items-center md:items-end text-center md:text-right">
+          {/* Title */}
+          <motion.h2
+            className="text-3xl md:text-5xl font-semibold text-black mt-20"
+            initial={{ opacity: 0, y: -20 }}
+            animate={inView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6 }}
+          >
+            {title}
+          </motion.h2>
 
-        {/* Steps */}
-        <div className="flex flex-col gap-4 lg:gap-0 md:mx-64 px-4 text-left w-full max-w-2xl mb-8 md:mb-0">
-          {step.map((s, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: -10 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.2 * (i + 1) }}
-            >
-              <h3 className="text-lg md:text-xl font-bold text-black">
-                {s.title}
-              </h3>
-              <p className="text-gray-700 text-sm md:text-lg">
-                {s.desc}
-              </p>
-            </motion.div>
-          ))}
+          {/* Steps */}
+          <div className="flex flex-col gap-4 md:gap-2 px-4 md:px-0 text-left w-full max-w-2xl mt-6 md:mt-8 md:pl-24">
+            {step.map((s, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: -10 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.2 * (i + 1) }}
+              >
+                <h3 className="text-lg md:text-[1.1em] font-bold text-black md:mr-33">
+                  {s.title}{" "}
+                  <span className="text-gray-900 text-sm font-normal md:text-[1.1em]">
+                    {" "}
+                    {s.desc}
+                  </span>
+                </h3>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
-        {/* Image */}
-        <div className="flex items-center justify-center">
+        {/* Columna derecha: Imagen */}
+        <div className="flex items-center justify-center mt-8 md:mt-0">
           <motion.img
             src={imageUrl}
             alt={title}
             className="
               w-full 
-              md:w-3/4 
-              lg:w-[450px]
+              md:w-full
+              md:h-full
+              lg:w-full
               object-cover 
               object-top
               md:rounded-xl
