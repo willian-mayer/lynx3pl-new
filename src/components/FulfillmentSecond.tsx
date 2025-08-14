@@ -36,7 +36,7 @@ export default function FulfillmentSecond() {
           {/* Texto (primero en móvil, segundo en escritorio) */}
           <div className="order-1 md:order-2">
             <motion.h2
-              className="text-[1.2em] md:text-4xl font-bold leading-tight mb-4 md:mr-5 mt-10 md:mt-0 text-center md:text-left md:flex-1"
+              className="text-[1.2em] md:text-2xl font-bold leading-tight mb-4 md:mr-5 mt-10 md:mt-0 text-center md:text-left md:flex-1"
               initial={{ opacity: 0, y: -20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
@@ -58,7 +58,7 @@ export default function FulfillmentSecond() {
 
         {/* Columna 2: Benefits */}
         <div className="flex flex-col justify-center px-4">
-          <div className="space-y-2">
+          <div className="space-y-3">
             {benefits.map((b, i) => (
               <motion.div
                 key={i}
@@ -66,27 +66,30 @@ export default function FulfillmentSecond() {
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.2 * i }}
               >
-                <h4 className="text-[0.58em] md:text-[1.05em] ml-30 md:mr-0 md:ml-0">
+                <h4 className="text-[0.58em] md:text-[0.9em] ml-30 md:mr-0 md:ml-0">
                   ● {b.title}
                   <span className="text-black font-normal">
                     : {b.desc.trim()}
                   </span>
                 </h4>
               </motion.div>
+              
             ))}
-          </div>
-        </div>
-      </div>
-
-      {/* El párrafo para pantallas md+ */}
+                            {/* El párrafo para pantallas md+ */}
       <motion.p
-        className="hidden md:block absolute bottom-8 text-[1.5em] text-center leading-snug"
+        className="hidden md:block absolute bottom-8 text-[0.9em] font-bold text-left leading-snug mr-46 mb-20"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         {desc}
       </motion.p>
+          </div>
+
+        </div>
+      </div>
+
+
 
       {/* Ajuste específico para Surface Duo / pantallas intermedias */}
       <style>
