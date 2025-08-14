@@ -54,7 +54,7 @@ export default function FulfillmentSecond() {
 
             {/* Descripción solo en móvil */}
             <motion.p
-              className="text-black text-[0.85em] leading-snug md:hidden ml-35 mr-10"
+              className="text-black text-[0.75em] leading-snug md:hidden ml-45 mr-10"
               initial={{ opacity: 0, y: -10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -66,7 +66,7 @@ export default function FulfillmentSecond() {
 
         {/* Columna 2: Benefits */}
         <div className="flex flex-col justify-center px-4">
-          <div className="space-y-3">
+          <div className="space-y-2 md:space-y-3">
             {benefits.map((b, i) => (
               <motion.div
                 key={i}
@@ -74,7 +74,7 @@ export default function FulfillmentSecond() {
                 animate={inView ? { opacity: 1, x: 0 } : {}}
                 transition={{ duration: 0.4, delay: 0.2 * i }}
               >
-                <h4 className="text-[0.58em] md:text-[0.9em] ml-30 md:mr-0 md:ml-0">
+                <h4 className="text-[0.6em] md:text-[0.9em] ml-41 md:mr-0 md:ml-0">
                   ● {b.title}
                   <span className="text-black font-normal">
                     : {b.desc.trim()}
