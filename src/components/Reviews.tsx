@@ -46,7 +46,7 @@ export default function Reviews() {
           <img
             src="/review/quote-new.png"
             alt="Quote Mobile"
-            className="block md:hidden w-auto object-contain h-36 mb-1 mr-18"
+            className="block md:hidden w-auto object-contain h-36 mb-1 mr-23"
           />
           <img
             src="/review/quote-md.png"
@@ -54,13 +54,13 @@ export default function Reviews() {
             className="hidden md:block w-full object-contain"
           />
           {/* Autor */}
-          <p className="text-[0.7em] text-red-700 font-semibold text-center md:text-right ml-27 md:ml-25 md:text-xl">
+          <p className="text-[0.65em] text-red-700 font-semibold text-center md:text-right ml-35 mb-4 md:ml-25 md:text-xl">
             — {mainReview.author}, {mainReview.country} ({mainReview.year})
           </p>
         </motion.div>
 
         {/* Right column - Other Reviews */}
-        <div className="md:w-2/5 flex flex-col justify-start gap-4 ml-24 md:ml-0 md:mt-50">
+        <div className="md:w-2/5 flex flex-col justify-start gap-4 ml-30 md:ml-0 md:mt-50">
           {reviews.map((r, i) => (
             <motion.div
               key={i}
@@ -69,7 +69,7 @@ export default function Reviews() {
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 * i }}
             >
-              <div className="flex items-start mr-5 md:mr-0 md:ml-7">
+              <div className="flex items-start mr-3 md:mr-0 md:ml-7">
                 <div className="flex mr-2 mb-1">{renderStars(r.stars)}</div>
                 <p className="text-black text-[0.55em] md:text-[0.85em] font-semibold mb-4">
                   “{r.review}”
