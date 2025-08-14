@@ -44,7 +44,7 @@ export default function FulfillmentSecond() {
           {/* Texto (primero en móvil, segundo en escritorio) */}
           <div className="order-1 md:order-2">
             <motion.h2
-              className="text-[1.2em] md:text-[1.705em] font-bold leading-tight mb-2 md:mr-46 mt-10 md:mt-0 text-center md:text-left md:flex-1"
+              className="text-[1em] md:text-[1.705em] mx-20 font-bold leading-tight mb-2 md:mr-46 mt-10 md:mt-0 text-center md:text-left md:flex-1"
               initial={{ opacity: 0, y: -20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
@@ -54,7 +54,7 @@ export default function FulfillmentSecond() {
 
             {/* Descripción solo en móvil */}
             <motion.p
-              className="text-black text-[0.75em] leading-snug md:hidden ml-45 mr-10"
+              className="text-black text-[0.65em] leading-snug md:hidden ml-45 mr-10"
               initial={{ opacity: 0, y: -10 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 }}
