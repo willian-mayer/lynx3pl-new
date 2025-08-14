@@ -60,8 +60,8 @@ export default function FulfillmentFirst() {
   animate={inView ? { opacity: 1, y: 0 } : {}}
   transition={{ duration: 0.6, delay: 0.2 }}
 >
-  Managing fulfillment can be stressful and{" "}
-  time<span className="inline md:block">consuming.</span>{" "}
+  Managing fulfillment can be stressful{" "}
+  <span className="inline md:block">and time consuming.</span>{" "}
   <span className="inline md:block">We take care of</span>{" "}
   <span className="inline md:block"></span>{" "}
   inventory, packing, and shipping,<span className="inline md:block"></span> so you can
