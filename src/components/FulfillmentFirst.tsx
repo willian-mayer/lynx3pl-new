@@ -32,7 +32,7 @@ export default function FulfillmentFirst() {
     transition={{ duration: 0.6, delay: 0.4 }}
   />
   <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-white rounded-xl">
-    <p className="text-center text-xs md:text-lg font-bold leading-snug text-black md:px-10 lg:px-16 mb-25 md:mb-25">
+    <p className="text-center text-xs md:text-lg font-bold leading-snug text-black md:px-10 lg:px-16 mb-25 md:mb-40">
       Our box is open,<br /> we welcome business of all sizes to connect with us!
     </p>
   </div>
