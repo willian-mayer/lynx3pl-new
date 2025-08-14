@@ -22,11 +22,11 @@ export default function FulfillmentFirst() {
         "
       >
 {/* Imagen (primero en escritorio) */}
-<div className="relative flex items-center justify-center w-full md:w-2/3 md:rounded-xl overflow-hidden order-2 md:order-1 md:ml-6 md:mt-35">
+<div className="relative flex items-center justify-center w-full md:w-2/3 md:rounded-xl overflow-hidden order-2 md:order-1 md:ml-6 md:mt-20">
   <motion.img
     src="/fulfillmentFirst/image.jpg"
     alt={title}
-    className="w-full object-cover md:h-[380px] md:px-2"
+    className="w-full object-cover md:h-[500px] md:px-2"
     initial={{ opacity: 0, scale: 0.95 }}
     animate={inView ? { opacity: 1, scale: 1 } : {}}
     transition={{ duration: 0.6, delay: 0.4 }}
