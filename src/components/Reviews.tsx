@@ -31,7 +31,7 @@ export default function Reviews() {
         md:justify-center
         md:items-center
         md:h-full
-        pt-20
+        pt-17
       "
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row md:items-stretch gap-3">
@@ -46,7 +46,7 @@ export default function Reviews() {
           <img
             src="/review/quote-new.png"
             alt="Quote Mobile"
-            className="block md:hidden w-auto object-contain h-36 mb-1 mr-23"
+            className="block md:hidden w-auto object-contain h-36 mb-1 mr-25"
           />
           <img
             src="/review/quote-md.png"
@@ -54,13 +54,13 @@ export default function Reviews() {
             className="hidden md:block w-full object-contain"
           />
           {/* Autor */}
-          <p className="text-[0.65em] text-red-700 font-semibold text-center md:text-right ml-35 mb-4 md:ml-25 md:text-xl">
+          <p className="text-[0.65em] text-red-700 font-semibold text-center md:text-right ml-32 mb-4 md:ml-25 md:text-xl">
             — {mainReview.author}, {mainReview.country} ({mainReview.year})
           </p>
         </motion.div>
 
         {/* Right column - Other Reviews */}
-        <div className="md:w-2/5 flex flex-col justify-start gap-4 ml-30 md:ml-0 md:mt-50">
+        <div className="md:w-2/5 flex flex-col justify-start gap-4 ml-33 md:ml-0 md:mt-50">
           {reviews.map((r, i) => (
             <motion.div
               key={i}
