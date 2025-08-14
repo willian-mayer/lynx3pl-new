@@ -26,7 +26,7 @@ export default function FulfillmentFirst() {
   <motion.img
     src="/fulfillmentFirst/image.jpg"
     alt={title}
-    className="w-full object-cover md:h-[400px]"
+    className="w-full object-cover md:h-[380px] md:px-2"
     initial={{ opacity: 0, scale: 0.95 }}
     animate={inView ? { opacity: 1, scale: 1 } : {}}
     transition={{ duration: 0.6, delay: 0.4 }}
@@ -44,7 +44,7 @@ export default function FulfillmentFirst() {
     flex flex-col w-full md:w-1/3 order-1 md:order-2 md:justify-end
     h-auto md:h-full
     mt-20
-    md:mt-76
+    md:mt-50
     md:mr-5
     md:mb-2
     ml-4
@@ -91,11 +91,11 @@ export default function FulfillmentFirst() {
               </span>{" "}
               <span className="block md:inline">
                 {" "}
-                inventory, packing, and shipping, so
+                inventory, packing, and shipping,
               </span>{" "}
               <span className="block md:inline">
                 {" "}
-                you can focus on growing
+                so you can focus on growing
               </span>{" "}
               your business.
             </motion.p>
