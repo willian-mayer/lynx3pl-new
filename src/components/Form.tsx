@@ -40,7 +40,6 @@ export default function Form() {
         pt-18 md:pt-0 
         h-screen 
         md:flex md:items-center md:justify-center
-         mx-4
       "
     >
       <div className="w-full max-w-6xl overflow-y-auto md:overflow-visible md:h-auto h-full">
@@ -52,8 +51,8 @@ export default function Form() {
               Contact Us
             </h1>
             {/* Full Name */}
-            <label className="flex md:flex-row md:items-start md:gap-4 text-md font-medium">
-              <span className="whitespace-nowrap md:w-40 mt-3 md:mt-0 pr-2">
+            <label className="flex md:flex-row md:items-start md:gap-4 text-md font-medium pb-2">
+              <span className="whitespace-nowrap md:w-40 mt-1 md:mt-0 pr-2">
                 Full Name
               </span>
               <input
@@ -62,7 +61,7 @@ export default function Form() {
                 placeholder="Your name"
                 value={formValues.name}
                 onChange={handleChange}
-                className="w-full border px-3 py-1 md:mt-0 rounded"
+                className="w-full border px-3 h-8 md:mt-0 rounded"
               />
             </label>
 
@@ -77,7 +76,7 @@ export default function Form() {
                 placeholder="Your email"
                 value={formValues.email}
                 onChange={handleChange}
-                className="w-full border px-3 py-1 md:mt-0 rounded"
+                className="w-full border px-3 py-1 h-8 md:mt-0 rounded"
               />
             </label>
 
@@ -88,14 +87,14 @@ export default function Form() {
                 {interests.map((interest, idx) => (
                   <label
                     key={idx}
-                    className="text-xs font-semibold flex items-center gap-2"
+                    className="text-xs font-semibold flex items-center gap-1"
                   >
                     <input
                       type="checkbox"
                       value={interest}
                       checked={formValues.interests.includes(interest)}
                       onChange={handleCheckboxChange}
-                      className="accent-green-600 pr-10"
+                      className="accent-green-600 "
                     />
                     {interest}
                   </label>
@@ -104,7 +103,7 @@ export default function Form() {
             </div>
 
             {/* Message */}
-            <label className="flex md:flex-row md:items-start md:gap-4 text-md font-medium">
+            <label className="flex md:flex-row md:items-start md:gap-4 text-md font-medium mt-2">
               <span className="whitespace-nowrap w-full md:w-40 md:mt-0">
                 Your Message
               </span>
@@ -121,7 +120,7 @@ export default function Form() {
             <div className="">
               <button
                 type="submit"
-                className="bg-green-600 text-white px-2 py-1 my-1 rounded text-xs ml-39"
+                className="bg-green-600 text-white px-2 py-1 my-1 rounded text-xs ml-42"
               >
                 Submit
               </button>
@@ -137,7 +136,7 @@ export default function Form() {
                   key={i}
                   className={
                     i === 0
-                      ? "text-xs font-extrabold text-black" // Primer item
+                      ? "text-sm font-extrabold text-black" // Primer item
                       : "text-xs font-normal text-black" // Resto
                   }
                 >
