@@ -13,7 +13,7 @@ export default function Reviews() {
     Array.from({ length: count }).map((_, i) => (
       <Star
         key={i}
-        className="w-4 h-4 text-red-600 fill-red-600 inline-block mr-1"
+        className="w-2 h-2 text-red-600 fill-red-600 inline-block mr-[1px] mt-1"
       />
     ));
 
@@ -38,43 +38,50 @@ export default function Reviews() {
         className="
           w-full max-w-6xl mx-auto
           flex flex-col md:flex-row md:items-stretch
-          gap-8
+          gap-2
         "
       >
         {/* Left column - Main Review */}
         <motion.div
-          className="md:w-[60%] flex flex-col justify-start lg:mb-64"
+          className="flex items-center justify-center"
           initial={{ opacity: 0, y: -20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-black text-[1.8em] md:text-6xl font-bold mb-4 text-center md:text-center ">
-            <span className="text-red-700">“</span>
-            {mainReview.review}
-            <span className="text-red-700">”</span>
-          </p>
-          <p className="text-sm text-red-700 font-semibold text-center md:text-right md:mr-20">
-            — {mainReview.author}, {mainReview.country} ({mainReview.year})
-          </p>
-        </motion.div>
+          {/* Imagen para móviles (antes de md) */}
+          <img
+            src="/review/quote.png"
+            alt="Quote Mobile"
+            className="block md:hidden w-auto object-contain"
+          />
 
+          {/* Imagen para md+ */}
+          <img
+            src="/review/quote-md.png"
+            alt="Quote Desktop"
+            className="hidden md:block w-full max-w-md object-contain"
+          />
+        </motion.div>
+        <p className="text-sm text-red-700 font-semibold text-center md:text-right md:mr-20 ml-10">
+          — {mainReview.author}, {mainReview.country} ({mainReview.year})
+        </p>
         {/* Right column - Other Reviews */}
         <div className="md:w-[40%] flex flex-col justify-end lg:ml-10">
           {reviews.map((r, i) => (
             <motion.div
               key={i}
-              className="flex flex-col items-start my-2"
+              className="flex flex-col items-start my-1"
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.4, delay: 0.1 * i }}
             >
-              <div className="flex items-start">
+              <div className="flex items-start ml-25 mr-7">
                 <div className="flex mr-2 mb-2">{renderStars(r.stars)}</div>
-                <p className="text-black text-xs md:text-[1em] font-semibold">
+                <p className="text-black text-[0.6em] md:text-[1em] font-semibold mb-2">
                   “{r.review}”
                 </p>
               </div>
-              <p className="text-xs lg:text-[0.9em] text-red-700 font-semibold pl-6 md:my-2">
+              <p className="text-[0.6em] lg:text-[0.9em] text-red-700 font-semibold pl-6 md:my-2 ml-30 mr-8">
                 — {r.author}, {r.country} ({r.year})
               </p>
             </motion.div>
