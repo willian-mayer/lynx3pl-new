@@ -44,7 +44,7 @@ export default function Reviews() {
         >
           {/* Imagen */}
           <img
-            src="/review/quote.png"
+            src="/review/quote-new.png"
             alt="Quote Mobile"
             className="block md:hidden w-auto object-contain h-36 mb-1 mr-18"
           />
