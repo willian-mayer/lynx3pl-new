@@ -23,7 +23,7 @@ export default function Hall() {
     >
       {/* Title */}
       <motion.h2
-        className="text-2xl md:text-[1.7em] font-bold mb-10 mx-23 text-left pl-4"
+        className="text-2xl md:text-[1.55em] font-bold mb-10 mx-23 text-left "
         initial={{ opacity: 0, y: -20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5 }}
