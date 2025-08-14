@@ -20,7 +20,7 @@ export default function Transloading() {
         "
       >
         {/* Columna izquierda: Items + Botón (solo md+) */}
-        <div className="w-full grid grid-cols-1 gap-2 px-4 md:px-0 md:col-span-1 md:gap-2 md:mt-12">
+        <div className="w-full grid grid-cols-1 gap-2 px-4 md:px-0 md:col-span-1 ml-10 md:ml-0 md:gap-2 md:mt-12">
           {/* Título solo en móvil */}
           <motion.h2
             className="block md:hidden text-md font-bold text-black inter-bold mb-4"
