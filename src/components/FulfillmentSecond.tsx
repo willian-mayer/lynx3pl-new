@@ -14,7 +14,7 @@ export default function FulfillmentSecond() {
       <div className="w-full max-w-[1100px] flex flex-col md:grid md:grid-cols-2 gap-6 items-center h-full">
 
         {/* Columna 1: Imagen + Título con orden adaptable */}
-        <div className="flex flex-col md:flex-row items-center md:items-start md:mb-27 gap-6">
+        <div className="flex flex-col md:flex-row items-center md:items-start md:mb-27 gap-3">
           
           {/* Imagen (segundo en móvil, primero en escritorio) */}
 <div className="flex justify-center items-center overflow-hidden md:h-[180px] md:w-[400px] h-[100px] order-2 md:order-1 ">
@@ -44,7 +44,7 @@ export default function FulfillmentSecond() {
           {/* Texto (primero en móvil, segundo en escritorio) */}
           <div className="order-1 md:order-2">
             <motion.h2
-              className="text-[1em] md:text-[1.705em] mx-20 font-bold leading-tight mb-2 md:mr-46 mt-10 md:mt-0 text-center md:text-left md:flex-1"
+              className="text-[1em] md:text-[1.705em] mx-20 md:mx-0 font-bold leading-tight mb-2 md:mr-46 mt-10 md:mt-0 text-center md:text-left md:flex-1"
               initial={{ opacity: 0, y: -20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
