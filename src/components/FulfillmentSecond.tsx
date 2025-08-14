@@ -11,13 +11,13 @@ export default function FulfillmentSecond() {
       ref={ref}
       className="relative bg-white md:px-6 pt-10 pb-2 h-screen flex items-center justify-center overflow-hidden"
     >
-      <div className="w-full max-w-6xl flex flex-col md:grid md:grid-cols-2 gap-6 items-center h-full">
+      <div className="w-full max-w-[1100px] flex flex-col md:grid md:grid-cols-2 gap-6 items-center h-full">
 
         {/* Columna 1: Imagen + Título con orden adaptable */}
-        <div className="flex flex-col md:flex-row items-center md:items-start md:mb-23 gap-6">
+        <div className="flex flex-col md:flex-row items-center md:items-start md:mb-27 gap-6">
           
           {/* Imagen (segundo en móvil, primero en escritorio) */}
-<div className="flex justify-center items-center overflow-hidden md:h-[180px] md:w-[300px] h-[100px] order-2 md:order-1">
+<div className="flex justify-center items-center overflow-hidden md:h-[180px] md:w-[400px] h-[100px] order-2 md:order-1 ">
   <motion.picture
     initial={{ opacity: 0, scale: 0.95 }}
     animate={inView ? { opacity: 1, scale: 1 } : {}}
@@ -34,6 +34,7 @@ export default function FulfillmentSecond() {
         md:h-[180px]
         object-cover 
         md:object-[center]
+        md:w-
       "
     />
   </motion.picture>
@@ -43,7 +44,7 @@ export default function FulfillmentSecond() {
           {/* Texto (primero en móvil, segundo en escritorio) */}
           <div className="order-1 md:order-2">
             <motion.h2
-              className="text-[1.2em] md:text-2xl font-bold leading-tight mb-4 md:mr-70 mt-10 md:mt-0 text-center md:text-left md:flex-1"
+              className="text-[1.2em] md:text-[1.705em] font-bold leading-tight mb-4 md:mr-46 mt-10 md:mt-0 text-center md:text-left md:flex-1"
               initial={{ opacity: 0, y: -20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5 }}
