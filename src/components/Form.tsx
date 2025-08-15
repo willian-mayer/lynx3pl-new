@@ -87,7 +87,7 @@ if (!isDesktop) {
                   </label>
                 ))}
               </div>
-                            <h2 className="text-left font-bold mt-4">Lynx3PL, Inc. </h2>
+                            <h2 className="text-left font-bold mt-7">Lynx3PL, Inc. </h2>
 
             </div>
 
