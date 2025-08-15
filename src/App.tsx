@@ -18,6 +18,7 @@ import FulfillmentSecond from "./components/FulfillmentSecond";
 import FulfillmentThird from "./components/FulfillmentThird";
 import Gallery from "./components/Gallery";
 import Transloading from "./components/Transloading";
+import Transboarding from "./components/Transboarding";
 function App() {
   return (
     <>
@@ -57,6 +58,9 @@ function App() {
             </section>
             <section className="h-screen snap-start" id="transloading">
               <Transloading />
+            </section>
+                        <section className="h-screen snap-start">
+              <Transboarding />
             </section>
             <section className="h-screen snap-start" id="reviews">
               <Reviews />
