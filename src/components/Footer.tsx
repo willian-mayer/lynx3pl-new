@@ -13,7 +13,7 @@ export default function Footer() {
       </div>
 
       {/* Divider */}
-      <div className="border-t-2 border-white my-6 w-fulln"></div>
+      <div className="border-t-2 border-white my-6 w-full md:my-0 md:mt-10"></div>
 
       {/* Bottom Section - Footer Links */}
       <div className="basis-1/4 px-2 md:px-6 md:ml-10 mx-8 md:pt-10">
