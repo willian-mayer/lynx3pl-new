@@ -21,7 +21,7 @@ export default function FulfillmentThird() {
         "
       >
         {/* Columna izquierda: Título y Steps */}
-        <div className="flex flex-col items-center md:items-end text-center mt-10 md:mt-0 md:text-right md:space-y-20">
+        <div className="flex flex-col items-center md:items-end text-center mt-15 md:mt-0 md:text-right md:space-y-20">
           {/* Title */}
           <motion.h2
             className="text-[1.8em] md:text-4xl font-semibold text-black md:mt-20 md:mt-0 md:mr-20 "
