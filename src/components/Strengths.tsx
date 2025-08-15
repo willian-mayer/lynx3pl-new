@@ -17,7 +17,7 @@ export default function Strengths() {
         initial={{ x: "-100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center p-6 md:p-12 md:pt-56"
+        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center px-6 mb-10 md:p-12 md:pt-56"
       >
         <video
           src="/watchus/Lynx3PL.mp4"
