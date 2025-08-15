@@ -86,7 +86,7 @@ export default function Gallery() {
   />
 
   <motion.p
-    className="text-left text-base font-medium inter mx-5 pr-14 ml-4 bg-[#404040] text-white"
+    className="text-left text-base font-medium inter mx-10 pl-2 mr-11 "
     variants={itemVariants}
     transition={{ duration: 0.5, ease: "easeOut" }}
   >
