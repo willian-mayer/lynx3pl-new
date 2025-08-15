@@ -4,19 +4,19 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-10 md:py-16 md:h-screen flex flex-col justify-end h-full">
       {/* Top Section - Title */}
-      <div className="flex-1 flex items-end justify-center md:justify-start mx-4 md:mx-24 mr-44 ml-10 mx-6">
+      <div className="flex-1 flex items-end justify-center md:justify-start mx-4 md:mx-15 mr-44 ml-10 mx-6">
         <h2 className="text-lg md:text-4xl font-semibold leading-snug max-w-4xl mx-auto md:mx-0 text-center text-left">
           Starting a new project or looking for a new partner?{" "}
-          <span className="underline">Let’s talk</span> &gt;{" "}
+          <span className="underline text-[#008000]">Let’s talk</span> &gt;{" "}
           <span>info@lynx3pl.com</span>
         </h2>
       </div>
 
       {/* Divider */}
-      <div className="border-t-4 border-white my-6 w-full"></div>
+      <div className="border-t-4 border-white my-6 w-full md:hidden"></div>
 
       {/* Bottom Section - Footer Links */}
-      <div className="basis-1/4 px-2 md:px-6 md:ml-20 mx-8 ">
+      <div className="basis-1/4 px-2 md:px-6 md:ml-10 mx-8 md:pt-10">
         <div
           className="
             grid grid-cols-2 md:grid-cols-4 

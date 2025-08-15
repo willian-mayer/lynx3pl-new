@@ -60,11 +60,11 @@ export default function Gallery() {
           ))}
 
           <motion.div
-            className="flex items-center justify-center rounded-xl text-left ml-2"
+            className="flex items-center justify-center rounded-xl text-left bg-[#404040] text-white"
             variants={itemVariants}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
-            <p className="text-sm md:text-[1.3em] font-medium text-black inter-medium  mx-7 pr-5">
+            <p className="text-sm md:text-[1.3em] font-medium inter-medium  mx-7 pr-5">
               {desc}
             </p>
           </motion.div>
@@ -86,7 +86,7 @@ export default function Gallery() {
   />
 
   <motion.p
-    className="text-left text-base font-medium text-black inter px-5 pr-14 ml-8"
+    className="text-left text-base font-medium inter mx-5 pr-14 ml-4 bg-[#404040] text-white"
     variants={itemVariants}
     transition={{ duration: 0.5, ease: "easeOut" }}
   >
