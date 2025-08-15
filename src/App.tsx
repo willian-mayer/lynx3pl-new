@@ -29,16 +29,23 @@ function App() {
           </section>
           <div className="navbar">
             <Navbar title="Your Company" routes={routes} />
-            <section className="snap-start min-h-[calc(100vh-64px)]" id="services">
+            <section
+              className="snap-start min-h-[calc(100vh-64px)]"
+              id="services"
+            >
               <Services />
-            </section>
-            <section className="h-screen snap-start">
-              <Hero />
             </section>
             <section className="snap-start min-h-[calc(100vh-64px)]">
               <Strengths />
             </section>
-            <section className="snap-start min-h-[calc(100vh-64px)]" id="warehousing">
+            <section className="h-screen snap-start">
+              <Hero />
+            </section>
+
+            <section
+              className="snap-start min-h-[calc(100vh-64px)]"
+              id="warehousing"
+            >
               <NewWarehousing />
             </section>
             <section className="snap-start min-h-[calc(100vh-64px)]">
@@ -59,7 +66,7 @@ function App() {
             <section className="h-screen snap-start" id="transloading">
               <Transloading />
             </section>
-                        <section className="h-screen snap-start">
+            <section className="h-screen snap-start">
               <Transboarding />
             </section>
             <section className="h-screen snap-start" id="reviews">
