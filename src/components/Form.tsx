@@ -43,7 +43,7 @@ if (!isDesktop) {
         <div className="grid gap-2">
           {/* Full Name */}
           <label className="flex text-md font-medium pb-2 mx-5">
-            <span className="whitespace-nowrap mt-1 pr-4 text-xs">Full Name</span>
+            <span className="whitespace-nowrap mt-1 pr-4 text-md font-bold">Full Name</span>
             <input
               type="text"
               name="name"
@@ -55,7 +55,7 @@ if (!isDesktop) {
 
           {/* Email */}
           <label className="flex text-md font-medium mx-5">
-            <span className="whitespace-nowrap mt-1 pr-[14px] text-xs">Your Email</span>
+            <span className="whitespace-nowrap mt-1 pr-[14px] text-md font-bold">Your Email</span>
             <input
               type="email"
               name="email"
@@ -66,10 +66,10 @@ if (!isDesktop) {
           </label>
 
           {/* Grid de 2 columnas */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 ml-5">
             {/* Columna izquierda: Interests */}
             <div>
-              <h2 className="text-md font-medium mb-2">I'm interested in:</h2>
+              <h2 className="text-md font-bold mb-2">I'm interested in:</h2>
               <div className="flex flex-col gap-3">
                 {interests.map((interest, idx) => (
                   <label
@@ -93,7 +93,7 @@ if (!isDesktop) {
             <div className="flex flex-col gap-2">
               {/* Message */}
               <label className="flex flex-col text-md font-medium pr-8">
-                <span className="whitespace-nowrap">Your Message</span>
+                <span className="whitespace-nowrap font-bold">Your Message</span>
                 <textarea
                   name="message"
                   rows={4}
