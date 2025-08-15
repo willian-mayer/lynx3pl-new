@@ -163,18 +163,18 @@ export default function Form() {
 
   // 💻 Desktop: diseño en 3 columnas
   return (
-    <section className="px-6 pt-0 h-screen flex items-center justify-center">
+    <section className="px-90 pt-0 h-screen flex items-center justify-center">
       <div className="w-full max-w-6xl grid grid-cols-2 gap-4">
         {/* Columna izquierda (2 columnas) */}
         <div className="col-span-1 space-y-4">
-          <h1 className="font-bold text-lg">Contact Us</h1>
+          <h1 className="font-bold text-3xl">Contact Us</h1>
 
           <label className="flex items-start gap-4 text-md font-medium">
             <span className="whitespace-nowrap w-40 mt-1">Full Name</span>
             <input
               type="text"
               name="name"
-              placeholder="Your name"
+              placeholder=""
               value={formValues.name}
               onChange={handleChange}
               className="w-full border px-3 h-8 rounded"
@@ -186,7 +186,7 @@ export default function Form() {
             <input
               type="email"
               name="email"
-              placeholder="Your email"
+              placeholder=""
               value={formValues.email}
               onChange={handleChange}
               className="w-full border px-3 h-8 rounded"
@@ -197,22 +197,22 @@ export default function Form() {
             <span className="whitespace-nowrap w-40">Your Message</span>
             <textarea
               name="message"
-              rows={4}
+              rows={10}
               value={formValues.message}
               onChange={handleChange}
-              className="w-full border px-3 rounded border-green-600"
+              className="w-full border px-3 h-50 rounded border-green-600"
             />
           </label>
 
           <button
             type="submit"
-            className="bg-green-600 text-white px-2 py-1 rounded text-xs"
+            className="bg-green-600 text-white px-2 py-1 rounded text-xs ml-58"
           >
             Submit
           </button>
 
           {/* Contact Info + Mapa */}
-          <div className="flex gap-6 mt-6">
+          <div className="flex gap-6">
             <div>
               {contactInfo.map((line, i) => (
                 <p
@@ -236,20 +236,20 @@ export default function Form() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                className="border border-black rounded w-full"
+                className="border border-solid border-black rounded w-full"
               ></iframe>
             </div>
           </div>
         </div>
 
         {/* Columna derecha */}
-        <div>
-          <h2 className="text-md font-medium mb-2">I'm interested in</h2>
+        <div className="flex flex-col items-end">
+          <h2 className="text-xl font-bold mb-2 mr-6 ">I'm interested in:</h2>
           <div className="flex flex-col gap-1">
             {interests.map((interest, idx) => (
               <label
                 key={idx}
-                className="text-xs font-semibold flex items-center gap-1"
+                className="text-md font-semibold flex items-center gap-1"
               >
                 <input
                   type="checkbox"
