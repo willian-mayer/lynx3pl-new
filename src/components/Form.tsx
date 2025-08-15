@@ -108,7 +108,7 @@ if (!isDesktop) {
               {/* Botón */}
               <button
                 type="submit"
-                className="bg-gray-700 text-white px-2 py-1 rounded text-xs self-start"
+                className="bg-gray-500 text-white px-2 py-1 rounded text-xs self-start"
               >
                 Submit
               </button>
@@ -194,7 +194,7 @@ return (
 
         <button
           type="submit"
-          className="bg-gray-700 text-white px-4 py-2 rounded text-sm ml-[10.2rem]"
+          className="bg-gray-500 text-white px-4 py-2 rounded text-sm ml-[10.2rem]"
         >
           Submit
         </button>
