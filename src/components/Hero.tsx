@@ -67,7 +67,7 @@ export default function Hero() {
           items-end
           justify-between 
           gap-4 
-          pb-6 
+          pb-12 
           w-full 
           px-3
           md:pb-10
