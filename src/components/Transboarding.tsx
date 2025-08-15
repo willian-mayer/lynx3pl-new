@@ -11,10 +11,10 @@ const Transboarding: React.FC = () => {
     <section className="w-full h-screen flex items-center justify-center lg:px-12 pt-18">
       {isDesktop ? (
         // 🖥 Desktop Layout
-        <div className="flex w-full h-full">
+        <div className="flex w-full h-full mt-20 mx-37">
           {/* Imagen - 2/3 izquierda */}
           <motion.div
-            className="w-2/3 h-full m-20"
+            className="w-full h-96"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -28,12 +28,12 @@ const Transboarding: React.FC = () => {
 
           {/* Título - derecha */}
           <motion.div
-            className="w-1/3 flex items-start justify-start p-6"
+            className=" flex items-start justify-start "
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-4xl font-bold">{title}</h1>
+            <h1 className="text-4xl font-bold ml-20">{title}</h1>
           </motion.div>
         </div>
       ) : (
