@@ -101,7 +101,7 @@ if (!isDesktop) {
                   rows={4}
                   value={formValues.message}
                   onChange={handleChange}
-                  className="w-full border h-30 px-5 mt-1 rounded border-green-600"
+                  className="w-full border h-30 px-5 mt-1 rounded border-black"
                 />
               </label>
 
@@ -188,7 +188,7 @@ return (
             rows={10}
             value={formValues.message}
             onChange={handleChange}
-            className="w-full border px-3 rounded border-green-600 h-35"
+            className="w-full border px-3 rounded border-black h-35"
           />
         </label>
 
