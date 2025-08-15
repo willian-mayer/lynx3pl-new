@@ -30,10 +30,7 @@ export default function Form() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log(formValues);
-  };
+
 
 if (!isDesktop) {
   // 📱 Mobile: diseño con grid 2 columnas después de name y email
