@@ -21,10 +21,10 @@ export default function FulfillmentThird() {
         "
       >
         {/* Columna izquierda: Título y Steps */}
-        <div className="flex flex-col items-center md:items-end text-center md:text-right space-y-20">
+        <div className="flex flex-col items-center md:items-end text-center md:text-right md:space-y-20">
           {/* Title */}
           <motion.h2
-            className="text-[1.8em] md:text-4xl font-semibold text-black mt-20 md:mt-0 md:mr-20 "
+            className="text-[1.8em] md:text-4xl font-semibold text-black md:mt-20 md:mt-0 md:mr-20 "
             initial={{ opacity: 0, y: -20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
