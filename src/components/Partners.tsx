@@ -35,7 +35,7 @@ export default function Partners() {
         <div className="w-full max-w-5xl flex flex-col-reverse md:flex-row items-center gap-10 ">
           {/* Texto del título */}
           <motion.h2
-            className="text-3xl md:text-5xl font-bold text-[#008000] text-right md:text-right ml-25 mt-4 md:mt-0 flex-1 md:mt-56"
+            className="text-3xl md:text-5xl font-bold text-[#008000] text-right md:text-right ml-32 mt-4 md:mt-0 flex-1 md:mt-56"
             initial={{ opacity: 0 }}
             animate={inView ? { opacity: 1 } : {}}
             transition={{ duration: 0.6 }}
@@ -60,11 +60,11 @@ export default function Partners() {
         </div>
 
         {/* Partner Logos */}
-        <div className="w-full flex flex-wrap justify-between gap-1 mt-5 px-10 md:px-0 md:gap-10">
+        <div className="w-full flex flex-wrap justify-start gap-1 mt-5 px-10 ml-15 md:ml-0 md:px-0 md:gap-10">
           {partners.map((p, i) => (
             <motion.div
               key={i}
-              className="flex items-center justify-center w-[30%] md:w-auto md:flex-1 h-[40px] md:h-20"
+              className="flex items-center justify-center w-[20%] md:w-auto md:flex-1 h-[40px] md:h-20"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3, delay: i * 0.05 }}

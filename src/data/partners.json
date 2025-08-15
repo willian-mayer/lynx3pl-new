@@ -8,31 +8,34 @@
     ],
     "partners": [
         {
-            "partnersUrl": "/partners/1.jpg"
+            "partnersUrl": "/partners/1-new.png"
         },
         {
-            "partnersUrl": "/partners/2.png"
+            "partnersUrl": "/partners/2-new.png"
         },
         {
-            "partnersUrl": "/partners/3.jpg"
+            "partnersUrl": "/partners/3-new.png"
         },
         {
-            "partnersUrl": "/partners/4.png"
+            "partnersUrl": "/partners/4-new.png"
         },
         {
-            "partnersUrl": "/partners/5.png"
+            "partnersUrl": "/partners/5-new.png"
         },
         {
-            "partnersUrl": "/partners/6.png"
+            "partnersUrl": "/partners/6-new.png"
         },
         {
-            "partnersUrl": "/partners/7.png"
+            "partnersUrl": "/partners/7-new.png"
         },
         {
-            "partnersUrl": "/partners/8.png"
+            "partnersUrl": "/partners/8-new.png"
         },
         {
-            "partnersUrl": "/partners/9.png"
+            "partnersUrl": "/partners/9-new.png"
+        },
+        {
+            "partnersUrl": "/partners/10-new.png"
         }
     ]
 }
