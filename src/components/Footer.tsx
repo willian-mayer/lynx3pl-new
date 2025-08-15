@@ -13,16 +13,16 @@ export default function Footer() {
       </div>
 
       {/* Divider */}
-      <div className="border-t-4 border-white my-6 w-full md:hidden"></div>
+      <div className="border-t-2 border-white my-6 w-full md:hidden"></div>
 
       {/* Bottom Section - Footer Links */}
       <div className="basis-1/4 px-2 md:px-6 md:ml-10 mx-8 md:pt-10">
         <div
           className="
-            grid grid-cols-2 md:grid-cols-4 
+            grid grid-cols-2 md:grid-cols-5 
             text-[0.5em] md:text-sm 
             text-left md:text-left 
-            gap-2 md:gap-0
+            gap-2 md:gap-30
           "
         >
           {data.map((section, index) => (
