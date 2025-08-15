@@ -4,12 +4,13 @@ export default function Footer() {
   return (
     <footer className="bg-black text-white py-10 md:py-16 md:h-screen flex flex-col justify-end h-full">
       {/* Top Section - Title */}
-      <div className="flex-1 flex items-end justify-center md:justify-start mx-4 md:mx-15 mr-44 ml-10 mx-6 md:ml-56">
-        <h2 className="text-lg md:text-4xl font-semibold leading-snug max-w-4xl mx-auto md:mx-0 text-center text-left">
-          Starting a new project or looking for a new partner?{" "}
-          <span className="underline text-[#008000]">Let’s talk</span> &gt;{" "} <span className="ml-20 md:ml-0"></span>
-          <span>info@lynx3pl.com</span>
-        </h2>
+      <div className="flex-1 flex items-end justify-center md:justify-start mx-4 md:mx-15 ml-10 mx-6 md:ml-56">
+        <div className="text-lg md:text-4xl font-semibold leading-snug max-w-4xl mx-auto md:mx-0 text-center text-left">
+            <h2 className=" mr-40 md:mr-0">Starting a new project or looking for a new partner?{" "}</h2>
+          <span className="underline text-[#008000] ">
+            Let’s talk
+          </span> &gt; <span>info@lynx3pl.com</span>
+        </div>
       </div>
 
       {/* Divider */}
@@ -28,7 +29,9 @@ export default function Footer() {
         >
           {data.map((section, index) => (
             <div key={index}>
-              <h3 className="text-sm md:text-lg font-bold mb-3">{section.title}</h3>
+              <h3 className="text-sm md:text-lg font-bold mb-3">
+                {section.title}
+              </h3>
               <ul className="">
                 {section.items.map((item, i) => (
                   <li key={i}>
