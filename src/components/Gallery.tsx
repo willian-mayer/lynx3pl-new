@@ -90,7 +90,7 @@ export default function Gallery() {
     variants={itemVariants}
     transition={{ duration: 0.5, ease: "easeOut" }}
   >
-    We offer choices of real-time inventory management<span className="font-bold"> software solutions</span> and uniquely <span className="font-bold">versatile storage</span> options tailored to diverse customer needs, setting us apart from the competitions.
+    We offer choices of <span className="font-bold">real-time inventory</span> management<span className="font-bold"> software solutions</span> and uniquely <span className="font-bold">versatile storage</span> options tailored to diverse customer needs, setting us apart from the competitions.
   </motion.p>
 </motion.div>
 
