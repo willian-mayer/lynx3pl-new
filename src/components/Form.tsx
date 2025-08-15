@@ -39,7 +39,7 @@ if (!isDesktop) {
       className="px-4 md:px-6 pt-18 md:pt-0 h-screen md:flex md:items-center md:justify-center"
     >
       <div className="w-full max-w-6xl overflow-y-auto md:overflow-visible md:h-auto h-full">
-        <h1 className="text-center font-bold text-xl mb-3">Contact Us</h1>
+        <h1 className="text-center font-bold text-xl mb-3 ml-25">Contact Us</h1>
         <div className="grid gap-2">
           {/* Full Name */}
           <label className="flex text-md font-medium pb-2 mx-5">
@@ -66,7 +66,7 @@ if (!isDesktop) {
           </label>
 
           {/* Grid de 2 columnas */}
-          <div className="grid grid-cols-2 gap-4 ml-5">
+          <div className="grid grid-cols-2 gap-4 ml-5 mt-2">
             {/* Columna izquierda: Interests */}
             <div>
               <h2 className="text-md font-bold mb-2">I'm interested in:</h2>
@@ -87,10 +87,12 @@ if (!isDesktop) {
                   </label>
                 ))}
               </div>
+                            <h2 className="text-left font-bold mt-4">Lynx3PL, Inc. </h2>
+
             </div>
 
             {/* Columna derecha: Message + Botón + Info + Mapa */}
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col ">
               {/* Message */}
               <label className="flex flex-col text-md font-medium pr-8">
                 <span className="whitespace-nowrap font-bold">Your Message</span>
@@ -112,7 +114,7 @@ if (!isDesktop) {
               </button>
 
               {/* Info Empresa */}
-              <div>
+              <div className="my-2">
                 {contactInfo.map((line, i) => (
                   <p
                     key={i}
@@ -143,7 +145,6 @@ if (!isDesktop) {
             </div>
           </div>
         </div>
-              <h2 className="text-center font-bold mt-3">Lynx3PL, Inc. </h2>
 
       </div>
     </section>
