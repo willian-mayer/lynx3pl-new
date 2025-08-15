@@ -94,21 +94,21 @@ if (!isDesktop) {
             {/* Columna derecha: Message + Botón + Info + Mapa */}
             <div className="flex flex-col ">
               {/* Message */}
-              <label className="flex flex-col text-md font-medium pr-8">
+              <label className="flex flex-col text-md font-medium pr-6">
                 <span className="whitespace-nowrap font-bold">Your Message</span>
                 <textarea
                   name="message"
                   rows={4}
                   value={formValues.message}
                   onChange={handleChange}
-                  className="w-full border h-30 px-5 mt-1 rounded border-black"
+                  className="w-full border-3 h-30 px-5 mt-1 rounded border-black"
                 />
               </label>
 
               {/* Botón */}
               <button
                 type="submit"
-                className="bg-green-600 text-white px-2 py-1 rounded text-xs self-start"
+                className="bg-black text-white px-2 py-1 rounded text-xs self-start"
               >
                 Submit
               </button>
@@ -194,7 +194,7 @@ return (
 
         <button
           type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded text-sm ml-[10.2rem]"
+          className="bg-black text-white px-4 py-2 rounded text-sm ml-[10.2rem]"
         >
           Submit
         </button>
