@@ -60,7 +60,7 @@ export default function Partners() {
         </div>
 
         {/* Partner Logos */}
-        <div className="w-full flex flex-wrap justify-between gap-1 mt-2 px-10 md:px-0 md:gap-10">
+        <div className="w-full flex flex-wrap justify-between gap-1 mt-5 px-10 md:px-0 md:gap-10">
           {partners.map((p, i) => (
             <motion.div
               key={i}
