@@ -29,7 +29,7 @@ export default function Footer() {
           {data.map((section, index) => (
             <div key={index}>
               <h3 className="text-sm md:text-lg font-bold mb-3">{section.title}</h3>
-              <ul className="md:space-y-2">
+              <ul className="">
                 {section.items.map((item, i) => (
                   <li key={i}>
                     <a href="#" className="hover:underline">
