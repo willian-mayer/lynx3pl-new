@@ -19,6 +19,7 @@ import FulfillmentThird from "./components/FulfillmentThird";
 import Gallery from "./components/Gallery";
 import Transloading from "./components/Transloading";
 import Transboarding from "./components/Transboarding";
+import WeServe from "./components/WeServe";
 function App() {
   return (
     <>
@@ -65,6 +66,9 @@ function App() {
             </section>
             <section className="h-screen snap-start" id="transloading">
               <Transloading />
+            </section>
+                        <section className="h-screen snap-start">
+              <WeServe />
             </section>
             <section className="h-screen snap-start">
               <Transboarding />
