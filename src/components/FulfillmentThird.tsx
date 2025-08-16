@@ -33,7 +33,7 @@ export default function FulfillmentThird() {
           </motion.h2>
 
           {/* Steps */}
-          <div className="flex flex-col gap-1 md:gap-2 px-26 md:px-0 text-left w-full max-w-2xl mt-6 ml-4 md:mt-8 md:pl-24">
+          <div className="flex flex-col gap-1 md:gap-2 px-26 md:px-0 text-left w-full max-w-2xl mt-6 ml-4 md:mt-8 md:pl-30">
             {step.map((s, i) => (
               <motion.div
                 key={i}
