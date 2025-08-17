@@ -1,41 +1,51 @@
 {
-    "title": "Partners",
-    "years": [
-        {
-            "year": 35,
-            "desc": "years of warehouse management and logistics experiences"
-        }
-    ],
-    "partners": [
-        {
-            "partnersUrl": "/partners/1-new.png"
-        },
-        {
-            "partnersUrl": "/partners/2-new.png"
-        },
-        {
-            "partnersUrl": "/partners/3-new.png"
-        },
-        {
-            "partnersUrl": "/partners/4-new.png"
-        },
-        {
-            "partnersUrl": "/partners/5-new.png"
-        },
-        {
-            "partnersUrl": "/partners/6-new.png"
-        },
-        {
-            "partnersUrl": "/partners/7-new.png"
-        },
-        {
-            "partnersUrl": "/partners/8-new.png"
-        },
-        {
-            "partnersUrl": "/partners/9-new.png"
-        },
-        {
-            "partnersUrl": "/partners/10-new.png"
-        }
-    ]
+  "title": "Partners",
+  "years": [
+    {
+      "year": 35,
+      "desc": "years of warehouse management and logistics experiences"
+    }
+  ],
+  "partners": [
+    {
+      "partnersUrl": "/partners/1.png",
+      "height": "auto"
+    },
+    {
+      "partnersUrl": "/partners/2.png",
+      "height": "auto"
+    },
+    {
+      "partnersUrl": "/partners/3.png",
+      "height": "auto"
+    },
+    {
+      "partnersUrl": "/partners/4.png",
+      "height": "auto"
+    },
+    {
+      "partnersUrl": "/partners/5.png",
+      "height": "auto"
+    },
+    {
+      "partnersUrl": "/partners/6.png",
+      "height": "auto"
+    },
+    {
+      "partnersUrl": "/partners/7.png",
+      "height": "auto"
+    },
+    {
+      "partnersUrl": "/partners/8.png",
+      "height": "50px"
+    },
+    {
+      "partnersUrl": "/partners/9.png",
+      "height": "auto"
+    },
+    {
+      "partnersUrl": "/partners/10.png",
+      "height": "50px"
+    }
+  ]
 }
