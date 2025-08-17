@@ -22,17 +22,17 @@ const WeServe = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-3xl md:text-5xl font-bold text-center mb-8"
+            className="text-3xl md:text-md font-bold text-center mb-12"
           >
             {title}
           </motion.h2>
 
-          <div className="flex flex-col md:flex-row w-full h-full md:h-[70%] justify-center items-center gap-4">
+          <div className="flex flex-col md:flex-row w-full h-full md:h-[70%] justify-center items-start">
             <motion.ul
               initial={{ opacity: 0, x: -50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex-1 grid grid-cols-2 md:grid-cols-1 gap-2 text-right pr-4 text-sm md:text-base"
+              className="flex-1 grid grid-cols-2 md:grid-cols-1 font-normal text-right pr-4 md:text-xl"
             >
               {left.map((item, i) =>
                 item.name.trim() === "" ? (
@@ -45,7 +45,7 @@ const WeServe = () => {
               )}
             </motion.ul>
 
-            <div className="flex-1 flex justify-center items-center">
+            <div className="flex justify-center items-center">
               <img
                 src="/weserve/image.jpg"
                 alt="We serve"
@@ -57,7 +57,7 @@ const WeServe = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex-1 grid grid-cols-2 md:grid-cols-1 gap-2 text-left pl-4 text-sm md:text-base"
+              className="flex-1 grid grid-cols-2 md:grid-cols-1 font-normal text-left pl-4 text-sm md:text-xl"
             >
               {right.map((item, i) => (
                 <li key={i} className="text-black">
