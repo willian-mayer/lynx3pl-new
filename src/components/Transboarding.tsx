@@ -52,7 +52,7 @@ const Transboarding: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-4xl font-bold ml-30">{title}</h1>
+            <h1 className="text-4xl font-bold ml-30 text-[#006050]">{title}</h1>
           </motion.div>
         </div>
       ) : (
