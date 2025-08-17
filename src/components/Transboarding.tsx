@@ -60,7 +60,7 @@ const Transboarding: React.FC = () => {
         <div className="flex flex-col w-full h-full">
           {/* Título */}
           <motion.h1
-            className="text-right text-xl font-bold my-10 ml-50 mr-10"
+            className="text-right text-xl font-bold my-10 ml-50 mr-10 text-[#006050]"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -80,7 +80,7 @@ const Transboarding: React.FC = () => {
 
           {/* Imagen secundaria small.png */}
           <motion.img
-            src="/transboarding/small.png"
+            src="/transboarding/small-new.png"
             alt="Extra visual"
             className="w-full h-auto object-contain mt-8 px-15"
             initial={{ opacity: 0, y: 20 }}
