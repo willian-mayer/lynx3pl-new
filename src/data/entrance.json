@@ -1,14 +1,14 @@
 [
-    {
-        "language": "English",
-        "short": "EN"
-    },
-{
-        "language": "Spanish",
-        "short": "ES"
-    },
-    {
-        "language": "Chinese",
-        "short": "中文"
-    }
+  {
+    "language": "English",
+    "short": "EN"
+  },
+  {
+    "language": "Spanish",
+    "short": "ES"
+  },
+  {
+    "language": "Chinese",
+    "short": "中文"
+  }
 ]
