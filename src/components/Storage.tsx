@@ -59,12 +59,12 @@ const Storage = () => {
         </div>
       ) : (
         // 📱 Mobile Layout
-        <div className="flex flex-col items-center justify-between min-h-screen p-4">
+        <div className="flex flex-col items-center justify-between min-h-screen">
           {/* Imagen top */}
           <motion.img
             src={smartphone[0].imageTop}
             alt="Storage top"
-            className="w-full max-h-40 object-contain mb-6"
+            className="w-full max-h-40 object-contain mt-20"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -72,20 +72,20 @@ const Storage = () => {
 
           {/* Texto central */}
           <motion.div
-            className="text-center flex-1 flex flex-col justify-center"
+            className="text-center flex-1 flex flex-col justify-center p-10 py-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-2xl font-bold mb-4">{title}</h2>
-            <p className="text-sm text-gray-700">{desc}</p>
+            <h2 className="text-[0.8em] font-bold mb-2 text-left pr-18 pl-11 leading-4">{title}</h2>
+            <p className="text-[.3em] text-black font-medium text-left pr-39 pl-11">{desc}</p>
           </motion.div>
 
           {/* Imagen bottom */}
           <motion.img
             src={smartphone[1].imageBottom}
             alt="Storage bottom"
-            className="w-full max-h-40 object-contain mt-6"
+            className="w-full object-contain pb-5"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
