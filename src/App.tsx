@@ -20,6 +20,7 @@ import Gallery from "./components/Gallery";
 import Transloading from "./components/Transloading";
 import Transboarding from "./components/Transboarding";
 import WeServe from "./components/WeServe";
+import Storage from "./components/Storage";
 function App() {
   return (
     <>
@@ -67,7 +68,7 @@ function App() {
             <section className="h-screen snap-start" id="transloading">
               <Transloading />
             </section>
-                        <section className="h-screen snap-start">
+            <section className="h-screen snap-start">
               <WeServe />
             </section>
             <section className="h-screen snap-start">
@@ -75,6 +76,9 @@ function App() {
             </section>
             <section className="h-screen snap-start" id="reviews">
               <Reviews />
+            </section>
+            <section className="h-screen snap-start">
+              <Storage />
             </section>
             <section className="h-screen snap-start" id="convention">
               <Hall />
