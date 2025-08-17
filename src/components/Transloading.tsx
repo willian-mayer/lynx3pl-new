@@ -23,12 +23,12 @@ export default function Transloading() {
         <div className="w-full grid grid-cols-1 gap-2 px-4 md:px-0 md:col-span-1 ml-10 md:ml-0 md:gap-2 md:mt-12">
           {/* Título solo en móvil */}
           <motion.h2
-            className="block md:hidden text-md font-bold text-black inter-bold mb-4"
+            className="block md:hidden text-[1.2em] font-black text-black inter-bold mb-4 ml-1 md:ml-0"
             initial={{ opacity: 0, y: -10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            {title}
+            {title} 
           </motion.h2>
 
           {whyUs.map((item, index) => (
