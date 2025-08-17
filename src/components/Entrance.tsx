@@ -17,7 +17,7 @@ export default function Entrance() {
 
         {/* 📱 Mobile slogan (debajo del logo) */}
         <p className="text-white text-sm mt-10 md:hidden text-center font-semibold">
-          Efficiency. Accuracy. Transparency.
+          Efficiency. Transparency. Accuracy. 
         </p>
       </div>
 
@@ -36,7 +36,7 @@ export default function Entrance() {
 
       {/* 💻 Desktop slogan en esquina inferior izquierda */}
       <p className="absolute bottom-13 left-30 text-white text-base font-medium hidden md:block">
-        Efficiency. Accuracy. Transparency.
+        Efficiency. Transparency. Accuracy.
       </p>
     </div>
   );
