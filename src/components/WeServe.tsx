@@ -74,7 +74,7 @@ const WeServe = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
-            className="text-2xl font-bold text-center mb-6"
+            className="text-md font-bold text-center mb-6 mt-16"
           >
             {title}
           </motion.h2>
@@ -82,13 +82,13 @@ const WeServe = () => {
           <motion.img
             src="/weserve/image.jpg"
             alt="We serve"
-            className="w-auto h-48 object-cover mb-6 rounded-md"
+            className="w-auto h-68 object-cover mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           />
 
-          <div className="grid grid-cols-2 gap-4 w-full justify-center">
+          <div className="grid grid-cols-2 gap-7 w-full justify-center">
             <motion.ul
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
