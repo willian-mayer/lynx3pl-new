@@ -12,7 +12,7 @@ const WeServe = () => {
     <section
       ref={ref}
       className={`bg-white px-4 md:px-12 ${
-        isDesktop ? "md:h-screen flex flex-col items-center justify-end" : "flex flex-col items-center justify-center min-h-screen"
+        isDesktop ? "md:h-screen flex flex-col items-center justify-end pb-10" : "flex flex-col items-center justify-center min-h-screen"
       }`}
     >
       {isDesktop ? (
