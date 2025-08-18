@@ -1,3 +1,4 @@
+// src/components/Storage.tsx
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import data from "../data/storage.json";
@@ -9,9 +10,9 @@ const Storage = () => {
   return (
     <section className="w-full bg-white">
       {isDesktop ? (
-        // 🖥 Desktop Layout
-        <div className="grid grid-cols-6 grid-rows-2 w-full h-screen p-25">
-          {/* Imagen 1 ocupa fila 1 col 1-2 */}
+        // 🖥 Desktop Layout - 6 columnas
+        <div className="grid grid-cols-6 grid-rows-2 w-full h-screen px-40 py-35 gap-0">
+          {/* Fila 1 */}
           <motion.img
             src={desktop[0].imageUrl}
             alt="Storage 1"
@@ -20,45 +21,61 @@ const Storage = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
           />
+          <motion.img
+            src={desktop[1].imageUrl}
+            alt="Storage 2"
+            className="w-full h-full object-cover col-span-1 row-span-1"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          />
+          <motion.img
+            src={desktop[2].imageUrl}
+            alt="Storage 3"
+            className="w-full h-full object-cover col-span-1 row-span-1"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          />
+          <motion.div
+            className="col-span-2 row-span-1 flex flex-col justify-center px-8 bg-white"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+          >
+            <h2 className="text-2xl font-bold leading-tight text-left mx-auto">Versatile storage options <br />& individual office spaces</h2>
+          </motion.div>
 
-          {/* Imagen 2, 3 y 4 en fila 1 col 3-6 */}
-          <div className="col-span-4 row-span-1 grid grid-cols-3">
-            {desktop.slice(1, 4).map((img, i) => (
-              <motion.img
-                key={i}
-                src={img.imageUrl}
-                alt={`Storage ${i + 2}`}
-                className="w-full h-full object-cover"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 * i }}
-              />
-            ))}
-          </div>
+          {/* Fila 2 */}
+          <motion.div
+            className="col-span-3 row-span-1 flex items-center px-8 bg-white"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <p className="text-lg text-black font-medium leading-6 text-left mr-35">{desc}</p>
+          </motion.div>
 
-          {/* Imagen 5 en fila 2 col 1-2 */}
+          <motion.img
+            src={desktop[3].imageUrl}
+            alt="Storage 4"
+            className="w-full h-full object-cover col-span-1 row-span-1"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          />
+
           <motion.img
             src={desktop[4].imageUrl}
             alt="Storage 5"
             className="w-full h-full object-cover col-span-2 row-span-1"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
           />
-
-          {/* Texto en fila 2 col 3-6 */}
-          <motion.div
-            className="col-span-4 row-span-1 flex flex-col justify-center text-center px-8 bg-white"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <h2 className="text-[1.5em] font-bold mb-4 mx-67 leading-7">{title}</h2>
-            <p className="text-[1.25em] text-black font-medium leading-6 text-left mx-20 mr-12">{desc}</p>
-          </motion.div>
         </div>
       ) : (
-        // 📱 Mobile Layout
+        // 📱 Mobile Layout (igual que antes)
         <div className="flex flex-col items-center justify-between min-h-screen">
           {/* Imagen top */}
           <motion.img
@@ -77,8 +94,16 @@ const Storage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-[0.8em] font-bold mb-2 text-left pr-34 pl-4 leading-4">Versatile storage options & individual office <br />spaces</h2>
-            <p className="text-[.3em] text-black font-medium text-left pr-46 pl-4">{desc}</p>
+            <h2 className="text-[0.8em] font-bold mb-2 text-left pr-34 pl-4 leading-4">
+              {title}
+            </h2>
+            <p className="text-[.3em] text-black font-medium text-left pr-40 pl-4">
+              Our individual small offices and individual <br />warehouse spaces,
+              ranging from 600 <br />to 5,000 square feet, are uniquely <br />designed and
+              completely separate <br />from our main warehouse. These <br />private
+              workspaces offer <br />flexibility and privacy, <br />making them ideal <br />for
+              entrepreneurs <br />with specialized <br />business needs.
+            </p>
           </motion.div>
 
           {/* Imagen bottom */}
