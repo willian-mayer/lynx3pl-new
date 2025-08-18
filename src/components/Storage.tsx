@@ -5,7 +5,7 @@ import data from "../data/storage.json";
 
 const Storage = () => {
   const isDesktop = useMediaQuery({ minWidth: 1024 }); // lg: breakpoint
-  const { title, desc, desktop, smartphone } = data;
+  const { desc, desktop, smartphone } = data;
 
   return (
     <section className="w-full bg-white">
@@ -94,15 +94,15 @@ const Storage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-[0.8em] font-bold mb-2 text-left pr-32 pl-4 leading-4">
-              {title}
+            <h2 className="text-[0.8em] font-bold mb-2 text-left mx-auto leading-4">
+              Versatile storage options <br />& individual office spaces
             </h2>
-            <p className="text-[.42em] text-black font-medium text-left pr-30 pl-4">
-              Our individual small offices and individual <br />warehouse spaces,
-              ranging from 600 <br />to 5,000 square feet, are uniquely <br />designed and
-              completely separate <br />from our main warehouse. These <br />private
-              workspaces offer <br />flexibility and privacy, <br />making them ideal <br />for
-              entrepreneurs <br />with specialized <br />business needs.
+            <p className="text-[.42em] text-black font-medium text-left mx-auto">
+              Our individual small offices and individual warehouse <br />spaces,
+              ranging from 600 to 5,000 square feet, are <br />uniquely designed and
+              completely separate from our <br />main warehouse. These private
+              workspaces offer <br />flexibility and privacy, making them ideal for <br />
+              entrepreneurs with specialized business needs.
             </p>
           </motion.div>
 
