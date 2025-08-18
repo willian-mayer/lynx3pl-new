@@ -194,7 +194,7 @@ return (
 
         <button
           type="submit"
-          className="bg-gray-500 text-white px-4 py-2 rounded text-sm ml-[10.2rem]"
+          className="bg-[#045804] text-white px-4 py-2 rounded text-sm ml-[10.2rem]"
         >
           Submit
         </button>
