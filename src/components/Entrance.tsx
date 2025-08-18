@@ -10,13 +10,13 @@ export default function Entrance() {
   }, []);
 
   return (
-    <div className="h-screen bg-black flex flex-col md:flex-row items-center justify-center relative w-screen">
+    <div className="h-screen bg-black flex flex-col md:flex-row items-center justify-center relative w-screen ">
       {/* Logo en el centro */}
       <div className="flex flex-col items-center">
-        <img src="/logo-entrance.png" alt="logo" className="h-[400px] lg:h-96 w-auto" />
+        <img src="/logo-entrance.png" alt="logo" className="h-[400px] lg:h-96 w-auto my-10" />
 
         {/* 📱 Mobile slogan (debajo del logo) */}
-        <p className="text-white text-xs mt-13 md:hidden text-center font-semibold">
+        <p className="text-white text-[.5em] mt-13 md:hidden text-center font-semibold">
           Efficiency. Transparency. Accuracy. 
         </p>
       </div>
