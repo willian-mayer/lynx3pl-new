@@ -108,7 +108,7 @@ if (!isDesktop) {
               {/* Botón */}
               <button
                 type="submit"
-                className="bg-green-600 text-white px-2 py-1 rounded text-xs self-start"
+                className="bg-[#045804] text-white px-2 py-1 rounded text-xs self-start"
               >
                 Submit
               </button>
