@@ -8,44 +8,34 @@
   ],
   "partners": [
     {
-      "partnersUrl": "/partners/1.png",
-      "height": "auto"
+      "partnersUrl": "/partners/1-logo.png"
     },
     {
-      "partnersUrl": "/partners/2.png",
-      "height": "auto"
+      "partnersUrl": "/partners/2-logo.png"
     },
     {
-      "partnersUrl": "/partners/3.png",
-      "height": "auto"
+      "partnersUrl": "/partners/3-logo.png"
     },
     {
-      "partnersUrl": "/partners/4.png",
-      "height": "auto"
+      "partnersUrl": "/partners/4-logo.png"
     },
     {
-      "partnersUrl": "/partners/5.png",
-      "height": "auto"
+      "partnersUrl": "/partners/5-logo.png"
     },
     {
-      "partnersUrl": "/partners/6.png",
-      "height": "auto"
+      "partnersUrl": "/partners/6-logo.png"
     },
     {
-      "partnersUrl": "/partners/7.png",
-      "height": "auto"
+      "partnersUrl": "/partners/7-logo.png"
     },
     {
-      "partnersUrl": "/partners/8.png",
-      "height": "50px"
+      "partnersUrl": "/partners/8-logo.png"
     },
     {
-      "partnersUrl": "/partners/9.png",
-      "height": "auto"
+      "partnersUrl": "/partners/9-logo.png"
     },
     {
-      "partnersUrl": "/partners/10.png",
-      "height": "50px"
+      "partnersUrl": "/partners/10-logo.png"
     }
   ]
 }
