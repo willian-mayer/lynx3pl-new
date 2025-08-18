@@ -67,7 +67,7 @@ export default function Partners() {
           <div className="w-full max-w-5xl flex flex-col-reverse items-center gap-10">
             {/* Texto del título */}
             <motion.h2
-              className="text-3xl font-bold text-[#008000] text-right ml-32 mt-4 flex-1"
+              className="text-3xl font-bold text-[#008000] text-right ml-16 mt-4 flex-1"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
