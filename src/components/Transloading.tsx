@@ -46,7 +46,7 @@ export default function Transloading() {
 
           {/* Botón solo en md+ */}
           <motion.button
-            className="hidden md:block mt-4 bg-black text-white py-2 rounded-xl font-medium hover:bg-gray-800 transition text-xs md:mt-30 w-50"
+            className="hidden md:block mt-4 bg-[#006050] text-white py-2 rounded-xl font-medium hover:bg-gray-800 transition text-xs md:mt-30 w-50"
             initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: whyUs.length * 0.1 }}
