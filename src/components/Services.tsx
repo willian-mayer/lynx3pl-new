@@ -64,7 +64,7 @@ export default function Services() {
               <motion.a
                 href={service.route}
                 className="
-                  font-semibold text-black 
+                  font-extrabold text-black 
                   transition-transform duration-300 hover:scale-110 
                   text-base sm:text-lg md:text-xl 
                   py-1 sm:py-0
