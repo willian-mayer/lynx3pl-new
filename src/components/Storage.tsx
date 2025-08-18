@@ -10,61 +10,54 @@ const Storage = () => {
   return (
     <section className="w-full bg-white">
       {isDesktop ? (
-        // 🖥 Desktop Layout - 5 columnas con 6 imágenes
-        <div className="grid grid-cols-6 grid-rows-2 w-full h-screen px-40 py-30">
-          {/* Fila 1 */}
-          <motion.div
-            className="col-span-2 row-span-1 flex flex-col justify-end px-8 bg-white"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-xl font-bold leading-8 text-left mr-20 mb-3">
-              {title}
-            </h2>
-          </motion.div>
+  // 🖥 Desktop Layout - title y desc ocupan 2x2 celdas
+  <div className="grid grid-cols-6 grid-rows-2 w-full h-screen px-40 py-30">
+    {/* Título */}
+    <motion.div
+      className="col-span-2 row-span-2 flex flex-col justify-center px-8 bg-white gap-3"
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+    >
+      <h2 className="text-xl font-bold leading-6 text-left mr-20 mb-3">
+        {title}
+      </h2>
+      <p className="text-md text-black font-medium leading-6 text-left mr-34 mt-2">
+        {desc}
+      </p>
+    </motion.div>
 
-          <div className="col-span-4 row-span-1 grid grid-cols-3 gap-4 mt-12">
-            {desktop.slice(0, 3).map((img, i) => (
-              <motion.img
-                key={i}
-                src={img.imageUrl}
-                alt={`Storage ${i + 1}`}
-                className="w-full h-full object-contain"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: i * 0.2 }}
-              />
-            ))}
-          </div>
+    {/* Imágenes fila 1 */}
+    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-4 mt-12">
+      {desktop.slice(0, 3).map((img, i) => (
+        <motion.img
+          key={i}
+          src={img.imageUrl}
+          alt={`Storage ${i + 1}`}
+          className="w-full h-full object-contain"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: i * 0.2 }}
+        />
+      ))}
+    </div>
 
-          {/* Fila 2 */}
-          <motion.div
-            className="col-span-2 row-span-1 flex items-start px-8 bg-white"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-xs text-black font-medium leading-6 text-left mr-30">
-              {desc}
-            </p>
-          </motion.div>
-
-          <div className="col-span-4 row-span-1 grid grid-cols-3 gap-4 mb-12">
-            {desktop.slice(3, 6).map((img, i) => (
-              <motion.img
-                key={i + 3}
-                src={img.imageUrl}
-                alt={`Storage ${i + 4}`}
-                className="w-full h-full object-contain"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 * i }}
-              />
-            ))}
-          </div>
-        </div>
-      ) : (
+    {/* Imágenes fila 2 */}
+    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-4 mb-12">
+      {desktop.slice(3, 6).map((img, i) => (
+        <motion.img
+          key={i + 3}
+          src={img.imageUrl}
+          alt={`Storage ${i + 4}`}
+          className="w-full h-full object-contain"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 * i }}
+        />
+      ))}
+    </div>
+  </div>
+) : (
         // 📱 Mobile Layout (igual que antes)
         <div className="flex flex-col items-center justify-between min-h-screen">
           {/* Imagen top */}
