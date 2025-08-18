@@ -72,7 +72,7 @@ const Transboarding: React.FC = () => {
           <motion.img
             src={shipImageUrl}
             alt={title}
-            className="w-full h-[160px] object-cover"
+            className="w-full h-[120px] "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -82,7 +82,7 @@ const Transboarding: React.FC = () => {
           <motion.img
             src="/transboarding/small-new.png"
             alt="Extra visual"
-            className="w-full h-auto object-contain mt-8 px-15"
+            className="w-full h-auto object-contain mt-12 px-15"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
