@@ -94,10 +94,10 @@ const Storage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-[0.8em] font-bold mb-2 text-left pr-34 pl-4 leading-4">
+            <h2 className="text-[0.8em] font-bold mb-2 text-left pr-32 pl-4 leading-4">
               {title}
             </h2>
-            <p className="text-[.3em] text-black font-medium text-left pr-40 pl-4">
+            <p className="text-[.42em] text-black font-medium text-left pr-30 pl-4">
               Our individual small offices and individual <br />warehouse spaces,
               ranging from 600 <br />to 5,000 square feet, are uniquely <br />designed and
               completely separate <br />from our main warehouse. These <br />private
