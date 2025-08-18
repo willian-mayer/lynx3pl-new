@@ -89,7 +89,7 @@ const Storage = () => {
 
           {/* Texto central */}
           <motion.div
-            className="text-center flex-1 flex flex-col justify-start p-10 py-2 mt-6"
+            className="text-center flex-1 flex flex-col justify-start p-10 py-2 mt-6 ml-17"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
