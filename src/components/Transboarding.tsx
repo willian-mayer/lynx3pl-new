@@ -52,7 +52,7 @@ const Transboarding: React.FC = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <h1 className="text-4xl font-bold ml-30 text-[#006050]">{title}</h1>
+            <h1 className="text-4xl font-bold ml-30 text-[#596c4e]">{title}</h1>
           </motion.div>
         </div>
       ) : (
@@ -60,7 +60,7 @@ const Transboarding: React.FC = () => {
         <div className="flex flex-col w-full h-full">
           {/* Título */}
           <motion.h1
-            className="text-right text-xl font-bold my-10 ml-50 mr-10 text-[#006050]"
+            className="text-right text-xl font-bold my-10 ml-50 mr-10 text-[#596c4e]"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
