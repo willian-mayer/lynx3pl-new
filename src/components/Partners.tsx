@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import data from "../data/partners.json";
 
 export default function Partners() {
-  const { title, years, partners } = data;
+  const { title, years, partnersPhone, partnersDesktop } = data;
   const [count, setCount] = useState(0);
   const targetYear = years[0].year;
 
@@ -28,6 +28,9 @@ export default function Partners() {
     }
   }, [inView, targetYear]);
 
+  // ✅ Elegimos dataset según dispositivo
+  const partnersList = isDesktop ? partnersDesktop : partnersPhone;
+
   return (
     <section
       ref={ref}
@@ -39,7 +42,7 @@ export default function Partners() {
           <div className="w-full max-w-5xl flex flex-row items-center gap-10">
             {/* Texto del título */}
             <motion.h2
-              className="text-5xl font-bold text-[#596c4e] text-right ml-32 mt-56 flex-1"
+              className="text-5xl font-bold text-[#045804] text-right ml-32 mt-56 flex-1"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -67,7 +70,7 @@ export default function Partners() {
           <div className="w-full max-w-5xl flex flex-col-reverse items-center gap-10">
             {/* Texto del título */}
             <motion.h2
-              className="text-2xl font-bold text-[#596c4e] text-right ml-25 mt-4 flex-1"
+              className="text-2xl font-bold text-[#045804] text-right ml-25 mt-4 flex-1"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -92,12 +95,12 @@ export default function Partners() {
           </div>
         )}
 
-        {/* Partner Logos */}
-        <div className="w-full flex flex-wrap justify-center items-end gap-1 mt-5 px-10 gap-3 md:px-0 md:gap-2">
-          {partners.map((p, i) => (
+        {/* Partner Logos (dinámico según pantalla) */}
+        <div className="w-full flex flex-wrap justify-end items-end gap-1 mt-5 px-10 gap-3 md:px-0 md:gap-2">
+          {partnersList.map((p, i) => (
             <motion.div
               key={i}
-              className="flex items-end justify-center w-[15%] md:w-auto md:flex-1"
+              className="flex items-end justify-center w-[15%] md:w-auto md:flex-1 md:items-center"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={inView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.3, delay: i * 0.05 }}
@@ -105,7 +108,7 @@ export default function Partners() {
               <img
                 src={p.partnersUrl}
                 alt={`Partner ${i + 1}`}
-                className="object-contain"
+                className="object-contain  md:h-20 "
               />
             </motion.div>
           ))}
@@ -114,4 +117,3 @@ export default function Partners() {
     </section>
   );
 }
-  

@@ -6,7 +6,7 @@
       "desc": "years of warehouse management and logistics experiences"
     }
   ],
-  "partners": [
+  "partnersPhone": [
     {
       "partnersUrl": "/partners/1-logo.png"
     },
@@ -36,6 +36,38 @@
     },
     {
       "partnersUrl": "/partners/10-logo.png"
+    }
+  ],
+  "partnersDesktop" : [
+        {
+      "partnersUrl": "/partners/1-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/2-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/9-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/8-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/4-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/6-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/3-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/7-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/10-logo.png"
+    },
+    {
+      "partnersUrl": "/partners/5-logo.png"
     }
   ]
 }
