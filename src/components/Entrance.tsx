@@ -16,7 +16,7 @@ export default function Entrance() {
         <img src="/logo-entrance.png" alt="logo" className="h-[400px] lg:h-96 w-auto" />
 
         {/* 📱 Mobile slogan (debajo del logo) */}
-        <p className="text-white text-sm mt-13 md:hidden text-center font-semibold">
+        <p className="text-white text-xs mt-13 md:hidden text-center font-semibold">
           Efficiency. Transparency. Accuracy. 
         </p>
       </div>

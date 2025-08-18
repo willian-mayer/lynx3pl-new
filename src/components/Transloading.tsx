@@ -38,7 +38,7 @@ export default function Transloading() {
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <h3 className="text-[0.8em] font-normal text-black inter md:inter-bold md:text-[1em] ml-2">
+              <h3 className="text-[0.8em] font-normal text-gray-900 inter md:inter-bold md:text-[1em] ml-2">
                 • {item.name}
               </h3>
             </motion.div>
