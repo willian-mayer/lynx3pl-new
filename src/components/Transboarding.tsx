@@ -28,7 +28,7 @@ const Transboarding: React.FC = () => {
             <motion.img
               src={shipImageUrl}
               alt={title}
-              className="w-full h-96 object-cover rounded-lg my-2"
+              className="w-full h-80 object-cover rounded-lg my-2"
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
