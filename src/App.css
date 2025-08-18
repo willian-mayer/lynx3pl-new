@@ -22,6 +22,12 @@ html, body, #root {
   font-style: normal;
 }
 
+.exo-2-bold {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
 
 .inter {
   font-family: "Inter", sans-serif;

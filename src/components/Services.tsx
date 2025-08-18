@@ -68,7 +68,7 @@ export default function Services() {
                   transition-transform duration-300 hover:scale-110 
                   text-base sm:text-lg md:text-xl 
                   py-1 sm:py-0
-                  w-full sm:w-auto text-center exo-2
+                  w-full sm:w-auto text-center exo-2-bold
                 "
                 variants={{
                   hidden: { opacity: 0, y: 20 },

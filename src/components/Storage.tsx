@@ -89,15 +89,15 @@ const Storage = () => {
 
           {/* Texto central */}
           <motion.div
-            className="text-center flex-1 flex flex-col justify-start p-10 py-2 mt-6"
+            className="text-center flex-1 flex flex-col justify-start  py-2 mt-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h2 className="text-[1em] font-bold mb-2 text-left leading-4 ml-18">
+            <h2 className="text-[1em] font-bold mb-2 text-left leading-4 ml-30">
               Versatile storage options <br />& individual office spaces
             </h2>
-            <p className="text-[.5em] text-black font-medium text-left ml-18">
+            <p className="text-[.5em] text-black font-medium text-left ml-30">
               Our individual small offices and individual warehouse <br />spaces,
               ranging from 600 to 5,000 square feet, are <br />uniquely designed and
               completely separate from our <br />main warehouse. These private
