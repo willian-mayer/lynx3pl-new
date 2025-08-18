@@ -12,7 +12,7 @@ const WeServe = () => {
     <section
       ref={ref}
       className={`bg-white px-4 md:px-12 ${
-        isDesktop ? "md:h-screen flex flex-col items-center justify-end pb-10" : "flex flex-col items-center justify-center min-h-screen"
+        isDesktop ? "md:h-screen flex flex-col items-center justify-end pb-30" : "flex flex-col items-center justify-center min-h-screen"
       }`}
     >
       {isDesktop ? (
@@ -32,7 +32,7 @@ const WeServe = () => {
               initial={{ opacity: 0, x: -50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex-1 grid grid-cols-2 md:grid-cols-1 font-normal text-right pr-4 md:text-xl"
+              className="flex-1 grid grid-cols-2 md:grid-cols-1 font-normal text-right pr-4 md:text-lg"
             >
               {left.map((item, i) =>
                 item.name.trim() === "" ? (
@@ -57,7 +57,7 @@ const WeServe = () => {
               initial={{ opacity: 0, x: 50 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex-1 grid grid-cols-2 md:grid-cols-1 font-normal text-left pl-4 text-sm md:text-xl"
+              className="flex-1 grid grid-cols-2 md:grid-cols-1 font-normal text-left pl-4 text-sm md:text-lg"
             >
               {right.map((item, i) => (
                 <li key={i} className="text-black">
