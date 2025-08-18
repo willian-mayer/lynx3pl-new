@@ -1,14 +1,32 @@
 [
   {
-    "name": "Why Us",
-    "path": "#reviews"
-  },
-  {
     "name": "Services",
-    "path": "#services"
+    "path": "",
+    "sublink": [
+      {
+        "name": "Warehousing",
+        "path": "#warehousing"
+      },
+      {
+        "name": "Fulfillment",
+        "path": "#fulfillment"
+      },
+      {
+        "name": "Transloading",
+        "path": "#transloading"
+      }
+    ]
   },
   {
-    "name": "How it works",
-    "path": "#how-it-works"
+    "name": "Office Space Rental",
+    "path": "#office"
+  },
+  {
+    "name": "Individual Warehouse Rental",
+    "path": "#individual"
+  },
+  {
+    "name": "Space Rental",
+    "path": "#space"
   }
 ]
