@@ -51,15 +51,15 @@ export default function Partners() {
             </motion.h2>
 
             {/* Cuadro negro con número */}
-            <div className="bg-black text-white flex items-end justify-center w-80 h-80">
+            <div className="bg-black text-white flex items-end justify-center w-80 h-80 p-2">
               <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
-                className="text-6xl font-bold m-6"
+                className="text-7xl font-bold m-6"
               >
                 {count}+
-                <p className="text-start text-[0.44em] font-medium pr-5">
+                <p className="text-start text-[0.38em] font-medium">
                   {years[0].desc}
                 </p>
               </motion.div>
