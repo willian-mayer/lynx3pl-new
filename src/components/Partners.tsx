@@ -96,23 +96,38 @@ export default function Partners() {
         )}
 
         {/* Partner Logos (dinámico según pantalla) */}
-        <div className="w-full flex flex-wrap justify-end items-end gap-1 mt-5 px-10 gap-3 md:px-0 md:gap-2">
-          {partnersList.map((p, i) => (
-            <motion.div
-              key={i}
-              className="flex items-end justify-center w-[15%] md:w-auto md:flex-1 md:items-center"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={inView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.3, delay: i * 0.05 }}
-            >
-              <img
-                src={p.partnersUrl}
-                alt={`Partner ${i + 1}`}
-                className="object-contain  md:h-20 "
-              />
-            </motion.div>
-          ))}
-        </div>
+{/* Partner Logos (dinámico en mobile, imagen fija en desktop) */}
+{/* 📱 Mobile */}
+<div className="w-full flex flex-wrap justify-end items-end gap-1 mt-5 px-10 gap-3 md:hidden">
+  {partnersList.map((p, i) => (
+    <motion.div
+      key={i}
+      className="flex items-end justify-center w-[15%]"
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={inView ? { opacity: 1, scale: 1 } : {}}
+      transition={{ duration: 0.3, delay: i * 0.05 }}
+    >
+      <img
+        src={p.partnersUrl}
+        alt={`Partner ${i + 1}`}
+        className="object-contain"
+      />
+    </motion.div>
+  ))}
+</div>
+
+{/* 🖥 Desktop */}
+<div className="hidden md:flex w-full justify-center mt-10 md:mt-5">
+  <motion.img
+    src="/partners/logos-md.png"
+    alt="Partners Logos"
+    className="w-full h-auto object-contain max-w-6xl"
+    initial={{ opacity: 0 }}
+    animate={inView ? { opacity: 1 } : {}}
+    transition={{ duration: 0.6 }}
+  />
+</div>
+
       </div>
     </section>
   );
