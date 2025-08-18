@@ -74,14 +74,15 @@ function App() {
             <section className="h-screen snap-start">
               <Transboarding />
             </section>
-            <section className="h-screen snap-start" id="reviews">
-              <Reviews />
-            </section>
+
             <section className="h-screen snap-start">
               <Storage />
             </section>
             <section className="h-screen snap-start" id="convention">
               <Hall />
+            </section>
+            <section className="h-screen snap-start" id="reviews">
+              <Reviews />
             </section>
             <section className="h-screen snap-start">
               <Partners />
