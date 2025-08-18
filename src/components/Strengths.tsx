@@ -60,7 +60,7 @@ export default function Strengths() {
             {description.map((item, index) => (
               <motion.li
                 key={index}
-                className="relative md:py-1 inter-bold md:inter md:text-lg"
+                className="relative md:py-1 inter-bold md:inter md:text-[1.2em]"
                 variants={{
                   hidden: { opacity: 0, y: 20 },
                   visible: { opacity: 1, y: 0 },
