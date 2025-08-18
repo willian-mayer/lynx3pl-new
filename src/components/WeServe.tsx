@@ -49,7 +49,7 @@ const WeServe = () => {
               <img
                 src="/weserve/image.jpg"
                 alt="We serve"
-                className="object-cover max-h-72 md:max-h-full"
+                className="object-cover max-h-72 md:max-h-full px-4"
               />
             </div>
 
