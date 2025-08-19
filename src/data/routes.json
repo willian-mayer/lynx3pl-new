@@ -1,73 +1,16 @@
 [
   {
     "name": "Why Us",
-    "path": "",
-    "sublink": [
-      {
-        "name": "Strengths",
-        "path": "#strengths"
-      },
-      {
-        "name": "Reviews",
-        "path": "#reviews"
-      },
-      {
-        "name": "Reliable fulfillment",
-        "path": "#reliable-fulfillment"
-      }
-    ]
+    "path": "#why-us"
   },
   {
     "name": "Warehousing",
-    "path": "",
-    "sublink": [
-      {
-        "name": "Warehousing",
-        "path": "#warehousing"
-      },
-      {
-        "name": "Our values",
-        "path": "#values"
-      },
-      {
-        "name": "Inventory",
-        "path": "#inventory"
-      }
-    ]
+    "path": "#warehousing"
+   
   },
   {
     "name": "Fulfillment",
-    "path": "",
-        "sublink": [
-{
-        "name": "Reliable fulfillment",
-        "path": "#reliable-fulfillment"
-      },
-      {
-        "name": "Fulfillment",
-        "path": "#fulfillment"
-      },
-      {
-        "name": "Fulfillment Services",
-        "path": "#services-fulfillment"
-      },
-            {
-        "name": "We serve",
-        "path": "#we-serve"
-      },
-            {
-        "name": "Door to Door",
-        "path": "#door-to-door"
-      },
-      {
-        "name": "Inventory",
-        "path": "#inventory"
-      },
-      {
-        "name": "How it works",
-        "path": "#steps"
-      }
-    ]
+    "path": "#fulfillment"
   },
   {
     "name": "Transloading",
@@ -75,30 +18,6 @@
   },
   {
     "name": "Space Rental",
-    "path": "",
-    "sublink": [
-      {
-        "name": "Individual Office spaces",
-        "path": "#individual-office"
-      },
-      {
-        "name": "Sales Meeting",
-        "path": "#sales-meeting"
-      }
-    ]
-  },
-  {
-    "name": "Contact",
-    "path": "",
-    "sublink": [
-      {
-        "name": "Contact Us",
-        "path": "#contact-us"
-      },
-      {
-        "name": "Let us talk",
-        "path": "#let-us-talk"
-      }
-    ]
+    "path": "#space-rental"
   }
 ]
