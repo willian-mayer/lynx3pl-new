@@ -17,11 +17,21 @@
     "path": "#transloading"
   },
   {
-    "name": "Individual Warehouse",
+    "name": "Flexible Leasing Space",
+    "path": "",
+    "sublink": [
+  {
+    "name": "Office Rental",
+    "path": "#individual"
+  },
+  {
+    "name": "Warehouse Rental",
     "path": "#individual"
   },
   {
     "name": "Event Space Rental",
     "path": "#events"
+  }
+    ]
   }
 ]
