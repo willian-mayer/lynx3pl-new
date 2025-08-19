@@ -52,7 +52,7 @@ export default function Partners() {
 
             {/* Imagen principal */}
             <motion.img
-              src="/partners/main-logo.png"
+              src="/partners/main-logo-new.png"
               alt="Main Partner Logo"
               className="w-80 h-80 object-contain"
               initial={{ opacity: 0, y: -10 }}
@@ -75,7 +75,7 @@ export default function Partners() {
 
             {/* Imagen principal en móvil */}
             <motion.img
-              src="/partners/main-logo.png"
+              src="/partners/main-logo-new.png"
               alt="Main Partner Logo"
               className="w-55 h-55 object-contain"
               initial={{ opacity: 0, y: -10 }}
