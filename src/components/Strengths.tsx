@@ -20,7 +20,7 @@ export default function Strengths() {
         className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center px-6 mb-10 md:mb-0 md:p-12 md:pt-56"
       >
         <video
-          src="/watchus/Lynx3PL.mp4"
+          src="/watchus/video-2.mp4"
           className="max-w-md md:max-w-lg w-full h-auto object-contain mt-2"
           controls
           playsInline
