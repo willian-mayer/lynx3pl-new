@@ -31,7 +31,7 @@ function App() {
           </section>
           <div className="navbar">
             <Navbar title="Your Company" routes={routes} />
-            {/* Why Us */}
+            {/* Why Us Page*/}
 
             {/* <section
               className="snap-start min-h-[calc(100vh-64px)]"
@@ -54,7 +54,7 @@ function App() {
             <section className="h-screen snap-start" id="reliable-fulfillment">
               <Hero />
             </section>
-            {/* Warehousing */}
+            {/* Warehousing Page*/}
             <section
               className="snap-start min-h-[calc(100vh-64px)]"
               id="warehousing"
@@ -70,7 +70,7 @@ function App() {
             <section className="h-screen snap-start" id="inventory">
               <Gallery />
             </section>
-            {/* Fulfillment */}
+            {/* Fulfillment Page*/}
             <section className="h-screen snap-start" id="fulfillment">
               <Hero />
             </section>
@@ -92,17 +92,18 @@ function App() {
             <section className="h-screen snap-start" id="steps">
               <FulfillmentThird />
             </section>
-            {/* Transloading */}
+            {/* Transloading Page*/}
             <section className="h-screen snap-start" id="transloading">
               <Transloading />
             </section>
+            {/* Space Rental Page */}
             <section className="h-screen snap-start" id="individual">
               <Storage />
             </section>
             <section className="h-screen snap-start" id="events">
               <Hall />
             </section>
-              {/* Contact */}
+              {/* Contact Page*/}
             <section className="h-screen snap-start" id="form">
               <Form />
             </section>
