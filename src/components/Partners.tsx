@@ -1,13 +1,12 @@
 // src/components/Partners.tsx
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import data from "../data/partners.json";
 
 export default function Partners() {
-  const { title, years, partnersPhone, partnersDesktop } = data;
-  const [count, setCount] = useState(0);
+  const { title, years, } = data;
   const targetYear = years[0].year;
 
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
@@ -21,7 +20,6 @@ export default function Partners() {
         if (start > targetYear) {
           clearInterval(interval);
         } else {
-          setCount(start);
         }
       }, 30);
       return () => clearInterval(interval);
@@ -29,7 +27,6 @@ export default function Partners() {
   }, [inView, targetYear]);
 
   // ✅ Elegimos dataset según dispositivo
-  const partnersList = isDesktop ? partnersDesktop : partnersPhone;
 
   return (
     <section
