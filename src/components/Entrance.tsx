@@ -22,7 +22,7 @@ export default function Entrance() {
       </div>
 
       {/* 🌍 Idiomas en la esquina superior derecha (solo desktop) */}
-      <div className="absolute top-13 right-30 flex flex-col space-y-2 text-white invisible md:visible">
+      <div className="absolute top-13 right-30 flex flex-col space-y-2 text-white invisible ">
         {languages.map((lang) => (
           <div
             key={lang.short}
