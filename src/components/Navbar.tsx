@@ -48,7 +48,7 @@ export default function Navbar({ title, routes }: NavbarProps) {
                       <a
                         key={sub.path}
                         href={sub.path}
-                        className="px-3 py-2 text-sm text-black hover:text-blue-600 whitespace-nowrap"
+                        className="px-3 py-2 text-sm text-black font-semibold hover:text-blue-600 whitespace-nowrap"
                       >
                         {sub.name}
                       </a>
