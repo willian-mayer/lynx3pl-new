@@ -28,7 +28,7 @@ const Storage = () => {
     </motion.div>
 
     {/* Imágenes fila 1 */}
-    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-3 mt-12">
+    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-5 mt-12">
       {desktop.slice(0, 3).map((img, i) => (
         <motion.img
           key={i}
@@ -43,7 +43,7 @@ const Storage = () => {
     </div>
 
     {/* Imágenes fila 2 */}
-    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-3 mb-12">
+    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-5 mb-12">
       {desktop.slice(3, 6).map((img, i) => (
         <motion.img
           key={i + 3}
