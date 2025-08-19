@@ -28,13 +28,13 @@ const Storage = () => {
     </motion.div>
 
     {/* Imágenes fila 1 */}
-    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-6 mt-12">
+    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-3 mt-12">
       {desktop.slice(0, 3).map((img, i) => (
         <motion.img
           key={i}
           src={img.imageUrl}
           alt={`Storage ${i + 1}`}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain mt-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: i * 0.2 }}
@@ -43,7 +43,7 @@ const Storage = () => {
     </div>
 
     {/* Imágenes fila 2 */}
-    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-6 mb-12">
+    <div className="col-span-4 row-span-1 grid grid-cols-3 gap-3 mb-12">
       {desktop.slice(3, 6).map((img, i) => (
         <motion.img
           key={i + 3}
