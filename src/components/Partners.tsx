@@ -42,7 +42,7 @@ export default function Partners() {
           <div className="w-full max-w-5xl flex flex-row items-center gap-10">
             {/* Texto del título */}
             <motion.h2
-              className="text-5xl font-bold text-[#045804] text-right ml-32 mt-56 flex-1"
+              className="text-[2em] font-bold text-[#045804] text-right ml-32 mt-56 flex-1"
               initial={{ opacity: 0 }}
               animate={inView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6 }}
@@ -56,10 +56,10 @@ export default function Partners() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6 }}
-                className="text-7xl font-bold m-6"
+                className="text-[4em] font-bold m-6"
               >
                 {count}+
-                <p className="text-start text-[0.38em] font-medium">
+                <p className="text-start text-[0.35em] font-medium">
                   {years[0].desc}
                 </p>
               </motion.div>
