@@ -13,7 +13,7 @@ export default function Entrance() {
     <div className="h-screen bg-black flex flex-col md:flex-row items-center justify-center relative w-screen ">
       {/* Logo en el centro */}
       <div className="flex flex-col items-center">
-        <img src="/logo-entrance.png" alt="logo" className="h-[400px] lg:h-80 w-auto my-10" />
+        <img src="/logo-entrance.png" alt="logo" className="h-[400px] lg:h-100 w-auto my-10" />
 
         {/* 📱 Mobile slogan (debajo del logo) */}
         <p className="text-white text-[.7em] mt-13 md:hidden text-center font-semibold">
