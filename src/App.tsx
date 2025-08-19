@@ -37,10 +37,10 @@ function App() {
             >
               <Services />
             </section>
-            <section className="snap-start min-h-[calc(100vh-64px)]">
+            <section className="snap-start min-h-[calc(100vh-64px)]" id="strengths">
               <Strengths />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="reliable-fulfillment">
               <Hero />
             </section>
 
@@ -50,10 +50,10 @@ function App() {
             >
               <NewWarehousing />
             </section>
-            <section className="snap-start min-h-[calc(100vh-64px)]">
+            <section className="snap-start min-h-[calc(100vh-64px)]" id="values">
               <WarehousingList />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="inventory">
               <Gallery />
             </section>
             <section className="h-screen snap-start" id="fulfillment">
@@ -62,35 +62,35 @@ function App() {
             <section className="h-screen snap-start">
               <FulfillmentSecond />
             </section>
-            <section className="h-screen snap-start" id="how-it-works">
+            <section className="h-screen snap-start" id="steps">
               <FulfillmentThird />
             </section>
             <section className="h-screen snap-start" id="transloading">
               <Transloading />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="we-serve">
               <WeServe />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="door-to-door">
               <Transboarding />
             </section>
 
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="individual-office">
               <Storage />
             </section>
-            <section className="h-screen snap-start" id="convention">
+            <section className="h-screen snap-start" id="sales-meeting">
               <Hall />
             </section>
             <section className="h-screen snap-start" id="reviews">
               <Reviews />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="reviews">
               <Partners />
             </section>
-            <section className="h-screen snap-start" id="form">
+            <section className="h-screen snap-start" id="contact-us">
               <Form />
             </section>
-            <section className="h-screen snap-start">
+            <section className="h-screen snap-start" id="let-us-talk">
               <Footer />
             </section>
           </div>
