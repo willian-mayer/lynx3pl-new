@@ -126,7 +126,7 @@ export default function Hero() {
             justify-center 
             rounded-full 
             whitespace-nowrap
-            mb-1
+            mb-[6px]
           "
         >
           {contact.title}
