@@ -39,11 +39,10 @@ export default function Hero() {
             text-black 
             font-black 
             text-left
-            text-[2.4em]        /* móvil */
+            text-[2.2em]        /* móvil */
             sm:text-[2.3em]     /* sm */
             md:text-[2.8em]     /* md más grande */
-            lg:text-[3em]     /* lg aún más */
-            xl:text-[4.2em]
+            xl:text-[3.8em]
             leading-tight
             w-full 
             mx-auto 
@@ -55,7 +54,7 @@ export default function Hero() {
         >
           <span className="block sm:inline inter-bold">Reliable </span>
           <span className="block sm:inline inter-bold">fulfillment, </span>
-          <span className="block sm:inline inter-bold">B2B, FBA, FBM,</span>
+          <span className="block sm:inline inter-bold">B2B, FBA, FBM, LTL</span>
           <span className="block inter-bold">warehouse & more.</span>
         </motion.h1>
       </div>
