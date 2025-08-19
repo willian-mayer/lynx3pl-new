@@ -2,7 +2,7 @@
 import "./App.css";
 import Entrance from "./components/Entrance";
 import Hero from "./components/Hero";
-import Services from "./components/Services";
+// import Services from "./components/Services";
 import Strengths from "./components/Strengths";
 import Reviews from "./components/Reviews";
 import Hall from "./components/Hall";
@@ -31,55 +31,19 @@ function App() {
           </section>
           <div className="navbar">
             <Navbar title="Your Company" routes={routes} />
-            <section
+            {/* Why Us */}
+
+            {/* <section
               className="snap-start min-h-[calc(100vh-64px)]"
               id="services"
             >
               <Services />
-            </section>
-            <section className="snap-start min-h-[calc(100vh-64px)]" id="strengths">
-              <Strengths />
-            </section>
-            <section className="h-screen snap-start" id="reliable-fulfillment">
-              <Hero />
-            </section>
-
+            </section> */}
             <section
               className="snap-start min-h-[calc(100vh-64px)]"
-              id="warehousing"
+              id="why-us"
             >
-              <NewWarehousing />
-            </section>
-            <section className="snap-start min-h-[calc(100vh-64px)]" id="values">
-              <WarehousingList />
-            </section>
-            <section className="h-screen snap-start" id="inventory">
-              <Gallery />
-            </section>
-            <section className="h-screen snap-start" id="fulfillment">
-              <FulfillmentFirst />
-            </section>
-            <section className="h-screen snap-start">
-              <FulfillmentSecond />
-            </section>
-            <section className="h-screen snap-start" id="steps">
-              <FulfillmentThird />
-            </section>
-            <section className="h-screen snap-start" id="transloading">
-              <Transloading />
-            </section>
-            <section className="h-screen snap-start" id="we-serve">
-              <WeServe />
-            </section>
-            <section className="h-screen snap-start" id="door-to-door">
-              <Transboarding />
-            </section>
-
-            <section className="h-screen snap-start" id="individual-office">
-              <Storage />
-            </section>
-            <section className="h-screen snap-start" id="sales-meeting">
-              <Hall />
+              <Strengths />
             </section>
             <section className="h-screen snap-start" id="reviews">
               <Reviews />
@@ -87,7 +51,59 @@ function App() {
             <section className="h-screen snap-start" id="reviews">
               <Partners />
             </section>
-            <section className="h-screen snap-start" id="contact-us">
+            <section className="h-screen snap-start" id="reliable-fulfillment">
+              <Hero />
+            </section>
+            {/* Warehousing */}
+            <section
+              className="snap-start min-h-[calc(100vh-64px)]"
+              id="warehousing"
+            >
+              <NewWarehousing />
+            </section>
+            <section
+              className="snap-start min-h-[calc(100vh-64px)]"
+              id="values"
+            >
+              <WarehousingList />
+            </section>
+            <section className="h-screen snap-start" id="inventory">
+              <Gallery />
+            </section>
+            {/* Fulfillment */}
+            <section className="h-screen snap-start" id="fulfillment">
+              <Hero />
+            </section>
+            <section className="h-screen snap-start" id="">
+              <FulfillmentFirst />
+            </section>
+            <section className="h-screen snap-start">
+              <FulfillmentSecond />
+            </section>
+            <section className="h-screen snap-start" id="we-serve">
+              <WeServe />
+            </section>
+            <section className="h-screen snap-start" id="door-to-door">
+              <Transboarding />
+            </section>
+            <section className="h-screen snap-start" id="inventory">
+              <Gallery />
+            </section>
+            <section className="h-screen snap-start" id="steps">
+              <FulfillmentThird />
+            </section>
+            {/* Transloading */}
+            <section className="h-screen snap-start" id="transloading">
+              <Transloading />
+            </section>
+            <section className="h-screen snap-start" id="individual">
+              <Storage />
+            </section>
+            <section className="h-screen snap-start" id="events">
+              <Hall />
+            </section>
+              {/* Contact */}
+            <section className="h-screen snap-start" id="form">
               <Form />
             </section>
             <section className="h-screen snap-start" id="let-us-talk">

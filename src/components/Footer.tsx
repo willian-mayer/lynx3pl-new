@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="flex-1 flex items-end justify-center md:justify-start mx-4 md:mx-15 ml-10 mx-6 md:ml-56">
         <div className="text-lg md:text-4xl font-semibold leading-snug max-w-4xl mx-auto md:mx-0 text-center text-left">
             <h2 className=" mr-40 md:mr-0">Starting a new project or looking for a new partner?{" "}</h2>
-          <a className="underline text-[#045804]" href="#contact-us">
+          <a className="underline text-[#045804]" href="#form">
             Let’s talk
           </a> &gt; <span>info@lynx3pl.com</span>
         </div>

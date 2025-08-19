@@ -17,15 +17,11 @@
     "path": "#transloading"
   },
   {
-    "name": "Office Rental",
-    "path": "#space-rental"
-  },
-  {
-    "name": "Individual Space Rental",
-    "path": "#space-rental"
+    "name": "Individual Warehouse",
+    "path": "#individual"
   },
   {
     "name": "Event Space Rental",
-    "path": "#space-rental"
+    "path": "#events"
   }
 ]
