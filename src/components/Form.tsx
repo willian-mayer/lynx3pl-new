@@ -155,7 +155,7 @@ if (!isDesktop) {
   // 💻 Desktop: diseño en 3 columnas
 return (
   <section className="px-20 pt-0 h-screen flex items-center justify-center">
-    <div className="w-full max-w-6xl grid grid-cols-4 gap-8">
+    <div className="w-full max-w-6xl grid grid-cols-4 gap-5">
       
       {/* Columna 1 y 2: Formulario */}
       <div className="col-span-2 space-y-4">
@@ -244,11 +244,11 @@ return (
           ))}
         </div>
 
-        <div className="border-3 border-black rounded overflow-hidden">
+        <div className="border-3 border-black rounded overflow-hidden w-62">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.99225188882!2d-84.965537!3d34.755787999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88600b7ac7c171ad%3A0x7adaa70446346069!2sLynx3PL%20Inc!5e0!3m2!1spt-BR!2sbr!4v1749732230049!5m2!1sen!2sus"
             width="100%"
-            height="220"
+            height="200"
             style={{ border: 0 }}
             loading="lazy"
             allowFullScreen
