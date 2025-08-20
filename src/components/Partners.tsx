@@ -86,7 +86,7 @@ export default function Partners() {
         {/* 📱 Mobile */}
         <div className="w-full flex flex-wrap justify-end items-end gap-1 px-10 gap-3 md:hidden">
          <motion.img
-            src="/partners/logos-small.png"
+            src="/partners/new-logos-small.png"
             alt="Partners Logos"
             className="w-full h-auto object-contain max-w-6xl"
             initial={{ opacity: 0 }}
