@@ -98,7 +98,7 @@ export default function Partners() {
         {/* 🖥 Desktop */}
         <div className="hidden md:flex w-full justify-center mt-10 md:mt-5">
           <motion.img
-            src="/partners/logos-md.png"
+            src="/partners/new-logos-md.png"
             alt="Partners Logos"
             className="w-full h-auto object-contain max-w-6xl"
             initial={{ opacity: 0 }}
