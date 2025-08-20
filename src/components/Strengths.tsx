@@ -44,7 +44,7 @@ export default function Strengths() {
       >
         <div className="max-w-xl w-full ">
 <motion.h2
-  className="flex items-baseline justify-end lg:justify-start text-2xl md:text-6xl font-bold text-gray-900 mb-6 uppercase inter-bold pt-10 lg:mb-16"
+  className="flex items-baseline justify-end lg:justify-start text-2xl md:text-[3em] font-bold text-gray-900 mb-6 uppercase inter-bold pt-10 lg:mb-12"
   variants={{
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 },
