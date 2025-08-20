@@ -1,37 +1,8 @@
 [
-  {
-    "name": "Why Us",
-    "path": "#why-us"
-  },
-  {
-    "name": "Warehousing",
-    "path": "#warehousing"
-   
-  },
-  {
-    "name": "Fulfillment",
-    "path": "#fulfillment"
-  },
-  {
-    "name": "Transloading",
-    "path": "#transloading"
-  },
-  {
-    "name": "Flexible Leasing Space",
-    "path": "",
-    "sublink": [
-  {
-    "name": "Office Rental",
-    "path": "#individual"
-  },
-  {
-    "name": "Warehouse Rental",
-    "path": "#individual"
-  },
-  {
-    "name": "Event Space Rental",
-    "path": "#events"
-  }
-    ]
-  }
+  { "name": "Home", "path": "/" },
+  { "name": "Why Us", "path": "/why-us" },
+  { "name": "Warehousing", "path": "/warehousing" },
+    { "name": "Fulfillment", "path": "/fulfillment" },
+  { "name": "Transloading", "path": "/transloading" },
+  { "name": "Flexible Leasing space", "path": "/space-rental" }
 ]
