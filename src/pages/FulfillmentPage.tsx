@@ -12,7 +12,7 @@ import Footer from "../components/Footer";
 
 export default function FulfillmentPage() {
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar">
+    <div className="h-screen overflow-y-scroll  hide-scrollbar overflow-x-hidden">
       <div>
         <Navbar title="Your Company" routes={routesData} />
         <section className="h-screen snap-start">
