@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $headers = "From: $email\r\nReply-To: $email";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "success";
+        echo " We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media.";
     } else {
         http_response_code(500);
         echo "error";
