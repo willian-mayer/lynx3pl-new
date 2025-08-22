@@ -48,7 +48,7 @@ export default function Form() {
       const result = await response.text();
 
       if (result === "success") {
-        alert("✅ Message sent successfully!");
+        alert("We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media.");
         setFormValues({ name: "", email: "", message: "", interests: [] });
       } else {
         alert("❌ There was an error sending your message.");
