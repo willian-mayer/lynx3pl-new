@@ -5,7 +5,7 @@ import routesData from "../data/routes.json";
 
 export default function ContactPage() {
   return (
-    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar overflow-x-hidden md:snap-none">
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar overflow-x-hidden ">
       <Navbar title="Your Company" routes={routesData} />
       <section className="h-screen snap-start">
         <Form />
