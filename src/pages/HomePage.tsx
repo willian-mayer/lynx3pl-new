@@ -23,8 +23,8 @@ import Services from "../components/Services";
 
 export default function HomePage() {
   return (
-    <div className="h-screen overflow-y-scroll  hide-scrollbar overflow-x-hidden">
-      <section className="h-screen ">
+    <div className="h-screen overflow-y-scroll snap-y snap-mandatory scroll-smooth hide-scrollbar overflow-x-hidden">
+      <section className="h-screen snap-start">
         <Entrance />
       </section>
       <div>
