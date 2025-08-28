@@ -16,7 +16,7 @@ export default function SpaceRentalPage() {
         <section className="h-screen snap-start">
           <Hall />
         </section>
-        <section className="h-screen snap-start">
+        <section className="h-screen snap-start" id="form">
           <Form />
         </section>
         <section className="h-screen snap-start">

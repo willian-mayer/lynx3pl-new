@@ -45,14 +45,15 @@ export default function Transloading() {
           ))}
 
           {/* Botón solo en md+ */}
-          <motion.button
-            className="hidden md:block mt-4 bg-[#045804] text-white py-2 rounded-xl font-medium hover:bg-gray-800 transition text-xs md:mt-30 w-50"
+          <motion.a
+            href="#form"
+            className="hidden md:block mt-4 bg-[#045804] text-white py-2 rounded-xl font-medium hover:bg-gray-800 transition text-xs md:mt-30 w-50 md:pl-4"
             initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: whyUs.length * 0.1 }}
           >
             Contact Us for a Custom Quote​
-          </motion.button>
+          </motion.a>
         </div>
 
         {/* Columna derecha: Imagen + Título + Botón (solo móvil) */}
@@ -86,14 +87,16 @@ export default function Transloading() {
           </motion.h2>
 
           {/* Botón solo en móvil */}
-          <motion.button
+          <motion.a
+            href="#form"
             className="block md:hidden mt-1 bg-[#045804] text-white px-6 py-2 rounded-xl font-medium hover:bg-gray-800 transition text-xs"
             initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: whyUs.length * 0.1 }}
+            
           >
             Contact Us for a Custom Quote​
-          </motion.button>
+          </motion.a>
         </div>
       </div>
     </section>

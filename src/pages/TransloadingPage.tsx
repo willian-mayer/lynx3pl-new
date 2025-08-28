@@ -12,7 +12,7 @@ export default function TransloadingPage() {
         <section className="h-screen snap-start">
           <Transloading />;
         </section>
-              <section className="h-screen snap-start">
+              <section className="h-screen snap-start" id="form">
                 <Form />
       </section>
             <section className="h-screen snap-start">

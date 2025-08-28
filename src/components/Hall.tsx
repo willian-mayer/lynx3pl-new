@@ -45,7 +45,7 @@ export default function Hall() {
 
         {/* Button over image */}
         <motion.a
-          href="#"
+          href="#form"
           className="
             absolute left-1/2 -translate-x-1/2 
             bottom-0 translate-y-1/2
