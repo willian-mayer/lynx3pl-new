@@ -13,10 +13,18 @@ export default function Form() {
     interests: [] as string[],
   });
 
+  const [successMessage, setSuccessMessage] = useState("");
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
+
+    // Si el usuario empieza a escribir en el mensaje, limpiamos el successMessage
+    if (name === "message" && successMessage) {
+      setSuccessMessage("");
+    }
+
     setFormValues({ ...formValues, [name]: value });
   };
 
@@ -48,14 +56,16 @@ export default function Form() {
       const result = await response.text();
 
       if (result === "success") {
-        alert("We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media.");
+        setSuccessMessage(
+          "We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media."
+        );
         setFormValues({ name: "", email: "", message: "", interests: [] });
       } else {
-        alert("❌ There was an error sending your message.");
+        setSuccessMessage("❌ There was an error sending your message.");
       }
     } catch (error) {
       console.error(error);
-      alert("⚠️ Network error, please try again later.");
+      setSuccessMessage("⚠️ Network error, please try again later.");
     }
   };
 
@@ -134,6 +144,11 @@ export default function Form() {
                     required
                     className="w-full border-3 h-30 px-5 mt-1 rounded border-black"
                   />
+                  {successMessage && (
+                    <p className="text-sm mt-2" style={{ color: "#045804" }}>
+                      {successMessage}
+                    </p>
+                  )}
                 </label>
 
                 <button
@@ -215,7 +230,7 @@ export default function Form() {
             />
           </label>
 
-          <label className="flex items-start gap-4 text-md font-medium">
+          <label className="flex flex-col text-md font-medium">
             <span className="whitespace-nowrap w-40 font-bold">Your Message</span>
             <textarea
               name="message"
@@ -225,6 +240,11 @@ export default function Form() {
               required
               className="w-full border px-3 rounded border-black h-35"
             />
+            {successMessage && (
+              <p className="text-sm mt-2" style={{ color: "#045804" }}>
+                {successMessage}
+              </p>
+            )}
           </label>
 
           <button
