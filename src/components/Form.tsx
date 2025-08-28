@@ -55,14 +55,15 @@ export default function Form() {
 
       const result = await response.text();
 
-      if (result === "success") {
-        setSuccessMessage(
-          "We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media."
-        );
-        setFormValues({ name: "", email: "", message: "", interests: [] });
-      } else {
-        setSuccessMessage("❌ There was an error sending your message.");
-      }
+if (result === "success") {
+  setSuccessMessage(
+    "We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media."
+  );
+  setFormValues({ name: "", email: "", message: "", interests: [] });
+} else {
+  setSuccessMessage("❌ There was an error sending your message.");
+}
+
     } catch (error) {
       console.error(error);
       setSuccessMessage("⚠️ Network error, please try again later.");
@@ -134,22 +135,28 @@ export default function Form() {
 
               {/* Columna derecha: Message + Botón + Info + Mapa */}
               <div className="flex flex-col">
-                <label className="flex flex-col text-md font-medium pr-6">
-                  <span className="whitespace-nowrap font-bold">Your Message</span>
-                  <textarea
-                    name="message"
-                    rows={4}
-                    value={formValues.message}
-                    onChange={handleChange}
-                    required
-                    className="w-full border-3 h-30 px-5 mt-1 rounded border-black"
-                  />
-                  {successMessage && (
-                    <p className="text-sm mt-2" style={{ color: "#045804" }}>
-                      {successMessage}
-                    </p>
-                  )}
-                </label>
+<label className="flex flex-col text-md font-medium pr-6">
+  <span className="whitespace-nowrap font-bold">Your Message</span>
+
+  {successMessage ? (
+    <div
+      className="w-full border-3 h-30 px-5 mt-1 rounded border-black flex items-center"
+      style={{ color: "#045804", whiteSpace: "pre-wrap" }}
+    >
+      {successMessage}
+    </div>
+  ) : (
+    <textarea
+      name="message"
+      rows={4}
+      value={formValues.message}
+      onChange={handleChange}
+      required
+      className="w-full border-3 h-30 px-5 mt-1 rounded border-black"
+    />
+  )}
+</label>
+
 
                 <button
                   type="submit"
@@ -230,22 +237,28 @@ export default function Form() {
             />
           </label>
 
-          <label className="flex flex-col text-md font-medium">
-            <span className="whitespace-nowrap w-40 font-bold">Your Message</span>
-            <textarea
-              name="message"
-              rows={10}
-              value={formValues.message}
-              onChange={handleChange}
-              required
-              className="w-full border px-3 rounded border-black h-35"
-            />
-            {successMessage && (
-              <p className="text-sm mt-2" style={{ color: "#045804" }}>
-                {successMessage}
-              </p>
-            )}
-          </label>
+<label className="flex flex-col text-md font-medium pr-6">
+  <span className="whitespace-nowrap font-bold">Your Message</span>
+
+  {successMessage ? (
+    <div
+      className="w-full border-3 h-30 px-5 mt-1 rounded border-black flex items-center"
+      style={{ color: "#045804", whiteSpace: "pre-wrap" }}
+    >
+      {successMessage}
+    </div>
+  ) : (
+    <textarea
+      name="message"
+      rows={4}
+      value={formValues.message}
+      onChange={handleChange}
+      required
+      className="w-full border-3 h-30 px-5 mt-1 rounded border-black"
+    />
+  )}
+</label>
+
 
           <button
             type="submit"
