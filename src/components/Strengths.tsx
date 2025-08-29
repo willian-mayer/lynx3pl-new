@@ -42,21 +42,22 @@ export default function Strengths() {
         }}
         className="w-full lg:w-1/2 flex justify-center lg:justify-start items-center p-6 md:p-12"
       >
-        <div className="max-w-xl w-full ">
-<motion.h2
-  className="flex items-baseline justify-end lg:justify-start text-2xl md:text-[3em] font-bold text-gray-900 mb-6 uppercase inter-bold pt-10 lg:mb-12"
-  variants={{
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0 },
-  }}
-  transition={{ duration: 0.6, ease: "easeOut" }}
->
-  <span>{title}</span>
-  <span className="text-green-900 font-bold text-[40px] md:text-[60px] pt-5">.</span>
-</motion.h2>
+        <div className="max-w-xl w-full">
+          <motion.h2
+            className="flex items-baseline justify-end lg:justify-start text-2xl md:text-[3em] font-bold text-gray-900 mb-6 uppercase inter-bold pt-10 lg:mb-12"
+            variants={{
+              hidden: { opacity: 0, y: 30 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <span>{title}</span>
+            <span className="text-green-900 font-bold text-[40px] md:text-[60px] pt-5">
+              .
+            </span>
+          </motion.h2>
 
-
-          <ul className="space-y-3  text-xs text-black leading-relaxed text-left lg:pr-10">
+          <ul className="space-y-3  text-xs text-black leading-relaxed text-left lg:pr-10 md:border-l-2 md:py-2 md:pl-5">
             {description.map((item, index) => (
               <motion.li
                 key={index}
