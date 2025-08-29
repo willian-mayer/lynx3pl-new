@@ -55,15 +55,14 @@ export default function Form() {
 
       const result = await response.text();
 
-if (result === "success") {
-  setSuccessMessage(
-    "We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media."
-  );
-  setFormValues({ name: "", email: "", message: "", interests: [] });
-} else {
-  setSuccessMessage("❌ There was an error sending your message.");
-}
-
+      if (result === "success") {
+        setSuccessMessage(
+          "We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media."
+        );
+        setFormValues({ name: "", email: "", message: "", interests: [] });
+      } else {
+        setSuccessMessage("❌ There was an error sending your message.");
+      }
     } catch (error) {
       console.error(error);
       setSuccessMessage("⚠️ Network error, please try again later.");
@@ -75,7 +74,9 @@ if (result === "success") {
     return (
       <section className="px-4 md:px-6 pt-18 md:pt-0 h-screen md:flex md:items-center md:justify-center">
         <div className="w-full max-w-6xl overflow-y-auto md:overflow-visible md:h-auto h-full">
-          <h1 className="text-center font-bold text-xl mb-3 ml-25">Contact Us</h1>
+          <h1 className="text-center font-bold text-xl mb-3 ml-25">
+            Contact Us
+          </h1>
 
           <form onSubmit={handleSubmit} className="grid gap-2">
             {/* Full Name */}
@@ -135,28 +136,29 @@ if (result === "success") {
 
               {/* Columna derecha: Message + Botón + Info + Mapa */}
               <div className="flex flex-col">
-<label className="flex flex-col text-md font-medium pr-6">
-  <span className="whitespace-nowrap font-bold">Your Message</span>
+                <label className="flex flex-col text-md font-medium pr-6">
+                  <span className="whitespace-nowrap font-bold">
+                    Your Message
+                  </span>
 
-  {successMessage ? (
-    <div
-      className="w-full border-3 h-30 px-5 mt-1 rounded border-black flex items-center"
-      style={{ color: "#045804", whiteSpace: "pre-wrap" }}
-    >
-      {successMessage}
-    </div>
-  ) : (
-    <textarea
-      name="message"
-      rows={4}
-      value={formValues.message}
-      onChange={handleChange}
-      required
-      className="w-full border-3 h-30 px-5 mt-1 rounded border-black"
-    />
-  )}
-</label>
-
+                  {successMessage ? (
+                    <div
+                      className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804] flex items-center"
+                      style={{ color: "#045804", whiteSpace: "pre-wrap" }}
+                    >
+                      {successMessage}
+                    </div>
+                  ) : (
+                    <textarea
+                      name="message"
+                      rows={4}
+                      value={formValues.message}
+                      onChange={handleChange}
+                      required
+                      className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804]"
+                    />
+                  )}
+                </label>
 
                 <button
                   type="submit"
@@ -237,28 +239,29 @@ if (result === "success") {
             />
           </label>
 
-<label className="flex flex-row text-md font-medium">
-  <span className="whitespace-nowrap font-bold mr-8">Your Message</span>
+          <label className="flex flex-row text-md font-medium">
+            <span className="whitespace-nowrap font-bold mr-8">
+              Your Message
+            </span>
 
-  {successMessage ? (
-    <div
-      className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804] flex items-center"
-      style={{ color: "#045804", whiteSpace: "pre-wrap" }}
-    >
-      {successMessage}
-    </div>
-  ) : (
-    <textarea
-      name="message"
-      rows={4}
-      value={formValues.message}
-      onChange={handleChange}
-      required
-      className="w-full border-2 h-30 p-2 mt-1 rounded border-[#045804]"
-    />
-  )}
-</label>
-
+            {successMessage ? (
+              <div
+                className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804] flex items-center"
+                style={{ color: "#045804", whiteSpace: "pre-wrap" }}
+              >
+                {successMessage}
+              </div>
+            ) : (
+              <textarea
+                name="message"
+                rows={4}
+                value={formValues.message}
+                onChange={handleChange}
+                required
+                className="w-full border-2 h-30 p-2 mt-1 rounded border-[#045804]"
+              />
+            )}
+          </label>
 
           <button
             type="submit"
