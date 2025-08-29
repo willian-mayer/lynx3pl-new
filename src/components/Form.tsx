@@ -237,12 +237,12 @@ if (result === "success") {
             />
           </label>
 
-<label className="flex flex-col text-md font-medium pr-6">
-  <span className="whitespace-nowrap font-bold">Your Message</span>
+<label className="flex flex-row text-md font-medium">
+  <span className="whitespace-nowrap font-bold mr-8">Your Message</span>
 
   {successMessage ? (
     <div
-      className="w-full border-3 h-30 px-5 mt-1 rounded border-black flex items-center"
+      className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804] flex items-center"
       style={{ color: "#045804", whiteSpace: "pre-wrap" }}
     >
       {successMessage}
@@ -254,7 +254,7 @@ if (result === "success") {
       value={formValues.message}
       onChange={handleChange}
       required
-      className="w-full border-3 h-30 px-5 mt-1 rounded border-black"
+      className="w-full border-2 h-30 p-2 mt-1 rounded border-[#045804]"
     />
   )}
 </label>
@@ -262,7 +262,7 @@ if (result === "success") {
 
           <button
             type="submit"
-            className="bg-[#045804] text-white px-4 py-2 rounded text-sm ml-[10.2rem]"
+            className="bg-[#045804] text-white px-4 py-2 rounded text-sm ml-[10em]"
           >
             Submit
           </button>
