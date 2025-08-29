@@ -57,7 +57,7 @@ export default function Strengths() {
             </span>
           </motion.h2>
 
-          <ul className="space-y-3  text-xs text-black leading-relaxed text-left lg:pr-10 md:border-l-2 md:py-2 md:pl-5">
+          <ul className="space-y-3  text-xs text-black leading-relaxed text-left lg:pr-10 md:border-l-1 md:py-2 md:pl-5">
             {description.map((item, index) => (
               <motion.li
                 key={index}
