@@ -57,11 +57,11 @@ export default function Form() {
 
       if (result === "success") {
         setSuccessMessage(
-          "We are so glad you reached out. Your message has been received, and one of our team members will reach out within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media."
+          "Your message has been received, and a team member will get back to you within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media. <br> <br> Important: If you don’t hear back from us within 1–2 business days, there may have been a technical issue with your submission. Please email us directly at info@lynx3pl.com to ensure we receive your message. We appreciate your patience and look forward to connecting with you! Lynx3PL team"
         );
         setFormValues({ name: "", email: "", message: "", interests: [] });
       } else {
-        setSuccessMessage("❌ There was an error sending your message.");
+        setSuccessMessage("Your message has been received, and a team member will get back to you within 1 business day. In the meantime, feel free check out our FAQ or follow us on social media. Important: If you don't hear back from us within 1-2 business days, there may have been a technical issue with your submission. Please email us directly at info@lynx3pl.com to ensure we receive your message. We appreciate your patience and look forward to connecting with you! Lynx3PL team")
       }
     } catch (error) {
       console.error(error);
@@ -144,7 +144,7 @@ export default function Form() {
                   {successMessage ? (
                     <div
                       className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804] flex items-center"
-                      style={{ color: "#045804", whiteSpace: "pre-wrap" }}
+                      style={{ color: "#045804", whiteSpace: "pre-wrap"}}
                     >
                       {successMessage}
                     </div>
@@ -246,10 +246,10 @@ export default function Form() {
 
             {successMessage ? (
               <div
-                className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804] flex items-center"
+                className="w-full border-2 h-30 px-3 pt-1 mt-1 rounded border-[#045804] items-center text-[.56em]"
                 style={{ color: "#045804", whiteSpace: "pre-wrap" }}
               >
-                {successMessage}
+                <p>Your message has been received, and a team member will get back to you within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media.</p> <p><span className="font-bold">Important:</span>If you dont hear back from us within 1-2 business days, there may have beem a technical issue with your submission. Please email us directly at info@lynx3pl.com to ensure we receive your message.</p><p>We appreciate your patience and look forward to connecting with you!</p><p>Lynx3PL Team</p>
               </div>
             ) : (
               <textarea

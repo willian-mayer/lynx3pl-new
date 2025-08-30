@@ -53,7 +53,7 @@ export default function Hero() {
           animate={isInView ? "visible" : "hidden"}
           className="
             text-black font-black text-left
-            text-[2.2em] sm:text-[2.3em] md:text-[2.8em] xl:text-[3.8em]
+            text-[2.2em] sm:text-[2.3em] md:text-[2.8em] xl:text-[3.6em]
             leading-tight w-full mx-auto exo-2 mt-20 md:mt-0
           "
           style={{ fontFamily: "Times New Roman, Times, serif" }}
