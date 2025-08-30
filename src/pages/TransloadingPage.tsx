@@ -1,3 +1,4 @@
+// src/pages/TransloadingPage.tsx
 import Footer from "../components/Footer";
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
@@ -6,22 +7,20 @@ import routesData from "../data/routes.json";
 
 export default function TransloadingPage() {
   return (
-    <div className="h-screen overflow-y-scroll md:overflow-y-auto snap-y md:snap-none scroll-smooth hide-scrollbar overflow-x-hidden">
-      <div>
-        <Navbar title="Your Company" routes={routesData} />
+    <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-container">
+      <Navbar title="Your Company" routes={routesData} />
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center">
-          <Transloading />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section">
+        <Transloading />
+      </section>
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center" id="form">
-          <Form />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section" id="form">
+        <Form />
+      </section>
 
-        <section className="h-screen snap-start">
-          <Footer />
-        </section>
-      </div>
+      <section className="h-screen snap-start section">
+        <Footer />
+      </section>
     </div>
   );
 }

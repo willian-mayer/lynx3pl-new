@@ -1,3 +1,4 @@
+// src/pages/FulfillmentPage.tsx
 import Hero from "../components/Hero";
 import FulfillmentFirst from "../components/FulfillmentFirst";
 import FulfillmentSecond from "../components/FulfillmentSecond";
@@ -12,46 +13,47 @@ import Footer from "../components/Footer";
 
 export default function FulfillmentPage() {
   return (
-    <div className="h-screen overflow-y-scroll md:overflow-y-auto snap-y md:snap-none scroll-smooth hide-scrollbar overflow-x-hidden">
-      <div>
-        <Navbar title="Your Company" routes={routesData} />
+    <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory md:snap-none scroll-container">
+      <Navbar title="Your Company" routes={routesData} />
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center">
-          <Hero />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section">
+        <Hero />
+      </section>
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center">
-          <FulfillmentFirst />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section">
+        <FulfillmentFirst />
+      </section>
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center">
-          <FulfillmentSecond />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section">
+        <FulfillmentSecond />
+      </section>
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center">
-          <WeServe />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section">
+        <WeServe />
+      </section>
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center">
-          <Transboarding />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section">
+        <Transboarding />
+      </section>
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center">
-          <Gallery />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section">
+        <Gallery />
+      </section>
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center">
-          <FulfillmentThird />
-        </section>
+      <section className="h-screen snap-start flex justify-center items-center section">
+        <FulfillmentThird />
+      </section>
 
-        <section className="h-screen snap-start md:flex md:justify-center md:items-center" id="form">
-          <Form />
-        </section>
+      <section
+        className="h-screen snap-start flex justify-center items-center section"
+        id="form"
+      >
+        <Form />
+      </section>
 
-        <section className="h-screen snap-start">
-          <Footer />
-        </section>
-      </div>
+      <section className="h-screen snap-start section">
+        <Footer />
+      </section>
     </div>
   );
 }

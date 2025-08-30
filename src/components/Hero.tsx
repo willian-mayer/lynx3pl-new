@@ -43,7 +43,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="h-screen overflow-hidden bg-white flex flex-col justify-between sm:mx-48 pt-16"
+      className="h-screen overflow-hidden bg-white flex flex-col justify-between sm:mx-48"
     >
       {/* Contenido central */}
       <div className="flex-1 flex items-center justify-center px-4">
@@ -53,7 +53,7 @@ export default function Hero() {
           animate={isInView ? "visible" : "hidden"}
           className="
             text-black font-black text-left
-            text-[2.2em] sm:text-[2.3em] md:text-[2.8em] xl:text-[3.6em]
+            text-[2.2em] sm:text-[2.3em] md:text-[2.8em] xl:text-[3.5em]
             leading-tight w-full mx-auto exo-2 mt-20 md:mt-0
           "
           style={{ fontFamily: "Times New Roman, Times, serif" }}

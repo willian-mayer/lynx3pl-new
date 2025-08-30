@@ -246,10 +246,10 @@ export default function Form() {
 
             {successMessage ? (
               <div
-                className="w-full border-2 h-30 px-3 pt-1 mt-1 rounded border-[#045804] items-center text-[.56em]"
+                className="w-full border-2 h-30 px-3 pt-3 mt-1 rounded border-[#045804] items-center text-[.735em]"
                 style={{ color: "#045804", whiteSpace: "pre-wrap" }}
               >
-                <p>Your message has been received, and a team member will get back to you within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media.</p> <p><span className="font-bold">Important:</span>If you dont hear back from us within 1-2 business days, there may have beem a technical issue with your submission. Please email us directly at info@lynx3pl.com to ensure we receive your message.</p><p>We appreciate your patience and look forward to connecting with you!</p><p>Lynx3PL Team</p>
+                <p>We appreciate your message and will get back to you within 1 business day.</p> <p>We appreciate your patience and look forward to connecting with you!</p> <p>Lynx3PL Team</p>
               </div>
             ) : (
               <textarea

@@ -27,7 +27,6 @@ export default function Gallery() {
       className="bg-white min-h-screen px-4 py-10 flex flex-col md:items-center md:justify-center pt-12 md:pt-24"
     >
       <div className="w-full md:mx-64 max-w-7xl flex flex-col md:h-auto">
-        
         {/* Pantallas md+ → Grid existente */}
         <motion.div
           className="hidden md:grid grid-cols-3 grid-rows-2 gap-7 w-full"
@@ -71,30 +70,33 @@ export default function Gallery() {
         </motion.div>
 
         {/* Pantallas pequeñas → Imagen única + texto */}
-<motion.div
-  className="md:hidden flex flex-col items-center justify-center gap-6 min-h-screen pb-10 gap-10"
-  initial="hidden"
-  animate={inView ? "visible" : "hidden"}
-  variants={containerVariants}
->
-  <motion.img
-    src="/gallery/gallery-small-new.png"
-    alt="Gallery"
-    className="w-auto h-90 max-w-sm rounded-xl shadow-md object-cover"
-    variants={itemVariants}
-    transition={{ duration: 0.5, ease: "easeOut" }}
-  />
+        <motion.div
+          className="md:hidden flex flex-col items-center justify-center gap-6 min-h-screen pb-10 gap-10 mt-20 md:mt-0"
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={containerVariants}
+        >
+          <motion.img
+            src="/gallery/gallery-small-new.png"
+            alt="Gallery"
+            className="w-auto h-90 max-w-sm rounded-xl shadow-md object-cover"
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          />
 
-  <motion.p
-    className="text-left text-base font-medium inter mx-10 pl-2 mr-11"
-    variants={itemVariants}
-    transition={{ duration: 0.5, ease: "easeOut" }}
-  >
-    We offer choices of <span className="font-bold">real-time inventory</span> management<span className="font-bold"> software solutions</span> and uniquely <span className="font-bold">versatile storage</span> options tailored to diverse customer needs, setting us apart from the competitions.
-  </motion.p>
-</motion.div>
-
-
+          <motion.p
+            className="text-left text-base font-medium inter mx-10 pl-2 mr-11"
+            variants={itemVariants}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            We offer choices of{" "}
+            <span className="font-bold">real-time inventory</span> management
+            <span className="font-bold"> software solutions</span> and uniquely{" "}
+            <span className="font-bold">versatile storage</span> options
+            tailored to diverse customer needs, setting us apart from the
+            competitions.
+          </motion.p>
+        </motion.div>
       </div>
     </section>
   );
