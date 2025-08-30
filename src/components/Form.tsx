@@ -142,12 +142,12 @@ export default function Form() {
                   </span>
 
                   {successMessage ? (
-                    <div
-                      className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804] flex items-center"
-                      style={{ color: "#045804", whiteSpace: "pre-wrap"}}
-                    >
-                      {successMessage}
-                    </div>
+              <div
+                className="w-full border-2 h-30 px-3 pt-3 mt-1 rounded border-[#045804] items-center text-[.45em]"
+                style={{ color: "#045804", whiteSpace: "pre-wrap" }}
+              >
+                <p>We appreciate your message and will get back to you within 1 business day.</p> <p>We appreciate your patience and look forward to connecting with you!</p> <p>Lynx3PL Team</p>
+              </div>
                   ) : (
                     <textarea
                       name="message"
@@ -246,7 +246,7 @@ export default function Form() {
 
             {successMessage ? (
               <div
-                className="w-full border-2 h-30 px-3 pt-3 mt-1 rounded border-[#045804] items-center text-[.735em]"
+                className="w-full border-2 h-30 px-3 pt-3 mt-1 rounded border-[#045804] items-center md:text-[.735em]"
                 style={{ color: "#045804", whiteSpace: "pre-wrap" }}
               >
                 <p>We appreciate your message and will get back to you within 1 business day.</p> <p>We appreciate your patience and look forward to connecting with you!</p> <p>Lynx3PL Team</p>
