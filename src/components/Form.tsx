@@ -258,7 +258,7 @@ export default function Form() {
                 value={formValues.message}
                 onChange={handleChange}
                 required
-                className="w-full border-2 h-30 p-2 mt-1 rounded border-[#045804]"
+                className="w-full border-2 h-55 p-2 mt-1 rounded border-[#045804]"
               />
             )}
           </label>
