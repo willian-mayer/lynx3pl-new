@@ -246,10 +246,10 @@ export default function Form() {
 
             {successMessage ? (
               <div
-                className="w-full border-2 h-30 px-3 pt-3 mt-1 rounded border-[#045804] items-center md:text-[.735em]"
+                className="w-full border-2 h-55 px-3 pt-3 mt-1 rounded border-[#045804] items-center md:text-[.78em]"
                 style={{ color: "#045804", whiteSpace: "pre-wrap" }}
               >
-                <p>We appreciate your message and will get back to you within 1 business day.</p> <p>We appreciate your patience and look forward to connecting with you!</p> <p>Lynx3PL Team</p>
+                <p>We appreciate your message and will get back to you within 1 business day.</p> <p><span className="font-bold">Important:</span> If you don’t hear from us within 1–2 days, there may have been a technical issue with your submission. Please email us directly at info@lynx3pl.com to ensure we received your message.</p> <p>We look forward to connecting with you!</p> <p>Lynx3PL Team</p>
               </div>
             ) : (
               <textarea
@@ -270,7 +270,7 @@ export default function Form() {
             Submit
           </button>
 
-          <h1 className="font-bold text-5xl mt-21">Contact Us</h1>
+          <h1 className="font-bold text-5xl ">Contact Us</h1>
         </div>
 
         {/* Columna 3: Interests */}
