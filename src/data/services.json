@@ -1,18 +1,18 @@
 [
   {
     "title": "Warehousing",
-    "route": "#warehousing"
+    "route": "/warehousing"
   },
   {
     "title": "Fulfillment",
-    "route": "#fulfillment"
+    "route": "/fulfillment"
   },
   {
     "title": "Transloading",
-    "route": "#transloading"
+    "route": "/transloading"
   },
   {
     "title": "And more",
-    "route": "#transloading"
+    "route": "/space-rental"
   }
 ]
