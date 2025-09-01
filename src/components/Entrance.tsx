@@ -35,7 +35,7 @@ export default function Entrance() {
       </div>
 
       {/* 💻 Desktop slogan en esquina inferior izquierda */}
-      <p className="absolute bottom-20 left-30 text-white text-xl font-medium hidden md:block md:border-l-1  md:pl-2 md:mb-25">
+      <p className="absolute bottom-20 left-30 text-white text-xl font-medium hidden md:block md:border-l-1  md:pl-2 md:pt-24">
         Efficiency. <br /> Accuracy.<br />Transparency.
       </p>
     </div>
