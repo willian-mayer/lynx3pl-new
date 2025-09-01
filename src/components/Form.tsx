@@ -40,43 +40,46 @@ export default function Form() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    try {
-      const response = await fetch("/contact.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({
-          name: formValues.name,
-          email: formValues.email,
-          message: formValues.message,
-          interests: formValues.interests.join(", "),
-        }),
-      });
+  try {
+    const response = await fetch("/contact.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
+        name: formValues.name,
+        email: formValues.email,
+        message: formValues.message,
+        interests: formValues.interests.join(", "),
+      }),
+    });
 
-      const result = await response.text();
+    const result = await response.text();
 
-      if (result === "success") {
-        // ✅ Llamada al snippet de Google Ads
-        if (typeof gtag_report_conversion === "function") {
-          gtag_report_conversion("http://lynx3pl.com");
-        }
-
-        setSuccessMessage(
-          "Your message has been received, and a team member will get back to you within 1 business day."
-        );
-        setFormValues({ name: "", email: "", message: "", interests: [] });
+    if (result === "success") {
+      // ✅ Llamada segura al snippet de Google Ads
+      if (typeof (window as any).gtag_report_conversion === "function") {
+        (window as any).gtag_report_conversion("http://lynx3pl.com");
       } else {
-        setSuccessMessage(
-          "Your message has been received, but we could not confirm the server response. Please check your email inbox."
-        );
+        console.warn("⚠️ gtag_report_conversion no está disponible todavía.");
       }
-    } catch (error) {
-      console.error(error);
-      setSuccessMessage("⚠️ Network error, please try again later.");
+
+      setSuccessMessage(
+        "Your message has been received, and a team member will get back to you within 1 business day."
+      );
+      setFormValues({ name: "", email: "", message: "", interests: [] });
+    } else {
+      setSuccessMessage(
+        "Your message has been received, but we could not confirm the server response. Please check your email inbox."
+      );
     }
-  };
+  } catch (error) {
+    console.error(error);
+    setSuccessMessage("⚠️ Network error, please try again later.");
+  }
+};
+
 
   // 📱 Mobile Layout
   if (!isDesktop) {
