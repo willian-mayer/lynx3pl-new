@@ -20,10 +20,10 @@ export default function Transloading() {
         "
       >
         {/* Columna izquierda: Items + Botón (solo md+) */}
-        <div className="w-full grid grid-cols-1 gap-2 px-4 md:px-0 md:col-span-1 ml-10 md:ml-0 md:gap-2 md:mt-12">
+        <div className="w-full grid grid-cols-1 gap-2 px-4 md:px-0 md:col-span-1 ml-10 md:ml-0 md:gap-2 md:pb-20">
           {/* Título solo en móvil */}
           <motion.h2
-            className="block md:hidden text-[1.2em] font-black text-black inter-bold mb-4 ml-20 md:ml-0 mr-34 md:mr-0"
+            className="block md:hidden text-[1.2em] font-black text-black inter-bold mb-4 md:ml-0 md:mr-0"
             initial={{ opacity: 0, y: -10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
@@ -43,17 +43,17 @@ export default function Transloading() {
               </h3>
             </motion.div>
           ))}
+                    {/* Título solo en md+ */}
 
-          {/* Botón solo en md+ */}
-          <motion.a
-            href="#form"
-            className="hidden md:block mt-4 bg-[#045804] text-white py-2 rounded-xl font-medium hover:bg-gray-800 transition text-xs md:mt-30 w-50 md:pl-4"
-            initial={{ opacity: 0, y: 10 }}
+          <motion.h2
+            className="hidden md:block text-3xl font-bold text-black inter-bold md:ml-10 md:mt-10 md:mx-auto"
+            initial={{ opacity: 0, y: -10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: whyUs.length * 0.1 }}
+            transition={{ duration: 0.6 }}
           >
-            Contact Us for a Custom Quote​
-          </motion.a>
+            {title}
+          </motion.h2>
+
         </div>
 
         {/* Columna derecha: Imagen + Título + Botón (solo móvil) */}
@@ -76,15 +76,19 @@ export default function Transloading() {
             transition={{ duration: 0.6 }}
           />
 
-          {/* Título solo en md+ */}
-          <motion.h2
-            className="hidden md:block text-3xl font-bold text-black inter-bold md:mr-100"
-            initial={{ opacity: 0, y: -10 }}
+          {/* Botón solo en md+ */}
+          <div className="mx-20">
+          <motion.a
+            href="#form"
+            className="hidden md:block mt-4 bg-[#045804] text-white py-2 rounded-xl font-medium hover:bg-gray-800 transition text-xs md:mt-30 w-50 md:pl-4"
+            initial={{ opacity: 0, y: 10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5, delay: whyUs.length * 0.1 }}
           >
-            {title}
-          </motion.h2>
+            Contact Us for a Custom Quote​
+          </motion.a>
+          </div>
+
 
           {/* Botón solo en móvil */}
           <motion.a
