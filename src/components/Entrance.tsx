@@ -3,7 +3,9 @@ import { useEffect, useState } from "react";
 import entranceData from "../data/entrance.json";
 
 export default function Entrance() {
-  const [languages, setLanguages] = useState<{ language: string; short: string }[]>([]);
+  const [languages, setLanguages] = useState<
+    { language: string; short: string }[]
+  >([]);
 
   useEffect(() => {
     setLanguages(entranceData);
@@ -13,14 +15,17 @@ export default function Entrance() {
     <div className="h-screen bg-black flex flex-col md:flex-row items-center justify-center relative w-screen ">
       {/* Logo en el centro */}
       <div className="flex flex-col items-center">
-        <img src="/logo-entrance.png" alt="logo" className="h-[400px] lg:h-100 w-auto my-10" />
+        <img
+          src="/logo-entrance.png"
+          alt="logo"
+          className="h-[400px] lg:h-100 w-auto my-10"
+        />
 
         {/* 📱 Mobile slogan (debajo del logo) */}
         <p className="text-white text-[.7em] mt-13 md:hidden text-center font-semibold">
-          Efficiency. Transparency. Accuracy. 
+          Efficiency. Transparency. Accuracy.
         </p>
       </div>
-
       {/* 🌍 Idiomas en la esquina superior derecha (solo desktop) */}
       <div className="absolute top-13 right-30 flex flex-col space-y-2 text-white invisible ">
         {languages.map((lang) => (
@@ -33,11 +38,17 @@ export default function Entrance() {
           </div>
         ))}
       </div>
-
       {/* 💻 Desktop slogan en esquina inferior izquierda */}
-      <p className="absolute bottom-20 left-30 text-white text-xl font-medium hidden md:block md:border-l-1  md:pl-2 md:pt-24">
-        Efficiency. <br /> Accuracy.<br />Transparency.
-      </p>
+      <div className="absolute bottom-20 left-30 text-white text-lg flex font-medium hidden md:block md:border-l-1 md:pl-2 md:pt-24">
+        <p className="">Accuracy.</p>
+        <p>Efficiency.</p>
+        <p>Efficiency.</p>
+      </div>
+      //{" "}
     </div>
+    //   <p className="absolute bottom-20 left-30 text-white text-lg font-medium hidden md:block md:border-l-1 md:pl-2 md:pt-24">
+    //     Efficiency. <br /> Accuracy.<br />Transparency.
+    //   </p>
+    // </div>
   );
 }
