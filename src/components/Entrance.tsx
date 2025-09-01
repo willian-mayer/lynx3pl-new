@@ -42,7 +42,7 @@ export default function Entrance() {
       <div className="absolute bottom-20 left-30 text-white text-lg flex font-medium hidden md:block md:border-l-1 md:pl-2 md:pt-24">
         <p className="">Accuracy.</p>
         <p>Efficiency.</p>
-        <p>Efficiency.</p>
+        <p>Transparency.</p>
       </div>
       //{" "}
     </div>
