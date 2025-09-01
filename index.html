@@ -1,38 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/logo-ico.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="https://midominio.com/imagen-preview.jpg" />
+    <meta
+      property="og:image"
+      content="https://midominio.com/imagen-preview.jpg"
+    />
     <meta property="og:title" content="Lynx3PL, Inc." />
 
     <title>Lynx3PL</title>
 
     <!-- Google tag (gtag.js) -->
-<!-- Google tag (gtag.js) -->
-<script async src="/public/warehousing/warehouse.jpg">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="/public/warehousing/warehouse.jpg"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'AW-17493174136');
-</script>
+      gtag("config", "AW-17493174136");
+    </script>
 
     <!-- Event snippet for Purchase conversion page -->
+    <!-- Event snippet for Purchase conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
     <script>
       function gtag_report_conversion(url) {
         var callback = function () {
-          if (typeof(url) != 'undefined') {
+          if (typeof url != "undefined") {
             window.location = url;
           }
         };
-        gtag('event', 'conversion', {
-            'send_to': 'AW-17493174136/9CAgCNbuoYobEPjOspVB',
-            'transaction_id': '',
-            'event_callback': callback
+        gtag("event", "conversion", {
+          send_to: "AW-17493174136/9CAgCNbuoYobEPjOspVB",
+          transaction_id: "",
+          event_callback: callback,
         });
         return false;
       }

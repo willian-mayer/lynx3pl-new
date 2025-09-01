@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import formData from "../data/form.json";
 
+declare function gtag_report_conversion(url?: string): void;
+
 export default function Form() {
   const { contactInfo, interests } = formData;
   const isDesktop = useMediaQuery({ minWidth: 768 });
@@ -56,12 +58,19 @@ export default function Form() {
       const result = await response.text();
 
       if (result === "success") {
+        // ✅ Llamada al snippet de Google Ads
+        if (typeof gtag_report_conversion === "function") {
+          gtag_report_conversion("http://lynx3pl.com");
+        }
+
         setSuccessMessage(
-          "Your message has been received, and a team member will get back to you within 1 business day. In the meantime, feel free to check out our FAQ or follow us on social media. <br> <br> Important: If you don’t hear back from us within 1–2 business days, there may have been a technical issue with your submission. Please email us directly at info@lynx3pl.com to ensure we receive your message. We appreciate your patience and look forward to connecting with you! Lynx3PL team"
+          "Your message has been received, and a team member will get back to you within 1 business day."
         );
         setFormValues({ name: "", email: "", message: "", interests: [] });
       } else {
-        setSuccessMessage("Your message has been received, and a team member will get back to you within 1 business day. In the meantime, feel free check out our FAQ or follow us on social media. Important: If you don't hear back from us within 1-2 business days, there may have been a technical issue with your submission. Please email us directly at info@lynx3pl.com to ensure we receive your message. We appreciate your patience and look forward to connecting with you! Lynx3PL team")
+        setSuccessMessage(
+          "Your message has been received, but we could not confirm the server response. Please check your email inbox."
+        );
       }
     } catch (error) {
       console.error(error);
@@ -142,12 +151,20 @@ export default function Form() {
                   </span>
 
                   {successMessage ? (
-              <div
-                className="w-full border-2 h-30 px-3 pt-3 mt-1 rounded border-[#045804] items-center text-[.45em]"
-                style={{ color: "#045804", whiteSpace: "pre-wrap" }}
-              >
-                <p>We appreciate your message and will get back to you within 1 business day.</p> <p>We appreciate your patience and look forward to connecting with you!</p> <p>Lynx3PL Team</p>
-              </div>
+                    <div
+                      className="w-full border-2 h-30 px-3 pt-3 mt-1 rounded border-[#045804] items-center text-[.45em]"
+                      style={{ color: "#045804", whiteSpace: "pre-wrap" }}
+                    >
+                      <p>
+                        We appreciate your message and will get back to you
+                        within 1 business day.
+                      </p>{" "}
+                      <p>
+                        We appreciate your patience and look forward to
+                        connecting with you!
+                      </p>{" "}
+                      <p>Lynx3PL Team</p>
+                    </div>
                   ) : (
                     <textarea
                       name="message"
@@ -249,7 +266,17 @@ export default function Form() {
                 className="w-full border-2 h-55 px-3 pt-3 mt-1 rounded border-[#045804] items-center md:text-[.78em]"
                 style={{ color: "#045804", whiteSpace: "pre-wrap" }}
               >
-                <p>We appreciate your message and will get back to you within 1 business day.</p> <p><span className="font-bold">Important:</span> If you don’t hear from us within 1–2 days, there may have been a technical issue with your submission. Please email us directly at info@lynx3pl.com to ensure we received your message.</p> <p>We look forward to connecting with you!</p> <p>Lynx3PL Team</p>
+                <p>
+                  We appreciate your message and will get back to you within 1
+                  business day.
+                </p>{" "}
+                <p>
+                  <span className="font-bold">Important:</span> If you don’t hear
+                  from us within 1–2 days, there may have been a technical issue
+                  with your submission. Please email us directly at
+                  info@lynx3pl.com to ensure we received your message.
+                </p>{" "}
+                <p>We look forward to connecting with you!</p> <p>Lynx3PL Team</p>
               </div>
             ) : (
               <textarea
