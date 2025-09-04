@@ -9,7 +9,7 @@ export default function Transloading() {
   return (
     <section
       ref={ref}
-      className="w-full bg-white sm:px-10 md:px-50 py-10 min-h-screen flex items-center"
+      className="w-full sm:px-10 md:px-50 py-10 min-h-screen flex items-center"
     >
       <div
         className="

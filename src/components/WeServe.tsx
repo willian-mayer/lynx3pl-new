@@ -33,7 +33,7 @@ const WeServe = () => {
   return (
     <section
       ref={ref}
-      className={`bg-white px-4 md:px-12 ${
+      className={`px-4 md:px-12 ${
         isDesktop
           ? "md:h-screen flex flex-col items-center justify-end pb-30"
           : "flex flex-col items-center justify-center min-h-screen"

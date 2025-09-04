@@ -36,12 +36,12 @@ const Storage: React.FC = () => {
   };
 
   return (
-    <section ref={ref} className="w-full bg-white">
+    <section ref={ref} className="w-full">
       {isDesktop ? (
         <div className="grid grid-cols-6 grid-rows-2 w-full h-screen px-40 py-30">
           {/* Título y descripción */}
           <motion.div
-            className="col-span-2 row-span-2 flex flex-col justify-center px-8 bg-white gap-3"
+            className="col-span-2 row-span-2 flex flex-col justify-center px-8 gap-3"
             variants={textVariant}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}

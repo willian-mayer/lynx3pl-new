@@ -31,71 +31,71 @@ export default function HomePage() {
 
       <Navbar title="Your Company" routes={routesData} />
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
         <Services />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="why-us">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="why-us">
         <Strengths />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="reliable-fulfillment">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="reliable-fulfillment">
         <Hero />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="warehousing">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="warehousing">
         <NewWarehousing />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="values">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="values">
         <WarehousingList />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="inventory">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="inventory">
         <Gallery />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
         <FulfillmentFirst />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white">
         <FulfillmentSecond />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="steps">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="steps">
         <FulfillmentThird />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="transloading">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="transloading">
         <Transloading />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="we-serve">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="we-serve">
         <WeServe />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="door-to-door">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="door-to-door">
         <Transboarding />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="individual">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="individual">
         <Storage />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="events">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="events">
         <Hall />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="reviews">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="reviews">
         <Reviews />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="partners">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="partners">
         <Partners />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section" id="form">
+      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="form">
         <Form />
       </section>
 

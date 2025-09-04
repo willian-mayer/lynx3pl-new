@@ -9,7 +9,7 @@ export default function FulfillmentSecond() {
   return (
     <section
       ref={ref}
-      className="relative bg-white md:px-6 pt-10 pb-2 h-screen flex items-center justify-center overflow-hidden"
+      className="relative md:px-6 pt-10 pb-2 h-screen flex items-center justify-center overflow-hidden"
     >
       <div className="w-full max-w-[1100px] flex flex-col md:grid md:grid-cols-2 gap-6 items-center h-full">
 

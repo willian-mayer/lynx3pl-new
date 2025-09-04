@@ -12,7 +12,7 @@ export default function WarehousingPage() {
     <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-container">
       <Navbar title="Your Company" routes={routesData} />
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
         <NewWarehousing />
       </section>
 
@@ -20,7 +20,7 @@ export default function WarehousingPage() {
         <WarehousingList />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
         <Gallery />
       </section>
 

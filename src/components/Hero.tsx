@@ -43,7 +43,7 @@ export default function Hero() {
   return (
     <section
       ref={heroRef}
-      className="h-screen overflow-hidden bg-white flex flex-col justify-between sm:mx-48"
+      className="h-screen overflow-hidden flex flex-col justify-between sm:mx-48"
     >
       {/* Contenido central */}
       <div className="flex-1 flex items-center justify-center px-4">

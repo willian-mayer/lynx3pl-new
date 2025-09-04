@@ -24,7 +24,7 @@ export default function Gallery() {
   return (
     <section
       ref={ref}
-      className="bg-white min-h-screen px-4 py-10 flex flex-col md:items-center md:justify-center pt-12 md:pt-24"
+      className="min-h-screen px-4 py-10 flex flex-col md:items-center md:justify-center pt-12 md:pt-24"
     >
       <div className="w-full md:mx-64 max-w-7xl flex flex-col md:h-auto">
         {/* Pantallas md+ → Grid existente */}

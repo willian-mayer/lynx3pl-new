@@ -16,7 +16,7 @@ export default function FulfillmentPage() {
     <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory md:snap-none scroll-container">
       <Navbar title="Your Company" routes={routesData} />
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
         <Hero />
       </section>
 
@@ -24,7 +24,7 @@ export default function FulfillmentPage() {
         <FulfillmentFirst />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
         <FulfillmentSecond />
       </section>
 
@@ -32,7 +32,7 @@ export default function FulfillmentPage() {
         <WeServe />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
         <Transboarding />
       </section>
 
@@ -40,7 +40,7 @@ export default function FulfillmentPage() {
         <Gallery />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
         <FulfillmentThird />
       </section>
 

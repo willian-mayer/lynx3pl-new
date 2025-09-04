@@ -10,7 +10,6 @@ export default function Hall() {
     <section
       ref={ref}
       className="
-        bg-white 
          md:px-10 
         py-10 
         min-h-screen 

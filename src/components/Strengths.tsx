@@ -10,7 +10,7 @@ export default function Strengths() {
   return (
     <section
       ref={ref}
-      className="flex flex-col-reverse lg:flex-row w-full h-screen bg-white justify-center lg:justify-normal px-5 py-12 pb-10"
+      className="flex flex-col-reverse lg:flex-row w-full h-screen justify-center lg:justify-normal px-5 py-12"
     >
       {/* Video abajo en móvil, izquierda en desktop */}
       <motion.div

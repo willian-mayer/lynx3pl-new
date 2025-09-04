@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <section
       ref={ref}
-      className="snap-start w-full bg-white min-h-[calc(100vh-64px)] px-2 sm:px-24 flex items-center justify-center pt-25 md:pt-16"
+      className="snap-start w-full min-h-[calc(100vh-64px)] px-2 sm:px-24 flex items-center justify-center pt-25 md:pt-16"
     >
       {/* Grid para móviles: imagen arriba, texto abajo */}
       <div className="grid grid-rows-[auto_auto] sm:flex sm:flex-col items-center justify-center gap-4 w-full h-full">
@@ -39,7 +39,6 @@ export default function Services() {
         {/* Lista de servicios */}
         <motion.div
           className="
-            bg-white 
             w-full 
             flex flex-col md:flex-row flex-wrap 
             justify-start md:justify-around 

@@ -9,7 +9,7 @@ export default function FulfillmentThird() {
   return (
     <section
       ref={ref}
-      className="w-full bg-white sm:px-10 lg:px-20 py-2 min-h-screen flex items-center"
+      className="w-full sm:px-10 lg:px-20 py-2 min-h-screen flex items-center"
     >
       <div
         className="

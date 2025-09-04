@@ -21,7 +21,7 @@ const Partners: React.FC = () => {
   };
 
   return (
-    <section ref={ref} className="bg-white px-4 md:px-10 py-10 flex flex-col items-center">
+    <section ref={ref} className="px-4 md:px-10 py-10 flex flex-col items-center">
       <div className="w-full max-w-6xl flex flex-col items-center gap-6 mt-20 md:mt-40">
         {isDesktop ? (
           <div className="w-full max-w-5xl flex flex-row items-center gap-10">

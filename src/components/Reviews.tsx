@@ -21,7 +21,6 @@ export default function Reviews() {
     <section
       ref={ref}
       className="
-        bg-white 
         px-8 md:px-2 
         py-10 
         min-h-screen 
