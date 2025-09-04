@@ -10,14 +10,14 @@ export default function Strengths() {
   return (
     <section
       ref={ref}
-      className="flex flex-col-reverse lg:flex-row w-full h-screen justify-center lg:justify-normal px-5 py-12"
+      className="flex flex-col-reverse lg:flex-row w-full h-screen justify-center lg:justify-normal px-5"
     >
       {/* Video abajo en móvil, izquierda en desktop */}
       <motion.div
         initial={{ x: "-100%", opacity: 0 }}
         animate={inView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 1.2, delay: 0.2, ease: "easeOut" }}
-        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center px-6 mb-10 md:mb-0 md:p-12 md:pt-56"
+        className="w-full lg:w-1/2 flex justify-center lg:justify-end items-center px-6 md:mb-0 md:p-12 md:pt-56"
       >
         <video
           src="/watchus/video-2.mp4"
