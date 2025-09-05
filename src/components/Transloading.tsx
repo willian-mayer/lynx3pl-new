@@ -46,7 +46,7 @@ export default function Transloading() {
                     {/* Título solo en md+ */}
 
           <motion.h2
-            className="hidden md:block text-3xl font-bold text-black inter-bold md:ml-10 md:mt-10 md:mx-auto"
+            className="hidden md:block text-3xl font-bold text-black inter-bold md:ml-2 md:mt-10 md:mx-auto"
             initial={{ opacity: 0, y: -10 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
