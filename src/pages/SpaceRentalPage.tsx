@@ -15,7 +15,7 @@ export default function SpaceRentalPage() {
         <Storage />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200">
         <Hall />
       </section>
 

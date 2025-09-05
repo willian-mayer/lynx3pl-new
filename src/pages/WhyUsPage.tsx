@@ -13,7 +13,7 @@ export default function WhyUsPage() {
     <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-container">
       <Navbar title="Your Company" routes={routesData} />
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section ">
         <Strengths />
       </section>
 
@@ -25,7 +25,7 @@ export default function WhyUsPage() {
         <Partners />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200">
         <Hero />
       </section>
 

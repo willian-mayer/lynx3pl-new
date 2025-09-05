@@ -26,7 +26,7 @@ export default function FulfillmentFirst() {
   <motion.img
     src="/fulfillmentFirst/image.jpg"
     alt={title}
-    className="w-full object-cover md:h-[500px] md:px-2"
+    className="w-full object-cover md:h-[500px] md:px-2 rounded-xl"
     initial={{ opacity: 0, scale: 0.95 }}
     animate={inView ? { opacity: 1, scale: 1 } : {}}
     transition={{ duration: 0.6, delay: 0.4 }}

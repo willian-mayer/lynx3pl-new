@@ -32,7 +32,7 @@ export default function WarehousingList() {
     <img
       src="/warehousing/warehouse.jpg"
       alt="Warehousing"
-      className="w-full max-h-[360px] object-cover object-bottom md:mt-20"
+      className="w-full max-h-[360px] object-cover object-bottom md:mt-20 rounded-xl"
     />
   </motion.picture>
 </div>

@@ -16,31 +16,31 @@ export default function FulfillmentPage() {
     <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory md:snap-none scroll-container">
       <Navbar title="Your Company" routes={routesData} />
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section">
         <Hero />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200">
         <FulfillmentFirst />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section">
         <FulfillmentSecond />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200">
         <WeServe />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section">
         <Transboarding />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200">
         <Gallery />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section ">
         <FulfillmentThird />
       </section>
 

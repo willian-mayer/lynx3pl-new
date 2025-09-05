@@ -20,10 +20,12 @@ import Storage from "../components/Storage";
 import Navbar from "../components/Navbar";
 import routesData from "../data/routes.json";
 import Services from "../components/Services";
+import FloatingButton from "../components/FloatingButton";
 
 export default function HomePage() {
   return (
-    <div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-container">
+    <div className="relative">
+<div className="h-screen overflow-y-scroll overflow-x-hidden snap-y snap-mandatory scroll-container">
       {/* Entrance */}
       <section className="h-screen snap-start flex justify-center items-center section">
         <Entrance />
@@ -31,59 +33,59 @@ export default function HomePage() {
 
       <Navbar title="Your Company" routes={routesData} />
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section">
         <Services />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="why-us">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200" id="why-us">
         <Strengths />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="reliable-fulfillment">
+      <section className="h-screen snap-start flex justify-center items-center section " id="reliable-fulfillment">
         <Hero />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="warehousing">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200" id="warehousing">
         <NewWarehousing />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="values">
+      <section className="h-screen snap-start flex justify-center items-center section " id="values">
         <WarehousingList />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="inventory">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200" id="inventory">
         <Gallery />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100">
+      <section className="h-screen snap-start flex justify-center items-center section ">
         <FulfillmentFirst />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-white">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200">
         <FulfillmentSecond />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="steps">
+      <section className="h-screen snap-start flex justify-center items-center section " id="steps">
         <FulfillmentThird />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="transloading">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200" id="transloading">
         <Transloading />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="we-serve">
+      <section className="h-screen snap-start flex justify-center items-center section" id="we-serve">
         <WeServe />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="door-to-door">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200" id="door-to-door">
         <Transboarding />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-gray-100" id="individual">
+      <section className="h-screen snap-start flex justify-center items-center section" id="individual">
         <Storage />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="events">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200" id="events">
         <Hall />
       </section>
 
@@ -91,7 +93,7 @@ export default function HomePage() {
         <Reviews />
       </section>
 
-      <section className="h-screen snap-start flex justify-center items-center section bg-white" id="partners">
+      <section className="h-screen snap-start flex justify-center items-center section bg-gray-200" id="partners">
         <Partners />
       </section>
 
@@ -103,5 +105,8 @@ export default function HomePage() {
         <Footer />
       </section>
     </div>
+    <FloatingButton />
+    </div>
+    
   );
 }

@@ -47,7 +47,7 @@ const Transboarding: React.FC = () => {
             <motion.img
               src="/transboarding/top.png"
               alt="Top decoration"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain p-2 bg-white rounded-xl"
               variants={imageTopVariant}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
@@ -56,7 +56,7 @@ const Transboarding: React.FC = () => {
             <motion.img
               src={shipImageUrl}
               alt={title}
-              className="w-full h-80 object-cover rounded-lg my-2"
+              className="w-full h-80 object-cover rounded-lg my-2 p-2 "
               variants={imageMainVariant}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
@@ -65,7 +65,7 @@ const Transboarding: React.FC = () => {
             <motion.img
               src="/transboarding/bottom.png"
               alt="Bottom decoration"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain p-2 bg-white rounded-xl"
               variants={imageBottomVariant}
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
@@ -106,7 +106,7 @@ const Transboarding: React.FC = () => {
           <motion.img
             src="/transboarding/small-new.png"
             alt="Extra visual"
-            className="w-full h-auto object-contain mt-12 px-15"
+            className="w-full h-auto object-contain mt-7 px-10 py-2 bg-white rounded-xl"
             variants={imageBottomVariant}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}

@@ -70,7 +70,7 @@ const Partners: React.FC = () => {
         {/* Partner Logos */}
         {/* Mobile */}
         <motion.div
-          className="w-full flex flex-wrap justify-end items-end gap-3 md:hidden px-10"
+          className="w-full flex flex-wrap justify-end items-end gap-3 md:hidden p-5 bg-white rounded-xl"
           variants={fadeUpVariant}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
@@ -84,7 +84,7 @@ const Partners: React.FC = () => {
 
         {/* Desktop */}
         <motion.div
-          className="hidden md:flex w-full justify-center mt-10 md:mt-5"
+          className="hidden md:flex w-full justify-center mt-10 md:mt-5 md:p-5 bg-white rounded-xl"
           variants={fadeUpVariant}
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
