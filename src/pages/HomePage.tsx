@@ -21,6 +21,8 @@ import Navbar from "../components/Navbar";
 import routesData from "../data/routes.json";
 import Services from "../components/Services";
 import FloatingButton from "../components/FloatingButton";
+import NewsletterBar from "../components/NewsletterBar";
+import Subscription from "../components/Subscription";
 
 export default function HomePage() {
   return (
@@ -52,7 +54,9 @@ export default function HomePage() {
       <section className="h-screen snap-start flex justify-center items-center section " id="values">
         <WarehousingList />
       </section>
-
+      <section className="h-screen snap-start flex justify-center items-center section " id="values">
+        <Subscription />
+      </section>
       <section className="h-screen snap-start flex justify-center items-center section bg-gray-200" id="inventory">
         <Gallery />
       </section>
