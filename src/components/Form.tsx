@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import formData from "../data/form.json";
-import { reportConversion } from "../lib/gtag"; // 👈 Importamos helper
+import { reportConversion } from "../lib/gtag";
 
 export default function Form() {
   const { contactInfo, interests } = formData;
@@ -15,6 +15,7 @@ export default function Form() {
   });
 
   const [successMessage, setSuccessMessage] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -38,8 +39,14 @@ export default function Form() {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    e.stopPropagation();
+
+    // Prevenir múltiples envíos
+    if (isSubmitting) return;
+
+    setIsSubmitting(true);
 
     try {
       const response = await fetch("/contact.php", {
@@ -71,6 +78,8 @@ export default function Form() {
     } catch (error) {
       console.error(error);
       setSuccessMessage("⚠️ Network error, please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -95,6 +104,7 @@ export default function Form() {
                 value={formValues.name}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="w-full border px-3 h-6 rounded"
               />
             </label>
@@ -110,6 +120,7 @@ export default function Form() {
                 value={formValues.email}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="w-full border px-3 py-1 h-6 rounded"
               />
             </label>
@@ -130,6 +141,7 @@ export default function Form() {
                         value={interest}
                         checked={formValues.interests.includes(interest)}
                         onChange={handleCheckboxChange}
+                        disabled={isSubmitting}
                         className="accent-green-600"
                       />
                       {interest}
@@ -168,6 +180,7 @@ export default function Form() {
                       value={formValues.message}
                       onChange={handleChange}
                       required
+                      disabled={isSubmitting}
                       className="w-full border-2 h-30 px-5 mt-1 rounded border-[#045804]"
                     />
                   )}
@@ -175,9 +188,10 @@ export default function Form() {
 
                 <button
                   type="submit"
-                  className="bg-[#045804] text-white px-2 py-1 rounded text-xs self-start"
+                  disabled={isSubmitting}
+                  className="bg-[#045804] text-white px-2 py-1 rounded text-xs self-start disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit
+                  {isSubmitting ? "Sending..." : "Submit"}
                 </button>
 
                 <div className="my-2">
@@ -234,6 +248,7 @@ export default function Form() {
               value={formValues.name}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
               className="w-full border px-3 h-8 rounded"
             />
           </label>
@@ -248,6 +263,7 @@ export default function Form() {
               value={formValues.email}
               onChange={handleChange}
               required
+              disabled={isSubmitting}
               className="w-full border px-3 h-8 rounded"
             />
           </label>
@@ -267,7 +283,7 @@ export default function Form() {
                   business day.
                 </p>{" "}
                 <p>
-                  <span className="font-bold">Important:</span> If you don’t hear
+                  <span className="font-bold">Important:</span> If you don't hear
                   from us within 1–2 days, there may have been a technical issue
                   with your submission. Please email us directly at
                   info@lynx3pl.com to ensure we received your message.
@@ -281,6 +297,7 @@ export default function Form() {
                 value={formValues.message}
                 onChange={handleChange}
                 required
+                disabled={isSubmitting}
                 className="w-full border-2 h-55 p-2 mt-1 rounded border-[#045804]"
               />
             )}
@@ -288,9 +305,10 @@ export default function Form() {
 
           <button
             type="submit"
-            className="bg-[#045804] text-white px-4 py-2 rounded text-sm ml-[10em]"
+            disabled={isSubmitting}
+            className="bg-[#045804] text-white px-4 py-2 rounded text-sm ml-[10em] disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Submit
+            {isSubmitting ? "Sending..." : "Submit"}
           </button>
 
           <h1 className="font-bold text-5xl ">Contact Us</h1>
@@ -310,6 +328,7 @@ export default function Form() {
                   value={interest}
                   checked={formValues.interests.includes(interest)}
                   onChange={handleCheckboxChange}
+                  disabled={isSubmitting}
                   className="accent-green-600"
                 />
                 {interest}
