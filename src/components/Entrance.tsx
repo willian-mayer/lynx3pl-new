@@ -62,7 +62,7 @@ export default function Entrance() {
             <img 
               src={lang.flag} 
               alt={`${lang.language} flag`}
-              className="w-5 h-auto"
+              className="w-5 h-auto invisible"
             />
             <span className="text-sm font-medium">{lang.short}</span>
           </div>
