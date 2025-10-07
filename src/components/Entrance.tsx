@@ -6,6 +6,7 @@ import entranceData from "../data/entrance.json";
 type Language = {
   language: string;
   short: string;
+  flag: string;
 };
 
 export default function Entrance() {
@@ -58,7 +59,11 @@ export default function Entrance() {
                 : "opacity-50 cursor-not-allowed"
             }`}
           >
-            <img src="/item.png" alt="icon" className="h-4 w-auto" />
+            <img 
+              src={lang.flag} 
+              alt={`${lang.language} flag`}
+              className="w-5 h-auto"
+            />
             <span className="text-sm font-medium">{lang.short}</span>
           </div>
         ))}
