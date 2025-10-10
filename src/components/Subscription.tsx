@@ -2,25 +2,44 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 export default function Subscription() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!email) return;
 
-    // Aquí puedes conectar tu API o servicio de newsletter
-    console.log("Email submitted:", email);
+    const formData = new FormData();
+    formData.append("FNAME", name);
+    formData.append("EMAIL", email);
 
-    setSubmitted(true);
-    setEmail("");
+    try {
+      await fetch(
+        "https://lynx3pl.us10.list-manage.com/subscribe/post?u=d0929acf03114ebd5b36aeaf6&id=25b211111e&f_id=003298e3f0",
+        {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+        }
+      );
+
+      console.log("Subscriber:", { name, email });
+      setSubmitted(true);
+      setName("");
+      setEmail("");
+      setError(null);
+    } catch (err) {
+      console.error("Error subscribing:", err);
+      setError("Something went wrong. Please try again later.");
+    }
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row w-full ">
+    <div className="min-h-screen flex flex-col md:flex-row w-full">
       {/* Left Image */}
-      <div className=" md:w-1/2 w-full pt-20 md:pt-0 md:p-24 bg-gray-50 lg:pl-50">
+      <div className="md:w-1/2 w-full pt-20 md:pt-0 md:p-24 bg-gray-50 lg:pl-50">
         <img
           src="/subscribe/photo.jpg"
           alt="Newsletter illustration"
@@ -50,6 +69,14 @@ export default function Subscription() {
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <input
+                  type="text"
+                  placeholder="Your name (optional)"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#045804]"
+                />
+
+                <input
                   type="email"
                   required
                   placeholder="Your email address"
@@ -57,12 +84,19 @@ export default function Subscription() {
                   onChange={(e) => setEmail(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#045804]"
                 />
+
                 <button
                   type="submit"
                   className="bg-[#045804] text-white font-semibold px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition"
                 >
                   Subscribe
                 </button>
+
+                {error && (
+                  <p className="text-red-600 text-sm text-center mt-2">
+                    {error}
+                  </p>
+                )}
               </form>
             </>
           ) : (
@@ -75,7 +109,7 @@ export default function Subscription() {
               <h2 className="text-2xl font-bold text-green-600">
                 Thank you for joining! 🎉
               </h2>
-              <p className="text-gray-700">
+              <p className="text-gray-700 text-center">
                 You’ll now receive the latest updates from us.
               </p>
             </motion.div>
