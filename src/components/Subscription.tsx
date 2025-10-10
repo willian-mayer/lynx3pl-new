@@ -58,7 +58,7 @@ export default function Subscription() {
           {!submitted ? (
             <>
               <h1 className="text-md sm:text-4xl font-bold text-gray-900 mb-4">
-                Join Our Newsletter 🚀
+                Join Our Newsletter!
               </h1>
               <p className="text-gray-600 mb-6">
                 Stay updated with our latest news on{" "}
@@ -70,7 +70,7 @@ export default function Subscription() {
               <form onSubmit={handleSubmit} className="flex flex-col gap-4">
                 <input
                   type="text"
-                  placeholder="Your name (optional)"
+                  placeholder="Your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   className="w-full px-4 py-3 rounded-xl border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#045804]"
