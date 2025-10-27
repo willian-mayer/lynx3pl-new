@@ -1,4 +1,5 @@
 // src/pages/WhyUsPage.tsx
+import FloatingButton from "../components/FloatingButtonWhatsappIcon";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
 import Hero from "../components/Hero";
@@ -36,6 +37,7 @@ export default function WhyUsPage() {
       <section className="h-screen snap-start section">
         <Footer />
       </section>
+      <FloatingButton />
     </div>
   );
 }

@@ -10,6 +10,7 @@ import Navbar from "../components/Navbar";
 import routesData from "../data/routes.json";
 import Form from "../components/Form";
 import Footer from "../components/Footer";
+import FloatingButton from "../components/FloatingButtonWhatsappIcon";
 
 export default function FulfillmentPage() {
   return (
@@ -54,6 +55,7 @@ export default function FulfillmentPage() {
       <section className="h-screen snap-start section">
         <Footer />
       </section>
+      <FloatingButton />
     </div>
   );
 }

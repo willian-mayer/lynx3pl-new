@@ -1,4 +1,5 @@
 // src/pages/TransloadingPage.tsx
+import FloatingButton from "../components/FloatingButtonWhatsappIcon";
 import Footer from "../components/Footer";
 import Form from "../components/Form";
 import Navbar from "../components/Navbar";
@@ -21,6 +22,7 @@ export default function TransloadingPage() {
       <section className="h-screen snap-start section">
         <Footer />
       </section>
+      <FloatingButton />
     </div>
   );
 }

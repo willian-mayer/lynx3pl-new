@@ -2,6 +2,7 @@ import Form from "../components/Form";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import routesData from "../data/routes.json";
+import FloatingButton from "../components/FloatingButtonWhatsappIcon";
 
 export default function ContactPage() {
   return (
@@ -13,6 +14,7 @@ export default function ContactPage() {
       <section className="h-screen snap-start">
         <Footer />
       </section>
+      <FloatingButton />
     </div>
   );
 }
